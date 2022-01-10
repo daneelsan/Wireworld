@@ -3,9 +3,15 @@
 BeginPackage["Wireworld`"]
 
 WireworldStateQ
-$WireworldRule
+$WireworldFunctionRule
+$WireworldNumberRule
 WireworldEvolve
 WireworldPlot
+(*
+WireworldQ
+Wireworld
+*)
+
 WireworldDraw
 
 ClearAll["Wireworld`*"]
@@ -22,12 +28,12 @@ $cellStateInformation = <|
 	0 -> <|"Name" -> "empty", "Color" -> RGBColor[0, 0, 0] (* Black *)|>,
 	1 -> <|"Name" -> "electron head", "Color" -> RGBColor[1, 1, 1] (* White *)|>,
 	2 -> <|"Name" -> "electron tail", "Color" -> RGBColor[0, 0.5, 1] (* Blue *)|>,
-	3 -> <|"Name" -> "conductor", "Color" -> RGBColor[1, 0.5, 0] (* Orange *)|>
+	3 -> <|"Name" -> "wire", "Color" -> RGBColor[1, 0.5, 0] (* Orange *)|>
 |>;
 
 $cellStates = Keys[$cellStateInformation];
 
-$cellColorRules = $cellStateInformation[[All, "Color"]];
+$cellColorRules = Normal[$cellStateInformation[[All, "Color"]]];
 
 
 (*******************************************************************************
@@ -51,6 +57,12 @@ SyntaxInformation[WireworldPlot] = {
 };
 
 Options[WireworldPlot] = Options[ArrayPlot];
+
+SetOptions[WireworldPlot, {
+	ColorRules -> $cellColorRules,
+	Mesh -> True,
+	MeshStyle -> Directive[Thin, Darker[Gray]]
+}];
 
 WireworldPlot[args___] /; CheckArguments[WireworldPlot[args], 1] :=
 	Module[{arg1, opts},
@@ -77,11 +89,11 @@ iWireworldPlot[state_, opts___] :=
 
 
 (*******************************************************************************
-$WireworldRule
+$WireworldFunctionRule
 *******************************************************************************)
 
 (* Adapted from https://codegolf.stackexchange.com/a/44683/110183 *)
-$WireworldRule = {
+$WireworldFunctionRule = {
 	Switch[#[[2, 2]],
 		(* empty -> empty *)
 		0, 0,
@@ -90,11 +102,32 @@ $WireworldRule = {
 		(* electron tail -> conductor *)
 		2, 3,
 		(* conductor -> electron head if exactly one or two of the neighbouring cells are electron heads, otherwise remains conductor *)
-		3, If[0 < Count[#, 1, 2] < 3, 1, 3]
+		3, If[0 < Count[#, 1, 2] < 3, 1, 3],
+		_, 0 (* all other cell states die *)
 	] &,
 	{}, (* always {} when the first argument is a function *)
 	{1, 1} (* Moore neighborhood *)
 };
+
+
+(*******************************************************************************
+$WireworldNumberRule
+*******************************************************************************)
+
+(* Inspired from https://mathematica.stackexchange.com/questions/153388/how-to-calculate-cellularautomaton-rule-numbers-in-higher-dimensions *)
+$WireworldNumberRule := $WireworldNumberRule =
+	Module[{function, configurations, states},
+		function = $WireworldFunctionRule[[1]];
+		(* Generate all possible cell configurations (Moore neighborhood) *)
+		configurations = Tuples[{3, 2, 1, 0}, {3, 3}];
+		(* Compute the next center cell *)
+		states = function /@ configurations;
+		{
+			FromDigits[states, Length[$cellStates]], (* Rule number *)
+			Length[$cellStates], (* Number of colors *)
+			{1, 1} (* Moore neighborhood *)
+		}
+	];
 
 
 (*******************************************************************************
@@ -137,7 +170,7 @@ WireworldEvolve[iargs___] /; CheckArguments[WireworldEvolve[iargs], {1, 2}] :=
 		,
 			{CellularAutomaton::offtg, CellularAutomaton::offts, CellularAutomaton::offtm}
 		];
-		If[FailureQ[res],
+		If[FailureQ[res] || Head[init] === List,
 			Return[res]
 		];
 
@@ -148,255 +181,72 @@ WireworldEvolve[iargs___] /; CheckArguments[WireworldEvolve[iargs], {1, 2}] :=
 		]
 	]
 
-WireworldEvolveFunction = Function[{init, tspec}, CellularAutomaton[$WireworldRule, init, {tspec, All}]]
+WireworldEvolveFunction = CellularAutomaton[$WireworldNumberRule, #1, {#2, Automatic}] &
 
 
 (*******************************************************************************
-WireworldDraw
+Wireworld, WireworldQ
 *******************************************************************************)
 
-SyntaxInformation[WireworldDraw] = {
-	"ArgumentsPattern" -> {_, OptionsPattern[]}
+(*SyntaxInformation[Wireworld] = {
+	"ArgumentsPattern" -> {_}
 };
 
-WireworldDraw[iargs___] /; CheckArguments[WireworldDraw[iargs], {0, 1}] :=
-	Module[{args, opts, init},
-		{args, opts} = ArgumentsOptions[WireworldDraw[iargs], {0, 1}];
-		init = First[args];
-		If[ListQ[init] && Length[init] === 2 && AllTrue[init, Function[n, IntegerQ[n] && n > 0]],
-			init = SparseArray[ConstantArray[0, init]]
-		];
-		If[!WireworldStateQ[init],
+Wireworld[arg1_] ? System`Private`HoldEntryQ :=
+	Module[{state},
+		If[!WireworldStateQ[arg1],
 			Return @ Failure["WireworldFailure", <|
-				"MessageTemplate" -> "Argument `1` should be a list specifying the number of rows and columns of a new Wireworld state or a matrix of Wireworld cell states (`2`).",
-				"MessageParameters" -> {init, StringRiffle[$cellStates, ", "]},
-				"Input" -> init
+				"MessageTemplate" -> "Argument `1` should be a matrix of Wireworld cell states (`2`).",
+				"MessageParameters" -> {arg1, StringRiffle[$cellStates, ", "]},
+				"Input" -> arg1
 			|>]
 		];
-		If[Head[init] === List,
-			init = SparseArray[init]
+		If[ListQ[arg1],
+			state = SparseArray[arg1]
 		];
-		iWireworldDraw[init, opts]
+		System`Private`ConstructNoEntry[Wireworld, state]
 	]
 
-iWireworldDraw[init_, opts___] :=
-	Block[{$notebook},
-		WithCleanup[
-			resetVariables[];
-			recordState[init];
-		,
-			dialogInput[$notebook, FilterRules[{opts}, Options[DialogInput]]]
-		,
-			clearAllVariables[];
-			NotebookClose[$notebook]
-		]
-	]
+Wireworld /: HoldPattern[Normal[Wireworld[state_]]] := state;
+Wireworld /: Dimensions[w_Wireworld ? WireworldQ] := Dimensions[Normal[w]];
 
-resetVariables[] := (
-	$history = {};
-	$positionInTime = 0;
-	$escaped = False;
-	$buttonPressed = False;
-	$startPoint = None;
-	$endPoint = None;
-)
+SyntaxInformation[WireworldQ] = {
+	"ArgumentsPattern" -> {_}
+};
 
-setState[state_] := (
-	$state = state;
-	{$rows, $columns} = Dimensions[state];
-)
+WireworldQ[expr_Wireworld] := System`Private`NoEntryQ[expr];
+WireworldQ[_] := False;
 
-recordState[state_] :=
-	Which[
-		$positionInTime === Length[$history],
-			$positionInTime += 1;
-			AppendTo[$history, state];
-			setState[state];,
-		$positionInTime < Length[$history],
-			$history = Take[$history, $positionInTime];
-			recordState[state];,
-		True, (* should be unreachable *)
-			$history = {};
-			$positionInTime = 0;
-			recordState[state];
-	]
-
-clearAllVariables[] := ClearAll[
-	$state,
-	$rows,
-	$columns,
-	$history,
-	$positionInTime,
-	$escaped,
-	$buttonPressed,
-	$startPoint,
-	$endPoint
-]
-
-dialogReturn[arg_] := (clearAllVariables[]; DialogReturn[arg])
-
-returnState[] := dialogReturn[$state]
-
-escape[] :=
-	If[CurrentValue["MouseButtons"] === {},
-		dialogReturn[$Canceled]
-	,
-		$escaped = True;
-	]
-
-undo[] :=
-	If[Length[$history] > 1 && $positionInTime > 1,
-		$positionInTime -= 1;
-		setState[$history[[$positionInTime]]];
-	,
-		Beep[]
-	]
-
-redo[] :=
-	If[$positionInTime < Length[$history],
-		$positionInTime += 1;
-		setState[$history[[$positionInTime]]];
-	,
-		Beep[]
-	]
-
-fixMousePosition[{x_, y_}] :=
-	Module[{nx, ny},
-		nx = $rows + 1 - Ceiling[y];
-		ny = Ceiling[x];
-		If[1 <= nx <= $rows && 1 <= ny <= $columns,
-			{nx, ny}
-		,
-			None
-		]
-	]
-fixMousePosition[_] := None
-
-handleMouseDown[mode_, pos_] :=
-	Module[{npos},
-		npos = fixMousePosition[pos];
-		If[npos === None,
-			Return[]
-		];
-		Switch[mode,
-			Automatic,
-				(* background -> wire, tail -> head, head -> background, wire -> tail *)
-				recordState[ReplacePart[$state, npos -> {3, 2, 0, 1}[[Extract[$state, npos] + 1]]]],
-			_Integer,
-				recordState[ReplacePart[$state, npos -> mode]],
-			_,
-				(* unreachable *)
-				dialogReturn[$Canceled]
-		]
-	]
-
-handleMouseUp[mode_, pos_] := (
-	If[TrueQ[$escaped || $buttonPressed],
-		$escaped = False;
-		$buttonPressed = False;
-	,
-		With[{npos = DeleteCases[fixMousePosition /@ $dragPoints["Elements"], None]},
-			recordState[ReplacePart[$state, npos -> 3]]
-		]
-	];
-	$dragPoints["DropAll"];
-	$startPoint = None;
-	$endPoint = None;
-)
-
-$dragPoints := $dragPoints = CreateDataStructure["DynamicArray"];
-
-handleMouseDragged[_, {x_, y_}] :=
-	If[!TrueQ[$escaped],
-		$dragPoints["Append", $endPoint = {x, y}]
-	];
-
-onGraphicFramed[x_] :=
-	Framed[x,
-		RoundingRadius -> 5,
-		FrameMargins -> {{5, 5}, {2, 2}},
-		Alignment -> Center,
-		Background -> White,
-		FrameStyle -> Dynamic[
-			Directive[
-				If[CurrentValue["MouseOver"],
-					RGBColor[0.205997, 0.736172, 0.930205],
-					GrayLevel @ 0.7
-				],
-				AbsoluteThickness[1]
-			]
-		]
-	]
-
-Attributes[framedButton] = {HoldRest}
-framedButton[{arg1_, label_}, args___] := framedButton[Tooltip[arg1, label], args]
-framedButton[arg1_, args___] := Button[onGraphicFramed[arg1], $buttonPressed = True; args, Appearance -> None]
-
-lowerLeftButtons[] :=
-	Grid[{{
-		framedButton[{"Undo", "undo"}, undo[]],
-		framedButton[{"Redo", "redo"}, redo[]],
-		framedButton[{"Clear", "clear drawing"}, recordState[SparseArray[ConstantArray[0, Dimensions[$state]]]]]
-	}}]
-
-lowerRightButtons[] :=
-	Grid[{{
-		framedButton[{"Return", "return state"}, returnState[]],
-		framedButton[{"Cancel", "cancel"}, escape[]]
-	}}]
-
-getStatePlot[state_, opts_] :=
-	iWireworldPlot[
+stateIcon[state_] :=
+	MatrixPlot[
 		state,
-		opts,
-		Epilog -> {
-			lowerLeftButtons[],
-			lowerRightButtons[]
-		}
+		Frame -> False,
+		PlotTheme -> "Basic",
+		ColorRules \[Rule] $cellColorRules,
+		MaxPlotPoints -> 30,
+		Evaluate @ ElisionsDump`commonGraphicsOptions
 	]
 
-topAlignedRow[list_] := Grid[{list}, Alignment -> Top, Spacings -> {0, 0}]
-
-dialogInput[nb_, opts_] :=
-	DialogInput[
-		EventHandler[
-			Dynamic[iWireworldPlot[$state, {}]],
+MakeBoxes[w_Wireworld, fmt_] /; WireworldQ[w] :=
+	Module[{state, dims, icon},
+		state = Normal[w];
+		dims = Dimensions[state];
+		icon = stateIcon[state];
+		BoxForm`ArrangeSummaryBox[
+			Wireworld,
+			state,
+			icon,
 			{
-				"MouseDown" :> handleMouseDown[Automatic, MousePosition["Graphics"]],
-				"MouseDragged" :> handleMouseDragged[Automatic, MousePosition["Graphics"]],
-				"MouseUp" :> handleMouseUp[Automatic, MousePosition["Graphics"]]
-			}
-		],
-		NotebookEventActions -> {
-			"EscapeKeyDown" :> escape[],
-			"WindowClose" :> dialogReturn[$Canceled],
-			{"MenuCommand", "Undo"} :> undo[],
-			{"MenuCommand", "Redo"} :> redo[],
-			{"MenuCommand", "HandleShiftReturn"} :> returnState[]
-		},
-		WindowTitle -> "WireworldDraw",
-		WindowElements -> {"MagnificationPopUp", "StatusArea"},
-		WindowFrameElements -> {"CloseBox", "ZoomBox", "ResizeArea"},
-		Initialization :> Function[dialog, nb = dialog],
-		opts
-	]
-
-(*WireworldSimpleDraw[init_, opts___] :=
-	DynamicModule[{m, height, pos, x, y},
-		m = init;
-		height = Dimensions[init][[1]];
-		Dynamic @ EventHandler[
-			WireworldPlot[m],
-			"MouseDown" \[RuleDelayed] (
-				pos = MousePosition["Graphics"];
-				If[pos =!= None,
-					{x, y} = {height + 1 - #\[LeftDoubleBracket]2\[RightDoubleBracket], #\[LeftDoubleBracket]1\[RightDoubleBracket]} &@ Ceiling[pos];
-					(* m\[LeftDoubleBracket]x, y\[RightDoubleBracket] = Mod[m\[LeftDoubleBracket]x, y\[RightDoubleBracket] + 1, 4]; *)
-					m\[LeftDoubleBracket]x, y\[RightDoubleBracket] = {3, 2, 0, 1}[[m[[x, y]] + 1]];
-				]
-			)
+				BoxForm`SummaryItem @ {"Rows: ", dims[[1]]},
+				BoxForm`SummaryItem @ {"Columns: ", dims[[2]]}
+			},
+			{},
+			fmt
 		]
 	]*)
+
+
+Get["Wireworld`WireworldDraw`"]
 
 
 End[] (* End Wireworld`Private`*)

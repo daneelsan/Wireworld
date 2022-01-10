@@ -10,9 +10,20 @@ PacletObject[
                     "Root" -> "Kernel",
                     "Context" -> {"Wireworld`"}
                 },
-                {"Documentation"}
+                {"Documentation"},
+				{
+					"Asset",
+					"Assets" -> {
+						{"Examples", "Examples"},
+						{"wi-wire", "Examples/wi-wire.wl"},
+						{"wi-signals", "Examples/wi-signals.wl"},
+						{"wi-diode", "Examples/wi-signals.wl"},
+						{"wi-or", "Examples/wi-or.wl"}
+					}
+				}
             },
         "Description" -> "Explore the Wireworld turing-complete cellular automaton.",
         "Creator" -> "Daniel Sanchez"
     |>
 ]
+

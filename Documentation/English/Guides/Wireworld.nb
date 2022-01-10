@@ -1,0 +1,373 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13875,        365]
+NotebookOptionsPosition[      9121,        265]
+NotebookOutlinePosition[      9675,        284]
+CellTagsIndexPosition[      9632,        281]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["??", "HistoryData",
+  CellTags->"New",ExpressionUUID->"4e6545b4-d6bb-462c-9146-a0aada762bef"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"9aaa3992-3a58-43f4-b532-5af2dfd0bc24"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"ab6788b2-8605-464d-b661-d538de98bb26"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised",ExpressionUUID->"e3977bbc-724a-443a-8337-a81ec42b8b49"]
+}], "History",
+ CellID->2145780598,ExpressionUUID->"da2a7e14-a3c5-4180-b95b-4183a9d67bf8"],
+
+Cell["Created by: daniels on 01-09-2022 23:19:16", "AuthorDate",
+ CellID->899768095,ExpressionUUID->"5b7fbee2-c871-4323-bcc6-332fd67e0077"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1441626515,ExpressionUUID->"662c53ad-3849-43ed-bda5-f51047a6760c"],
+
+Cell["Guide", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->1506332151,ExpressionUUID->"85924fdc-dada-4614-bb10-82cd452b1e18"],
+
+Cell["Wireworld", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->239747374,ExpressionUUID->"c43cbf5b-d4d3-4e46-97fe-3f399b04d1bf"],
+
+Cell["Wireworld`", "Categorization",
+ CellLabel->"Context",
+ CellID->754793046,ExpressionUUID->"9709f8bb-a1ac-471a-93c5-2a13808ce610"],
+
+Cell["Wireworld/guide/Wireworld", "Categorization",
+ CellLabel->"URI",
+ CellID->620821293,ExpressionUUID->"07ceb44f-05f4-4888-9e1e-ba84f6b27843"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->1667914325,ExpressionUUID->"b1daaf86-6664-46ba-9dfe-9d0ae22bc197"],
+
+Cell["XXXX", "Keywords",
+ CellID->1532015984,ExpressionUUID->"b4508ff1-c805-4d68-9de1-9883186f2e27"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Wireworld", "GuideTitle",
+ CellID->263715558,ExpressionUUID->"3cc272b8-15ac-46a0-acda-34be80594bc5"],
+
+Cell[TextData[{
+ "Wireworld",
+ StyleBox[" is a Turing-complete cellular automaton first proposed by Brian \
+Silverman in 1987 suited to simulating logic gates and other real-world \
+computer elements.",
+  FontFamily->"Helvetica"]
+}], "GuideAbstract",
+ CellChangeTimes->{{3.850777519069322*^9, 3.85077755748042*^9}, {
+  3.850777587700685*^9, 3.850777647445011*^9}},
+ CellID->2008619545,ExpressionUUID->"a0211ff6-c0bc-4a4e-ad67-22c536b8991e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "GuideFunctionsSection",
+ CellID->425761975,ExpressionUUID->"60b6d45e-f67d-4a64-a83a-f6e4dec5f3a8"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["WireworldEvolve",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Wireworld/ref/WireworldEvolve"]], 
+  "InlineGuideFunction",ExpressionUUID->
+  "081111fc-c751-4230-a159-050b589af45d"],
+ " \[LongDash] evolve a Wireworld state"
+}], "GuideText",
+ CellChangeTimes->{{3.850777168855328*^9, 3.850777171033881*^9}, {
+  3.850777285031084*^9, 3.850777285031096*^9}, {3.850777326486117*^9, 
+  3.85077732991143*^9}},
+ CellID->366002021,ExpressionUUID->"1b980b57-f0f9-45bc-8771-b15c47b1ca4c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["WireworldPlot",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Wireworld/ref/WireworldPlot"]], "InlineGuideFunction",
+  ExpressionUUID->"6321343e-d971-47b3-96ea-7002a877416d"],
+ " \[LongDash] plot a Wireworld state"
+}], "GuideText",
+ CellChangeTimes->{{3.850777172569604*^9, 3.850777177454636*^9}, {
+  3.850777289026332*^9, 3.850777324225522*^9}},
+ CellID->1002801939,ExpressionUUID->"0c45c792-d38a-4764-b126-aee72cf97683"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["WireworldStateQ",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Wireworld/ref/WireworldStateQ"]], 
+  "InlineGuideFunction",ExpressionUUID->
+  "a52ce9ca-3386-4129-b8bd-31f6de7c6f50"],
+ " \[LongDash] test for a valid Wireworld state"
+}], "GuideText",
+ CellChangeTimes->{{3.850777215887967*^9, 3.850777219302685*^9}, {
+  3.850777294307767*^9, 3.850777313354164*^9}, {3.850777843727729*^9, 
+  3.85077784627321*^9}},
+ CellID->770606587,ExpressionUUID->"47852ff1-94b7-4474-b0ea-fdcb5a5f8e13"],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->381068117,ExpressionUUID->"1e1e3185-bfde-42e4-95af-1ae2a98d3f26"],
+
+Cell[TextData[{
+ Cell[BoxData[
+ "WireworldDraw"], "InlineGuideFunction",ExpressionUUID->
+  "c2f75fe9-484e-40ec-b6db-cb80520337ce"],
+ " \[LongDash] draw a Wireworld state"
+}], "GuideText",
+ CellChangeTimes->{{3.850777817884348*^9, 3.850777819345036*^9}, {
+  3.85077786666098*^9, 3.850777894171685*^9}},
+ CellID->964179972,ExpressionUUID->"d0d1ec2f-b05a-4619-a40f-736482ddfc6f"],
+
+Cell[TextData[{
+ Cell[BoxData[
+ "$WireworldFunctionRule"], "InlineGuideFunction",ExpressionUUID->
+  "7504adda-cb30-4bf7-8a10-57f9319d74c0"],
+ " \[LongDash] Wireworld as a general ",
+ Cell[BoxData[
+  ButtonBox["CellularAutomaton",
+   BaseStyle->"Link"]], "InlineFormula",ExpressionUUID->
+  "6ed8db22-d284-4a22-bf8b-93277dffab65"],
+ " function rule"
+}], "GuideText",
+ CellChangeTimes->{{3.850777708972972*^9, 3.8507777725924683`*^9}},
+ CellID->815607065,ExpressionUUID->"e6c3e478-7f69-4fe3-9cc8-a02bdf1970d5"],
+
+Cell[TextData[{
+ Cell[BoxData[
+ "$WireworldNumberRule"], "InlineGuideFunction",ExpressionUUID->
+  "563e0ee7-7df7-4ab7-82be-3b241dbd45ff"],
+ " \[LongDash] Wireworld as a general ",
+ Cell[BoxData[
+  ButtonBox["CellularAutomaton",
+   BaseStyle->"Link"]], "InlineFormula",ExpressionUUID->
+  "cc461054-e312-4af7-b348-4718689e9f9a"],
+ " number rule"
+}], "GuideText",
+ CellChangeTimes->{{3.850777784679394*^9, 3.85077780458619*^9}},
+ CellID->1827087358,ExpressionUUID->"b483251b-fd99-4d0b-aad4-9d0882050ac3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->640527117,ExpressionUUID->"db6c8452-093c-4b0f-be65-8372ec38f09d"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["CellularAutomaton",
+   BaseStyle->"Link"]], "InlineFormula",ExpressionUUID->
+  "32a15ac0-9bf0-4e24-950d-d53d43d8e1fd"],
+ " \[EmptyVerySmallSquare] ",
+ Cell[BoxData[
+  ButtonBox["ArrayPlot",
+   BaseStyle->"Link"]], "InlineFormula",ExpressionUUID->
+  "d875f61c-b9b4-4e96-9d09-16be90c28640"],
+ " \[EmptyVerySmallSquare] ",
+ Cell[BoxData[
+  ButtonBox["SparseArray",
+   BaseStyle->"Link"]], "InlineFormula",ExpressionUUID->
+  "fe390d83-36c0-4180-9427-d062fb4bc7b7"],
+ " \[EmptyVerySmallSquare] ",
+ Cell[BoxData[
+  ButtonBox["MatrixQ",
+   BaseStyle->"Link"]], "InlineFormula",ExpressionUUID->
+  "b84970cd-358c-48b6-8671-89a216674f89"]
+}], "InlineGuideFunctionListing",
+ CellChangeTimes->{{3.8507772262796183`*^9, 3.850777231975293*^9}, {
+  3.85077726270544*^9, 3.850777268236854*^9}},
+ CellID->3733008,ExpressionUUID->"752612cf-ba20-42aa-bf89-60b59d4b04f5"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tech Notes", "GuideTutorialsSection",
+ CellID->463639693,ExpressionUUID->"aefb8e0a-491a-4071-a5f3-e5672675fbc7"],
+
+Cell["XXXX", "GuideTutorial",
+ CellID->1321648935,ExpressionUUID->"30099955-a474-4000-b788-1558347c9705"],
+
+Cell["XXXX", "GuideTutorial",
+ CellID->1530289624,ExpressionUUID->"41971024-af6d-4302-848f-82fde6887037"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "GuideMoreAboutSection",
+ CellChangeTimes->{{3.8430423939366693`*^9, 3.843042395176153*^9}},
+ CellID->1313554096,ExpressionUUID->"b66cedec-913c-46bd-8bb4-5135a9a5f517"],
+
+Cell["XXXX", "GuideMoreAbout",
+ CellID->771800312,ExpressionUUID->"c9d035b0-9078-43a0-8e4c-f32e6d7df519"],
+
+Cell["XXXX", "GuideMoreAbout",
+ CellID->846615904,ExpressionUUID->"79a25b8a-ea3c-445b-a379-7225d6317ccc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Links", "GuideRelatedLinksSection",
+ CellID->1994337153,ExpressionUUID->"0467a5f8-3f2b-4ad3-bed4-82f6b5af94e8"],
+
+Cell[TextData[ButtonBox["https://www.quinapalus.com/wi-index.html",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.quinapalus.com/wi-index.html"], 
+   None}]], "GuideRelatedLinks",
+ CellID->993149038,ExpressionUUID->"45ef5219-f139-4c25-877f-5d35752da6dd"],
+
+Cell["https://en.wikipedia.org/wiki/Wireworld", "GuideRelatedLinks",
+ CellID->1612977182,ExpressionUUID->"04d39489-2e13-4002-8920-c47ef89ef985"],
+
+Cell[TextData[ButtonBox["https://mathworld.wolfram.com/WireWorld.html",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://mathworld.wolfram.com/WireWorld.html"], 
+   None}]], "GuideRelatedLinks",
+ CellID->1621421793,ExpressionUUID->"b5008d26-045e-4d09-bafb-72e119142c34"],
+
+Cell["\<\
+https://www.wolframscience.com/nks/notes-11-10--universality-in-2d-cellular-\
+automata/\
+\>", "GuideRelatedLinks",
+ CellID->1816078168,ExpressionUUID->"c77af4d6-f41b-43ee-b300-54a38c160e97"],
+
+Cell["http://www.heise.ws/wireworld.html", "GuideRelatedLinks",
+ CellID->640694765,ExpressionUUID->"e806c141-d898-44de-9ffd-8d5bd861ed04"]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+TaggingRules-><|
+ "Author" -> "daniels", "CreationDate" -> "01-09-2022 23:19:16"|>,
+FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (December 2, 2021)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"b82e3d9c-3695-4c6d-bcf1-03c97542a896"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 599, 14, 24, "History",ExpressionUUID->"da2a7e14-a3c5-4180-b95b-4183a9d67bf8",
+ CellID->2145780598],
+Cell[1160, 36, 139, 1, 20, "AuthorDate",ExpressionUUID->"5b7fbee2-c871-4323-bcc6-332fd67e0077",
+ CellID->899768095],
+Cell[CellGroupData[{
+Cell[1324, 41, 123, 1, 29, "CategorizationSection",ExpressionUUID->"662c53ad-3849-43ed-bda5-f51047a6760c",
+ CellID->1441626515],
+Cell[1450, 44, 134, 2, 30, "Categorization",ExpressionUUID->"85924fdc-dada-4614-bb10-82cd452b1e18",
+ CellID->1506332151],
+Cell[1587, 48, 137, 2, 30, "Categorization",ExpressionUUID->"c43cbf5b-d4d3-4e46-97fe-3f399b04d1bf",
+ CellID->239747374],
+Cell[1727, 52, 134, 2, 30, "Categorization",ExpressionUUID->"9709f8bb-a1ac-471a-93c5-2a13808ce610",
+ CellID->754793046],
+Cell[1864, 56, 145, 2, 30, "Categorization",ExpressionUUID->"07ceb44f-05f4-4888-9e1e-ba84f6b27843",
+ CellID->620821293]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2046, 63, 111, 1, 29, "KeywordsSection",ExpressionUUID->"b1daaf86-6664-46ba-9dfe-9d0ae22bc197",
+ CellID->1667914325],
+Cell[2160, 66, 100, 1, 19, "Keywords",ExpressionUUID->"b4508ff1-c805-4d68-9de1-9883186f2e27",
+ CellID->1532015984]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2297, 72, 106, 1, 77, "GuideTitle",ExpressionUUID->"3cc272b8-15ac-46a0-acda-34be80594bc5",
+ CellID->263715558],
+Cell[2406, 75, 440, 9, 40, "GuideAbstract",ExpressionUUID->"a0211ff6-c0bc-4a4e-ad67-22c536b8991e",
+ CellID->2008619545]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2883, 89, 108, 1, 70, "GuideFunctionsSection",ExpressionUUID->"60b6d45e-f67d-4a64-a83a-f6e4dec5f3a8",
+ CellID->425761975],
+Cell[2994, 92, 521, 12, 25, "GuideText",ExpressionUUID->"1b980b57-f0f9-45bc-8771-b15c47b1ca4c",
+ CellID->366002021],
+Cell[3518, 106, 465, 10, 25, "GuideText",ExpressionUUID->"0c45c792-d38a-4764-b126-aee72cf97683",
+ CellID->1002801939],
+Cell[3986, 118, 529, 12, 25, "GuideText",ExpressionUUID->"47852ff1-94b7-4474-b0ea-fdcb5a5f8e13",
+ CellID->770606587],
+Cell[CellGroupData[{
+Cell[4540, 134, 103, 1, 26, "GuideDelimiter",ExpressionUUID->"1e1e3185-bfde-42e4-95af-1ae2a98d3f26",
+ CellID->381068117],
+Cell[4646, 137, 376, 8, 23, "GuideText",ExpressionUUID->"d0d1ec2f-b05a-4619-a40f-736482ddfc6f",
+ CellID->964179972],
+Cell[5025, 147, 507, 12, 25, "GuideText",ExpressionUUID->"e6c3e478-7f69-4fe3-9cc8-a02bdf1970d5",
+ CellID->815607065],
+Cell[5535, 161, 501, 12, 25, "GuideText",ExpressionUUID->"b483251b-fd99-4d0b-aad4-9d0882050ac3",
+ CellID->1827087358]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6073, 178, 103, 1, 26, "GuideDelimiter",ExpressionUUID->"db6c8452-093c-4b0f-be65-8372ec38f09d",
+ CellID->640527117],
+Cell[6179, 181, 895, 23, 25, "InlineGuideFunctionListing",ExpressionUUID->"752612cf-ba20-42aa-bf89-60b59d4b04f5",
+ CellID->3733008]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7123, 210, 118, 1, 72, "GuideTutorialsSection",ExpressionUUID->"aefb8e0a-491a-4071-a5f3-e5672675fbc7",
+ CellID->463639693],
+Cell[7244, 213, 105, 1, 22, "GuideTutorial",ExpressionUUID->"30099955-a474-4000-b788-1558347c9705",
+ CellID->1321648935],
+Cell[7352, 216, 105, 1, 22, "GuideTutorial",ExpressionUUID->"41971024-af6d-4302-848f-82fde6887037",
+ CellID->1530289624]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7494, 222, 191, 2, 72, "GuideMoreAboutSection",ExpressionUUID->"b66cedec-913c-46bd-8bb4-5135a9a5f517",
+ CellID->1313554096],
+Cell[7688, 226, 105, 1, 22, "GuideMoreAbout",ExpressionUUID->"c9d035b0-9078-43a0-8e4c-f32e6d7df519",
+ CellID->771800312],
+Cell[7796, 229, 105, 1, 22, "GuideMoreAbout",ExpressionUUID->"79a25b8a-ea3c-445b-a379-7225d6317ccc",
+ CellID->846615904]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7938, 235, 125, 1, 72, "GuideRelatedLinksSection",ExpressionUUID->"0467a5f8-3f2b-4ad3-bed4-82f6b5af94e8",
+ CellID->1994337153],
+Cell[8066, 238, 268, 5, 22, "GuideRelatedLinks",ExpressionUUID->"45ef5219-f139-4c25-877f-5d35752da6dd",
+ CellID->993149038],
+Cell[8337, 245, 144, 1, 22, "GuideRelatedLinks",ExpressionUUID->"04d39489-2e13-4002-8920-c47ef89ef985",
+ CellID->1612977182],
+Cell[8484, 248, 277, 5, 22, "GuideRelatedLinks",ExpressionUUID->"b5008d26-045e-4d09-bafb-72e119142c34",
+ CellID->1621421793],
+Cell[8764, 255, 200, 4, 38, "GuideRelatedLinks",ExpressionUUID->"c77af4d6-f41b-43ee-b300-54a38c160e97",
+ CellID->1816078168],
+Cell[8967, 261, 138, 1, 22, "GuideRelatedLinks",ExpressionUUID->"e806c141-d898-44de-9ffd-8d5bd861ed04",
+ CellID->640694765]
+}, Open  ]]
+}
+]
+*)
+
