@@ -11,7 +11,7 @@ SyntaxInformation[Wireworld`WireworldDraw] = {
 	"ArgumentsPattern" -> {_, OptionsPattern[]}
 };
 
-expr : Wireworld`WireworldDraw[iargs___] /; CheckArguments[expr, {0, 1}] :=
+expr : Wireworld`WireworldDraw[___] /; CheckArguments[expr, {0, 1}] :=
 	Module[{args, opts, init},
 		{args, opts} = ArgumentsOptions[expr, {0, 1}];
 		init = First[args];
@@ -62,26 +62,29 @@ recordState[state_] :=
 		$positionInTime === Length[$history],
 			$positionInTime += 1;
 			AppendTo[$history, state];
-			setState[state];,
+			setState[state];
+		,
 		$positionInTime < Length[$history],
 			$history = Take[$history, $positionInTime];
-			recordState[state];,
+			recordState[state];
+		,
 		True, (* should be unreachable *)
 			$history = {};
 			$positionInTime = 0;
 			recordState[state];
 	]
 
-clearAllVariables[] := ClearAll[
-	$state,
-	$rows,
-	$columns,
-	$history,
-	$positionInTime,
-	$escaped,
-	$buttonPressed,
-	$dragPoints
-]
+clearAllVariables[] :=
+	ClearAll[
+		$state,
+		$rows,
+		$columns,
+		$history,
+		$positionInTime,
+		$escaped,
+		(*$buttonPressed,*)
+		$dragPoints
+	]
 
 dialogReturn[arg_] := (clearAllVariables[]; DialogReturn[arg])
 
@@ -122,7 +125,7 @@ fixMousePosition[{x_, y_}] :=
 	]
 fixMousePosition[_] := None
 
-handleMouseDown[mode_, pos_] :=
+handleMouseClicked[mode_, pos_] :=
 	Module[{npos},
 		npos = fixMousePosition[pos];
 		If[npos === None,
@@ -131,12 +134,14 @@ handleMouseDown[mode_, pos_] :=
 		Switch[mode,
 			Automatic,
 				(* background -> wire, tail -> head, head -> background, wire -> tail *)
-				recordState[ReplacePart[$state, npos -> {3, 2, 0, 1}[[Extract[$state, npos] + 1]]]],
+				recordState[ReplacePart[$state, npos -> {3, 2, 0, 1}[[Extract[$state, npos] + 1]]]]
+			,
 			_Integer,
-				recordState[ReplacePart[$state, npos -> mode]],
+				recordState[ReplacePart[$state, npos -> mode]]
+			,
 			_,
 				(* unreachable *)
-				dialogReturn[$Canceled]
+				Beep[]
 		]
 	]
 
@@ -145,7 +150,16 @@ handleMouseUp[mode_, pos_] := (
 		$escaped = False;
 		$buttonPressed = False;
 	,
-		recordState[ReplacePart[$state, Keys[$dragPoints] -> 3]]
+		Switch[mode,
+			Automatic,
+				recordState[ReplacePart[$state, Keys[$dragPoints] -> 3]]
+			,
+			_Integer,
+				recordState[ReplacePart[$state, Keys[$dragPoints] -> mode]]
+			,
+			_,
+				Beep[]
+		]
 	];
 	$dragPoints = <||>;
 )
@@ -181,45 +195,57 @@ onGraphicFramed[x_] :=
 		]
 	]
 
-Attributes[framedButton] = {HoldRest}
-framedButton[{arg1_, label_}, args___] := framedButton[Tooltip[arg1, label], args]
-framedButton[arg1_, args___] := Button[onGraphicFramed[arg1], $buttonPressed = True; args, Appearance -> None]
+SetAttributes[framedButton, {HoldRest}]
+framedButton[{arg1_, label_}, args___] :=
+	framedButton[Tooltip[arg1, label], args]
+framedButton[arg1_, args___] :=
+	Button[onGraphicFramed[arg1], ($buttonPressed = True; args), Appearance -> None]
 
 lowerLeftButtons[] :=
-	Grid[{{
-		framedButton[{"Undo", "undo"}, undo[]],
-		framedButton[{"Redo", "redo"}, redo[]],
-		framedButton[{"Clear", "clear drawing"}, recordState[SparseArray[ConstantArray[0, Dimensions[$state]]]]]
-	}}]
+	Grid[
+		{{
+			framedButton[{"Undo", "undo"}, undo[]],
+			framedButton[{"Redo", "redo"}, redo[]],
+			framedButton[{"Clear", "clear drawing"}, recordState[SparseArray[ConstantArray[0, Dimensions[$state]]]]]
+		}},
+		ImageSize -> {15, 15}
+	]
 
 lowerRightButtons[] :=
-	Grid[{{
-		framedButton[{"Return", "return state"}, returnState[]],
-		framedButton[{"Cancel", "cancel"}, escape[]]
-	}}]
+	Grid[
+		{{
+			framedButton[{"Return", "return state"}, returnState[]],
+			framedButton[{"Cancel", "cancel"}, escape[]]
+		}},
+		ImageSize -> {15, 15}
+	]
 
 getStatePlot[state_, opts_] :=
-	iWireworldPlot[
+	Wireworld`Private`iWireworldPlot[
 		state,
-		opts,
 		Epilog -> {
 			lowerLeftButtons[],
 			lowerRightButtons[]
-		}
+		},
+		opts
 	]
 
 topAlignedRow[list_] := Grid[{list}, Alignment -> Top, Spacings -> {0, 0}]
 
+mainPanel[] :=
+	EventHandler[
+		Dynamic[Wireworld`Private`iWireworldPlot[$state, {}]],
+		(*Dynamic[getStatePlot[$state, PlotRangePadding -> Scaled[0.075]]],*)
+		{
+			"MouseClicked" :> handleMouseClicked[Automatic, MousePosition["Graphics"]],
+			"MouseDragged" :> handleMouseDragged[Automatic, MousePosition["Graphics"]],
+			"MouseUp" :> handleMouseUp[Automatic, MousePosition["Graphics"]]
+		}
+	]
+
 dialogInput[nb_, opts_] :=
 	DialogInput[
-		EventHandler[
-			Dynamic[Wireworld`Private`iWireworldPlot[$state, {}]],
-			{
-				"MouseDown" :> handleMouseDown[Automatic, MousePosition["Graphics"]],
-				"MouseDragged" :> handleMouseDragged[Automatic, MousePosition["Graphics"]],
-				"MouseUp" :> handleMouseUp[Automatic, MousePosition["Graphics"]]
-			}
-		],
+		mainPanel[],
 		NotebookEventActions -> {
 			"EscapeKeyDown" :> escape[],
 			"WindowClose" :> dialogReturn[$Canceled],
