@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14358,        375]
-NotebookOptionsPosition[      9722,        277]
-NotebookOutlinePosition[     10278,        296]
-CellTagsIndexPosition[     10235,        293]
+NotebookDataLength[     14634,        381]
+NotebookOptionsPosition[     10060,        286]
+NotebookOutlinePosition[     10616,        305]
+CellTagsIndexPosition[     10573,        302]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -255,8 +255,12 @@ Cell[TextData[ButtonBox["https://www.quinapalus.com/wi-index.html",
    None}]], "GuideRelatedLinks",
  CellID->993149038,ExpressionUUID->"45ef5219-f139-4c25-877f-5d35752da6dd"],
 
-Cell["https://en.wikipedia.org/wiki/Wireworld", "GuideRelatedLinks",
- CellID->1612977182,ExpressionUUID->"04d39489-2e13-4002-8920-c47ef89ef985"],
+Cell[TextData[ButtonBox["https://en.wikipedia.org/wiki/Wireworld",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://en.wikipedia.org/wiki/Wireworld"], 
+   None}]], "GuideRelatedLinks",ExpressionUUID->"a44b9a5e-25be-4711-83b5-\
+a7d345591dff"],
 
 Cell[TextData[ButtonBox["https://mathworld.wolfram.com/WireWorld.html",
  BaseStyle->"Hyperlink",
@@ -265,14 +269,19 @@ Cell[TextData[ButtonBox["https://mathworld.wolfram.com/WireWorld.html",
    None}]], "GuideRelatedLinks",
  CellID->1621421793,ExpressionUUID->"b5008d26-045e-4d09-bafb-72e119142c34"],
 
-Cell["\<\
-https://www.wolframscience.com/nks/notes-11-10--universality-in-2d-cellular-\
-automata/\
-\>", "GuideRelatedLinks",
- CellID->1816078168,ExpressionUUID->"c77af4d6-f41b-43ee-b300-54a38c160e97"],
+Cell[TextData[ButtonBox["https://www.wolframscience.com/nks/notes-11-10--\
+universality-in-2d-cellular-automata",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.wolframscience.com/nks/notes-11-10--universality-in-2d-\
+cellular-automata"], None}]], "GuideRelatedLinks",ExpressionUUID->"8f6129eb-\
+6da3-43bd-ac05-5d709dbe2d21"],
 
-Cell["http://www.heise.ws/wireworld.html", "GuideRelatedLinks",
- CellID->640694765,ExpressionUUID->"e806c141-d898-44de-9ffd-8d5bd861ed04"]
+Cell[TextData[ButtonBox["http://www.heise.ws/wireworld.html",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["http://www.heise.ws/wireworld.html"], None}]], "GuideRelatedLinks",Exp\
+ressionUUID->"7d5cab72-d8fb-4445-b338-ec9bce4576c7"]
 }, Open  ]]
 },
 WindowSize->{700, 770},
@@ -368,14 +377,11 @@ Cell[8539, 247, 125, 1, 72, "GuideRelatedLinksSection",ExpressionUUID->"0467a5f8
  CellID->1994337153],
 Cell[8667, 250, 268, 5, 22, "GuideRelatedLinks",ExpressionUUID->"45ef5219-f139-4c25-877f-5d35752da6dd",
  CellID->993149038],
-Cell[8938, 257, 144, 1, 22, "GuideRelatedLinks",ExpressionUUID->"04d39489-2e13-4002-8920-c47ef89ef985",
- CellID->1612977182],
-Cell[9085, 260, 277, 5, 22, "GuideRelatedLinks",ExpressionUUID->"b5008d26-045e-4d09-bafb-72e119142c34",
+Cell[8938, 257, 248, 5, 22, "GuideRelatedLinks",ExpressionUUID->"a44b9a5e-25be-4711-83b5-a7d345591dff"],
+Cell[9189, 264, 277, 5, 22, "GuideRelatedLinks",ExpressionUUID->"b5008d26-045e-4d09-bafb-72e119142c34",
  CellID->1621421793],
-Cell[9365, 267, 200, 4, 38, "GuideRelatedLinks",ExpressionUUID->"c77af4d6-f41b-43ee-b300-54a38c160e97",
- CellID->1816078168],
-Cell[9568, 273, 138, 1, 22, "GuideRelatedLinks",ExpressionUUID->"e806c141-d898-44de-9ffd-8d5bd861ed04",
- CellID->640694765]
+Cell[9469, 271, 338, 6, 38, "GuideRelatedLinks",ExpressionUUID->"8f6129eb-6da3-43bd-ac05-5d709dbe2d21"],
+Cell[9810, 279, 234, 4, 22, "GuideRelatedLinks",ExpressionUUID->"7d5cab72-d8fb-4445-b338-ec9bce4576c7"]
 }, Open  ]]
 }
 ]
