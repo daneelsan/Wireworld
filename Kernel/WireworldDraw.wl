@@ -57,10 +57,15 @@ setState[state_] := (
 	{$rows, $columns} = Dimensions[state];
 )
 
+$maxHistoryLength = 100;
+
 recordState[state_] :=
 	Which[
 		$positionInTime === Length[$history],
 			$positionInTime += 1;
+			If[Length[$history] > $maxHistoryLength,
+				$history = Drop[$history, 1];
+			];
 			AppendTo[$history, state];
 			setState[state];
 		,
@@ -150,6 +155,9 @@ handleMouseUp[mode_, pos_] := (
 		$escaped = False;
 		$buttonPressed = False;
 	,
+		If[Length[$dragPoints] === 0,
+			Return[]
+		];
 		Switch[mode,
 			Automatic,
 				recordState[ReplacePart[$state, Keys[$dragPoints] -> 3]]
@@ -168,6 +176,7 @@ handleMouseDragged[_, pos_] :=
 	If[!TrueQ[$escaped],
 		With[{npos = fixMousePosition[pos]},
 			If[npos === None,
+				$dragPoints = <||>;
 				Return[]
 			];
 			If[KeyExistsQ[$dragPoints, npos],
@@ -276,7 +285,6 @@ dialogInput[nb_, opts_] :=
 			)
 		]
 	]*)
-
 
 End[]
 

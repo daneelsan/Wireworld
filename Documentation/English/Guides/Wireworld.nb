@@ -119,6 +119,19 @@ Cell[TextData[{
 
 Cell[TextData[{
  Cell[BoxData[
+  ButtonBox["WireworldDraw",
+   BaseStyle->"Link",
+   ButtonData->"paclet:Wireworld/ref/WireworldDraw"]], "InlineGuideFunction",
+  ExpressionUUID->"ba611c4c-30b0-4f1e-9ebd-5abe93e4ef88"],
+ " \[LongDash] draw a Wireworld state"
+}], "GuideText",
+ CellChangeTimes->{{3.850777817884348*^9, 3.850777819345036*^9}, {
+  3.85077786666098*^9, 3.850777894171685*^9}, {3.8509504454796352`*^9, 
+  3.850950445479659*^9}},
+ CellID->964179972,ExpressionUUID->"d0d1ec2f-b05a-4619-a40f-736482ddfc6f"],
+
+Cell[TextData[{
+ Cell[BoxData[
   ButtonBox["WireworldStateQ",
    BaseStyle->"Link",
    ButtonData->"paclet:Wireworld/ref/WireworldStateQ"]], 
@@ -135,19 +148,6 @@ Cell[CellGroupData[{
 
 Cell["\t", "GuideDelimiter",
  CellID->381068117,ExpressionUUID->"1e1e3185-bfde-42e4-95af-1ae2a98d3f26"],
-
-Cell[TextData[{
- Cell[BoxData[
-  ButtonBox["WireworldDraw",
-   BaseStyle->"Link",
-   ButtonData->"paclet:Wireworld/ref/WireworldDraw"]], "InlineGuideFunction",
-  ExpressionUUID->"c2f75fe9-484e-40ec-b6db-cb80520337ce"],
- " \[LongDash] draw a Wireworld state"
-}], "GuideText",
- CellChangeTimes->{{3.850777817884348*^9, 3.850777819345036*^9}, {
-  3.85077786666098*^9, 3.850777894171685*^9}, {3.8509504454796352`*^9, 
-  3.850950445479659*^9}},
- CellID->964179972,ExpressionUUID->"d0d1ec2f-b05a-4619-a40f-736482ddfc6f"],
 
 Cell[TextData[{
  Cell[BoxData[
@@ -330,13 +330,13 @@ Cell[3092, 93, 521, 12, 25, "GuideText",ExpressionUUID->"1b980b57-f0f9-45bc-8771
  CellID->366002021],
 Cell[3616, 107, 465, 10, 25, "GuideText",ExpressionUUID->"0c45c792-d38a-4764-b126-aee72cf97683",
  CellID->1002801939],
-Cell[4084, 119, 529, 12, 25, "GuideText",ExpressionUUID->"47852ff1-94b7-4474-b0ea-fdcb5a5f8e13",
+Cell[4084, 119, 514, 11, 25, "GuideText",ExpressionUUID->"d0d1ec2f-b05a-4619-a40f-736482ddfc6f",
+ CellID->964179972],
+Cell[4601, 132, 529, 12, 25, "GuideText",ExpressionUUID->"47852ff1-94b7-4474-b0ea-fdcb5a5f8e13",
  CellID->770606587],
 Cell[CellGroupData[{
-Cell[4638, 135, 103, 1, 26, "GuideDelimiter",ExpressionUUID->"1e1e3185-bfde-42e4-95af-1ae2a98d3f26",
+Cell[5155, 148, 103, 1, 26, "GuideDelimiter",ExpressionUUID->"1e1e3185-bfde-42e4-95af-1ae2a98d3f26",
  CellID->381068117],
-Cell[4744, 138, 514, 11, 25, "GuideText",ExpressionUUID->"d0d1ec2f-b05a-4619-a40f-736482ddfc6f",
- CellID->964179972],
 Cell[5261, 151, 655, 16, 25, "GuideText",ExpressionUUID->"e6c3e478-7f69-4fe3-9cc8-a02bdf1970d5",
  CellID->815607065],
 Cell[5919, 169, 647, 16, 25, "GuideText",ExpressionUUID->"b483251b-fd99-4d0b-aad4-9d0882050ac3",
