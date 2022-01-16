@@ -23,10 +23,17 @@ EXTERN_C DLLEXPORT int wireworld_step(WolframLibraryData libData, mint argc, MAr
 	}
 
 	MTensor state_tensor_in = MArgument_getMTensor(args[0]);
+	if (libData->MTensor_getRank(state_tensor_in) != 2) {
+		return LIBRARY_RANK_ERROR;
+	}
+	if (libData->MTensor_getType(state_tensor_in) != MType_Integer) {
+		return LIBRARY_TYPE_ERROR;
+	}
+
 	const mint *dims = libData->MTensor_getDimensions(state_tensor_in);
 
-	MTensor state_tensor_out = NULL;
-	error = libData->MTensor_clone(state_tensor_in, &state_tensor_out);
+	MTensor state_tensor_out;
+	error = libData->MTensor_new(MType_Integer, 2, dims, &state_tensor_out);
 	if (error) {
 		return error;
 	}

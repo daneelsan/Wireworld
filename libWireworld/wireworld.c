@@ -113,7 +113,9 @@ static void wireworld(int64_t *state_in, int64_t *state_out, int rows, int cols)
 				} break;
 
 				/* Empty cells do not evolve. */
-				case EMPTY: break;
+				case EMPTY: {
+					*cell_out = EMPTY;
+				} break;
 
 				/* Unknown cells become empty cells. */
 				default: {
