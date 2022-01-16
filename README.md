@@ -122,3 +122,13 @@ build/Wireworld-1.0.0.paclet
 ```Mathematica
 PacletInstall["./build/Wireworld-1.0.0.paclet"]
 ```
+
+3. (Optional) Build the `LibraryLink` library by running the `build_library.wls` script to use the ```Wireworld`Library`WireworldStep``` function:
+```bash
+./scripts/build_library.wls
+```
+   The library will be stored in `LibraryResources/$SystemID/`:
+```bash
+$ ls LibraryResources/MacOSX-ARM64
+libWireworld.dylib
+```
