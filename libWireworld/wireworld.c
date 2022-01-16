@@ -92,8 +92,8 @@ static void wireworld(int64_t *state_in, int64_t *state_out, int rows, int cols)
 					*cell_out = WIRE;
 				} break;
 				/*
-					4. Wire cells with 1 or 2 live neighbors (electron heads or
-					photon heads) turn into electron heads.
+					4. Vacuum cells with 2 or 3 live neighbors (electron heads or
+					photon heads) turn into photon heads.
 				*/
 				case VACUUM: {
 					int count = count_live_neighbors(state_in, rows, cols, row, col);
