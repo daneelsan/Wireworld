@@ -101,6 +101,11 @@ In[]:= ListAnimate[WireworldPlot /@ WireworldEvolve[state, 20]]
 ```
 ![An OR gate](./screenshots/example-OR.gif)
 
+## Wolfram Paclet Repository
+
+A copy of the lastest released paclet is in the Wolfram Paclet Repository (WPR):
+https://resources.wolframcloud.com/PacletRepository/resources/DanielS/Wireworld/
+
 ## Build
 
 1. Build the `Wireworld` paclet using the `build_paclet.wls` wolframscript:

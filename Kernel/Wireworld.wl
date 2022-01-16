@@ -246,7 +246,20 @@ MakeBoxes[w_Wireworld, fmt_] /; WireworldQ[w] :=
 	]*)
 
 
-Get["Wireworld`WireworldDraw`"]
+Needs["Wireworld`WireworldDraw`"]
+
+
+Needs["Wireworld`libWireworld`"]
+Wireworld`Library`WireworldStep :=
+	Module[{funs},
+		funs = InitializeWireworldLibrary[];
+		If[FailureQ[funs],
+			Return[funs]
+		];
+
+		ClearAll[Wireworld`Library`WireworldStep];
+		Wireworld`Library`WireworldStep = funs["wireworld_step"]
+	]
 
 
 End[] (* End Wireworld`Private`*)

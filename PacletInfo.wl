@@ -1,7 +1,7 @@
 PacletObject[
 		<|
 				"Name" -> "Wireworld",
-				"Version" -> "1.0.0",
+				"Version" -> "1.0.1",
 				"WolframVersion" -> "13.+",
 				"Extensions" ->
 						{
@@ -19,6 +19,7 @@ PacletObject[
 										}
 								},
 								{"Documentation"},
+								{"LibraryLink"},
 								{
 									"Asset",
 									"Assets" -> {

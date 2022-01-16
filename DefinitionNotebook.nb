@@ -5913,29 +5913,30 @@ Fu6DuJJG2H9mK2QZ3X1Y8rjKVdsLU11Qbnfn/Mae/TiO1RZHs2bny+6Vwq5Sfi8TnHKi+1+K4NOh"]\
     "DefaultContentMethod" -> "Tagged"}, "ToolsOpen" -> True, "StatusMessage" -> 
   "", "SubmissionReviewData" -> {"Review" -> False}, "AutoUpdate" -> True, 
   "PacletBuildData" -> {"FileHashes" -> ByteArray[CompressedData["
-1:eJwBfwOA/CFib1JiAQAAAHIDAAA4Qzp4nJ2Ve0hTURzHQzQSe5m1NAR1th7G
-maX2xzJbgq6pMx9HS3oY192z7erdvXIf25SBRFb+UaFJUpS9rL+CMAqkIHpJ
-UUFRqBEFlWI2oQfYyx6jK8bOvM7r3F+D3+7n8+X8zjm/k50A4Ooc1izaESMQ
-AsUyqbmMlaZ4W+oWkSIRn7qd4pCT5WhSy1RlhwE4G7IiZ0am0y2a6MeenmVS
-pYzgrEgwbd638HBL91MbgOrAxjyGRK7UPWu1Zgvvp+LDt7IMwp67I02JxuO7
-6wBcoeThkXXsL35PuoJrVvjL9t5TkRUArgrGpbUiRsEWXfh27wXXkA7ArMC2
-UmRBHGLMqJiwSr2DdfYqlvbrYQ5HOGV9fPOl81ZEiWsuTgF5xQ8uLY6SOqsP
-LSXXwdIOJMvxPnt1tu6bIQ3nqNU3Fqg6/xpDXk0xzQqylJWjB8QnF73zcYqR
-nmV80f/LEfJqoPQ9KpHlnNQJKy61nd+Gc/7c43NUvQlLADTMKGe5L8ggMuYx
-olSk5c2LsDTVH1qy0Y3jKvsXNr3YfXI1gDkhxm0V7VWICxDWWt1YANtsSTis
-JTNFtytSJe1USuAwiAjObBs/y+vHbxhSOMcZ5PdRd1/2upn4lG5s/OsBIuz5
-YOaUs2SSj6cUdI7uI2WeH6vqAQTB6CwUokle66QVlEeGHp3+XeKOAzAjGCU1
-9luIBIIkBELZnH+rebBhnV0639pgzL6plabg7KHnwW+7WjODdDo5SkBamjXX
-KDip8iJ1RX95AYArp3DWIpr+P6LTp9nw2/EHOmJHjQ0ArplW5luxTkFYvqlR
-M5jWtmjqLZ8snGZYX89SeY9+fWcCMD2wskwUWI4iJkw0wlwjXVfZhdR0fUhu
-HElyYbc+X6+pf61LBFCV6yLstbR0wwUnC0iKld7MiQfGdOLgQPP+Uz+LMI4r
-i324kxqnZXBE2LGd9z3kHAzjSrQ/zHIy0ntlxzD38HIyJnFF5U/ylJWRuiDD
-k7pq3n2MvVaLcVyJ8cedUvNkrHrtlpGBKJLye2t8FbziiqJSYJVmuwz2XL35
-vlv8XIVhXFlagDgG0bIHdSKv7/PGDlff4fx2y1eJkfMyNq6979OXDaOVmMWV
-edLhoJGQx1hYGdURayg5U/1+A6ZwJXqcKiQYyoJ4QXmWrE/obb/37Jz7H7xO
-kUYxDL4g
+1:eJwBewOE/CFib1JiAQAAAG4DAAA4Qzp4nJ2VW0gUURjHbUtLVGi1TLMSL92s
+s+s10BLb8JJ497glWtns7tl1cnZmm4tjpYhQRg/Z/SEsofQhKDK7ED0Y2r2e
+oiIofEgtVyUvpEVXacTwrNM6rj4tfDu/35/zzXe+0QUDuD6ZMQpWRPMETzK0
+NoW2UCRXqk0TSBPitDtJFokMS5k0tEGnAtADMgJrRJltwde+fGut2i1VCgjW
+gvhMceOOsz33j5cBGOrcmE6bUIW2JFJjNHMOKm5BNkMj7NlWa60NKw5RA7hG
+ycMhy/hfXEmMgovNXvc6UbVKAHCdKy6NBdEKNnXWh5qmCns8gInObfnIjFhE
+G1EuYZF6Bw9YDQzl0MNklhBlfXxqP/w+sl0dhVNOFHnrNdErdgGYNLeUlHKG
+KkeynHlBmz5uNaQdwjk3lxcVu2/RWeZ8mlyK4WUpQQ8TdJ9KGkpwClRfCfIt
+vuQ959NA6XmUJ8s5Y7Odvqr7oMI5Bx981ZzyGnYDMHVWOeGTQakCbRwn8gVK
+3rwNzW5+m7/rrTguqmPx74VClQeAyXOMyxasBsQ6CavbG6WPf/nYYe4qa8I6
+cp7ZywGMcB4GEcEaSydmOW7ihiGFOV459Ofzyzj79tn4lG7sQHV9a9e7pTum
+3SX/+ThSQRebuz/h1c8qPYDAFZ2ZRJSJ04iUgrLO/qLhV15lIICxrijJ8d8s
+xBMmgieUzbt6xWPphaORAGpcMU9urWgF5+ZnntVF4fUFLjpFluSRhmKMZQpO
+Up8TWtilzwBw7TROG6Kofys6ZoYX3raitjHgx/ZqADfMKJs8cbyC0O7ZcGO+
+T8uS6V/5/8IZlvW9RP+x06OdmQDGOFcWCDzDksSUjUYYy6TrKruQq+/2hh0e
+CanA7jcjKt+BpgwtgP4pFYTVRkk3nBcZYCIZ6Zs5dWAyzx/tPnnkwvccjOPK
+kklcJCdoGeyuOlf8pM+0CMO4onaEGVZGjrUU9bPPr4dhElf8HUmOtNBSF2R4
+yN2yzoGA2zaM44qfIy5KzZOxoZFpI91eJhKzuIJPXJiTDyzSbpfBfbdaex4J
+QwYM48qyDMTSiJJ9UKfySW/HAvr3tbOYxxU/OS9jAy++HRxO+LEHs7jiIw0H
+hfh02szIqAiqrTEpf3kwpnBFPUFlETRpRhyvvEu25g3WNF++E/cXJTqMSlmk
+o4w=
       "]], "LastBuiltArchive" -> 
-    "/Users/dans/projects/DanielS/Wireworld/build/DanielS__Wireworld-1.0"}},
+    "/Users/dans/projects/DanielS/Wireworld/build/DanielS__Wireworld-1.0.1"}},\
+
 CreateCellID->True,
 FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (December 2, 2021)",
 StyleDefinitions->Notebook[{
