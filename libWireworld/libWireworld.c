@@ -41,32 +41,8 @@ EXTERN_C DLLEXPORT int wireworld_step(WolframLibraryData libData, mint argc, MAr
 	mint *state_in = libData->MTensor_getIntegerData(state_tensor_in);
 	mint *state_out = libData->MTensor_getIntegerData(state_tensor_out);
 
-	wireworld(state_in, state_out, dims[0], dims[1]);
+	wireworld_step_impl(state_in, state_out, dims[0], dims[1]);
 
 	MArgument_setMTensor(res, state_tensor_out);
 	return error;
 }
-
-/*
-EXTERN_C DLLEXPORT int wireworld_run(WolframLibraryData libData, mint argc, MArgument *args, MArgument res)
-{
-	mint error = LIBRARY_NO_ERROR;
-
-	if (argc != 2) {
-		return LIBRARY_FUNCTION_ERROR;
-	}
-
-	MTensor state_tensor = MArgument_getMTensor(args[0]);
-	mint steps = MArgument_getInteger(args[1]);
-
-	mint *state = libData->MTensor_getIntegerData(state_tensor);
-	mint *dims = libData->MTensor_getDimensions(state_tensor);
-
-	for (int i = 0; i < steps; i += 1) {
-		wireworld_step(state, dims[0], dims[1]);
-	}
-
-	MArgument_setMTensor(res, state_tensor);
-	return error;
-}
-*/

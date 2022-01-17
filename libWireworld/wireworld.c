@@ -64,7 +64,7 @@ static inline int count_live_neighbors(int64_t *state, int rows, int cols, int r
 	return count;
 }
 
-static void wireworld(int64_t *state_in, int64_t *state_out, int rows, int cols)
+static void wireworld_step_impl(int64_t *state_in, int64_t *state_out, int rows, int cols)
 {
 	int64_t *cell_in = state_in;
 	int64_t *cell_out = state_out;
