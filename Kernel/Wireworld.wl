@@ -250,15 +250,27 @@ Needs["Wireworld`WireworldDraw`"]
 
 
 Needs["Wireworld`libWireworld`"]
-Wireworld`Library`WireworldStep :=
+
+Wireworld`Library`WireworldStepImmutable :=
 	Module[{funs},
 		funs = InitializeWireworldLibrary[];
 		If[FailureQ[funs],
 			Return[funs]
 		];
 
-		ClearAll[Wireworld`Library`WireworldStep];
-		Wireworld`Library`WireworldStep = funs["wireworld_step"]
+		ClearAll[Wireworld`Library`WireworldStepImmutable];
+		Wireworld`Library`WireworldStepImmutable = funs["wireworld_step_immutable"]
+	]
+
+Wireworld`Library`WireworldStepMutable :=
+	Module[{funs},
+		funs = InitializeWireworldLibrary[];
+		If[FailureQ[funs],
+			Return[funs]
+		];
+
+		ClearAll[Wireworld`Library`WireworldStepMutable];
+		Wireworld`Library`WireworldStepMutable = funs["wireworld_step_mutable"]
 	]
 
 

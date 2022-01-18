@@ -8,7 +8,7 @@ Begin["`Private`"]
 
 
 InitializeWireworldLibrary[] :=
-	Module[{libWireworld, lfWireworldStep},
+	Module[{libWireworld, wireworldStepImm, wireworldStepMut},
 		libWireworld = FindLibrary["libWireworld"];
 		If[!FileExistsQ[libWireworld],
 			Return @ Failure["WireworldFailure", <|
@@ -17,23 +17,36 @@ InitializeWireworldLibrary[] :=
 			|>]
 		];
 
-		lfWireworldStep = LibraryFunctionLoad[
+		wireworldStepImm = LibraryFunctionLoad[
 			libWireworld,
-			"wireworld_step",
-			{{Integer, 2, "Constant"}},
-			{Integer, 2}
+			"wireworld_step_immutable",
+			{{LibraryDataType[NumericArray, "UnsignedInteger16", 2], "Constant"}},
+			LibraryDataType[NumericArray, "UnsignedInteger16", 2]
 		];
-		If[Head[lfWireworldStep] =!= LibraryFunction,
+		If[Head[wireworldStepImm] =!= LibraryFunction,
 			Return @ Failure["WireworldFailure", <|
 				"MessageTemplate" -> "Unable to load the `1` library function.",
-				"MessageParameters" -> {"wireworld_step"}
+				"MessageParameters" -> {"wireworld_step_immutable"}
 			|>]
 		];
 
-		$libraryInitialized = True;
+		wireworldStepMut = LibraryFunctionLoad[
+			libWireworld,
+			"wireworld_step_mutable",
+			{{LibraryDataType[NumericArray, "UnsignedInteger16", 2], "Shared"}},
+			"Void"
+		];
+		If[Head[wireworldStepMut] =!= LibraryFunction,
+			Return @ Failure["WireworldFailure", <|
+				"MessageTemplate" -> "Unable to load the `1` library function.",
+				"MessageParameters" -> {"wireworld_step_mutable"}
+			|>]
+		];
+
 		ClearAll[InitializeWireworldLibrary];
 		InitializeWireworldLibrary[] = <|
-			"wireworld_step" -> lfWireworldStep
+			"wireworld_step_immutable" -> wireworldStepImm,
+			"wireworld_step_mutable" -> wireworldStepMut
 		|>
 	]
 
