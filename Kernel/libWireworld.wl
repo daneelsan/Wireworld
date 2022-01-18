@@ -20,8 +20,8 @@ InitializeWireworldLibrary[] :=
 		wireworldStepImm = LibraryFunctionLoad[
 			libWireworld,
 			"wireworld_step_immutable",
-			{{LibraryDataType[NumericArray, "UnsignedInteger16", 2], "Constant"}},
-			LibraryDataType[NumericArray, "UnsignedInteger16", 2]
+			{{Integer, 2, "Constant"}},
+			{Integer, 2}
 		];
 		If[Head[wireworldStepImm] =!= LibraryFunction,
 			Return @ Failure["WireworldFailure", <|
@@ -33,7 +33,7 @@ InitializeWireworldLibrary[] :=
 		wireworldStepMut = LibraryFunctionLoad[
 			libWireworld,
 			"wireworld_step_mutable",
-			{{LibraryDataType[NumericArray, "UnsignedInteger16", 2], "Shared"}},
+			{{Integer, 2, "Shared"}, Integer},
 			"Void"
 		];
 		If[Head[wireworldStepMut] =!= LibraryFunction,

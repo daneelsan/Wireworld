@@ -1,4 +1,4 @@
-#include <stdint.h>
+#include "WolframLibrary.h"
 
 enum WIREWORLD_CELL {
 	EMPTY           = 0,
@@ -29,7 +29,7 @@ static inline int cyclic_pos(int pos, int size)
 	return (pos + size) % size;
 }
 
-static inline int count_live_neighbors(uint16_t *state, int rows, int cols, int row, int col)
+static inline int count_live_neighbors(mint *state, int rows, int cols, int row, int col)
 {
 	int count = 0;
 	int pad;
@@ -64,7 +64,7 @@ static inline int count_live_neighbors(uint16_t *state, int rows, int cols, int 
 	return count;
 }
 
-static inline uint8_t evolve_cell(uint16_t* state, int rows, int cols, int row, int col, uint8_t cell_in)
+static inline uint8_t evolve_cell(mint* state, int rows, int cols, int row, int col, uint8_t cell_in)
 {
 	uint8_t cell_out;
 	switch (cell_in) {
@@ -122,10 +122,10 @@ static inline uint8_t evolve_cell(uint16_t* state, int rows, int cols, int row, 
 	return cell_out;
 }
 
-static void wireworld_step_immutable_impl(uint16_t *state_in, uint16_t *state_out, int rows, int cols)
+static void wireworld_step_immutable_impl(mint *state_in, mint *state_out, int rows, int cols)
 {
-	uint16_t *cell_in = state_in;
-	uint16_t *cell_out = state_out;
+	mint *cell_in = state_in;
+	mint *cell_out = state_out;
 	for (int row = 0; row < rows; row += 1) {
 		for (int col = 0; col < cols; col += 1) {
 			*cell_out = evolve_cell(state_in, rows, cols, row, col, *cell_in);
@@ -135,9 +135,9 @@ static void wireworld_step_immutable_impl(uint16_t *state_in, uint16_t *state_ou
 	}
 }
 
-static void wireworld_step_mutable_impl(uint16_t *state, int rows, int cols)
+static void wireworld_step_mutable_impl(mint *state, int rows, int cols)
 {
-	uint16_t *raw_cell;
+	mint *raw_cell;
 
 	raw_cell = state;
 	for (int row = 0; row < rows; row += 1) {

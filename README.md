@@ -123,7 +123,7 @@ build/Wireworld-1.0.0.paclet
 PacletInstall["./build/Wireworld-1.0.0.paclet"]
 ```
 
-3. (Optional) Build the `LibraryLink` library by running the `build_library.wls` script to use the ```Wireworld`Library`WireworldStep``` function:
+3. (Optional) Build the `LibraryLink` library by running the `build_library.wls` script to use the ```Wireworld`Library`WireworldStepImmutable``` or ```Wireworld`Library`WireworldStepMutable``` functions:
 ```bash
 ./scripts/build_library.wls
 ```
