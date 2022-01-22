@@ -2,3 +2,5 @@ notebooks/
 build/
 LibraryResources/
 .vscode/
+zig-cache/
+zig-out/
