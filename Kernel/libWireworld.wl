@@ -7,13 +7,15 @@ InitializeWireworldLibrary
 Begin["`Private`"]
 
 
+$libName = If[$OperatingSystem === "Windows", "", "lib"] <> "Wireworld";
+
 InitializeWireworldLibrary[] :=
 	Module[{libWireworld, wireworldStepImm, wireworldStepMut},
-		libWireworld = FindLibrary["libWireworld"];
+		libWireworld = FindLibrary[$libName];
 		If[!FileExistsQ[libWireworld],
 			Return @ Failure["WireworldFailure", <|
 				"MessageTemplate" -> "Unable to find the `1` library.",
-				"MessageParameters" -> {"libWireworld." <> Internal`DynamicLibraryExtension[]}
+				"MessageParameters" -> {$libName <> "." <> Internal`DynamicLibraryExtension[]}
 			|>]
 		];
 
@@ -26,7 +28,8 @@ InitializeWireworldLibrary[] :=
 		If[Head[wireworldStepImm] =!= LibraryFunction,
 			Return @ Failure["WireworldFailure", <|
 				"MessageTemplate" -> "Unable to load the `1` library function.",
-				"MessageParameters" -> {"wireworld_step_immutable"}
+				"MessageParameters" -> {"wireworld_step_immutable"},
+				"Library" -> libWireworld
 			|>]
 		];
 
@@ -39,7 +42,8 @@ InitializeWireworldLibrary[] :=
 		If[Head[wireworldStepMut] =!= LibraryFunction,
 			Return @ Failure["WireworldFailure", <|
 				"MessageTemplate" -> "Unable to load the `1` library function.",
-				"MessageParameters" -> {"wireworld_step_mutable"}
+				"MessageParameters" -> {"wireworld_step_mutable"},
+				"Library" -> libWireworld
 			|>]
 		];
 

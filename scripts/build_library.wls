@@ -13,7 +13,7 @@ warningsFlags = {"-Wall", "-Wextra", "-Werror", "-Wno-unused", "-Wno-unused-para
 Print["Building the library in ", libDirTarget];
 libPath = CCompilerDriver`CreateLibrary[
 	srcFiles,
-	"libWireworld",
+	If[$OperatingSystem === "Windows", "", "lib"] <> "Wireworld",
 	"ShellCommandFunction" -> EchoLabel["Command:\n"],
 	"ShellOutputFunction" -> EchoLabel["Output:\n"],
 	"TargetDirectory" -> libDirTarget,
