@@ -21,9 +21,8 @@ pub fn build(b: *std.build.Builder) void {
     const mode = b.standardReleaseOptions();
     lib.setBuildMode(mode);
 
-    // Options: x86_64-windows, x86_64-macos, x86_64-linux.
+    // Common options: x86_64-windows, x86_64-linux, x86_64-macos, aarch64-macos.
     const target = b.standardTargetOptions(.{});
-    // std.debug.print("Default target: {}\n", .{target});
     lib.setTarget(target);
 
     switch (target.getOsTag()) {
