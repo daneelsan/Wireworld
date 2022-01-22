@@ -109,13 +109,12 @@ https://resources.wolframcloud.com/PacletRepository/resources/DanielS/Wireworld/
 ## Build
 
 1. Build the `Wireworld` paclet using the `build_paclet.wls` wolframscript:
-```bash
+```sh
 ./scripts/build_paclet.wls
 ```
    The paclet will be placed under the `build` directory:
-```bash
-$ ls build/*.paclet
-build/Wireworld-1.0.0.paclet
+```sh
+ls build/*.paclet # build/Wireworld-1.0.0.paclet
 ```
 
 2. Install the built paclet:
@@ -123,12 +122,59 @@ build/Wireworld-1.0.0.paclet
 PacletInstall["./build/Wireworld-1.0.0.paclet"]
 ```
 
-3. (Optional) Build the `LibraryLink` library by running the `build_library.wls` script to use the ```Wireworld`Library`WireworldStepImmutable``` or ```Wireworld`Library`WireworldStepMutable``` functions:
-```bash
+
+## Build libWireworld
+
+The `LibraryLink` library `libWireworld` contains the low-level functions ```Wireworld`Library`WireworldStepImmutable``` and ```Wireworld`Library`WireworldStepMutable```. There are two ways to build it:
+
+### build_library.wls
+
+Run `scripts/build_library.wls`:
+```sh
 ./scripts/build_library.wls
 ```
-   The library will be stored in `LibraryResources/$SystemID/`:
-```bash
-$ ls LibraryResources/MacOSX-ARM64
-libWireworld.dylib
+The library will be stored in `LibraryResources/$SystemID/`:
+```sh
+ls LibraryResources/MacOSX-ARM64 # libWireworld.dylib
+```
+
+Note: this script only builds the library for your builtin `$SystemID`.
+
+### zig build
+
+Use `zig build` (https://ziglang.org) to build the library:
+
+```sh
+zig version # 0.9.0
+zig build
+```
+
+The library will be stored in `LibraryResources/$SystemID/`:
+```sh
+ls LibraryResources/MacOSX-ARM64 # libWireworld.dylib
+```
+
+One can also cross compile specifying the target:
+```sh
+zig build -Dtarget=x86_64-linux
+ls LibraryResources/Linux-x86-64 # libWireworld.so
+```
+
+The mapping between `zig targets` and `$SystemID` is:
+```Mathematica
+{
+	"Linux-x86-64" -> "x86_64-linux",
+	"MacOSX-x86-64" -> "x86_64-macos",
+	"Windows-x86-64" -> "x86_64-windows",
+	"MacOSX-ARM64" -> "aarch64-macos",
+}
+```
+
+Note: other targets will be stored in `zig-out/lib`.
+
+The build configuration is specified in `build.zig`. If necessary, change the location of the Wolfram libraries and headers:
+
+```zig
+lib.addIncludeDir(...);
+lib.addLibPath(...);
 ```
