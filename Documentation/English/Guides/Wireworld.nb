@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14634,        381]
-NotebookOptionsPosition[     10060,        286]
-NotebookOutlinePosition[     10616,        305]
-CellTagsIndexPosition[     10573,        302]
+NotebookDataLength[     14840,        387]
+NotebookOptionsPosition[     10202,        289]
+NotebookOutlinePosition[     10763,        308]
+CellTagsIndexPosition[     10720,        305]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -46,15 +46,15 @@ Cell["Guide", "Categorization",
  CellLabel->"Entity Type",
  CellID->1506332151,ExpressionUUID->"85924fdc-dada-4614-bb10-82cd452b1e18"],
 
-Cell["Wireworld", "Categorization",
+Cell["DanielS/Wireworld", "Categorization",
  CellLabel->"Paclet Name",
  CellID->239747374,ExpressionUUID->"c43cbf5b-d4d3-4e46-97fe-3f399b04d1bf"],
 
-Cell["Wireworld`", "Categorization",
+Cell["DanielS`Wireworld`", "Categorization",
  CellLabel->"Context",
  CellID->754793046,ExpressionUUID->"9709f8bb-a1ac-471a-93c5-2a13808ce610"],
 
-Cell["Wireworld/guide/Wireworld", "Categorization",
+Cell["DanielS/Wireworld/guide/Wireworld", "Categorization",
  CellLabel->"URI",
  CellID->620821293,ExpressionUUID->"07ceb44f-05f4-4888-9e1e-ba84f6b27843"]
 }, Open  ]],
@@ -95,7 +95,7 @@ Cell[TextData[{
  Cell[BoxData[
   ButtonBox["WireworldEvolve",
    BaseStyle->"Link",
-   ButtonData->"paclet:Wireworld/ref/WireworldEvolve"]], 
+   ButtonData->"paclet:DanielS/Wireworld/ref/WireworldEvolve"]], 
   "InlineGuideFunction",ExpressionUUID->
   "081111fc-c751-4230-a159-050b589af45d"],
  " \[LongDash] evolve a Wireworld state"
@@ -109,8 +109,9 @@ Cell[TextData[{
  Cell[BoxData[
   ButtonBox["WireworldPlot",
    BaseStyle->"Link",
-   ButtonData->"paclet:Wireworld/ref/WireworldPlot"]], "InlineGuideFunction",
-  ExpressionUUID->"6321343e-d971-47b3-96ea-7002a877416d"],
+   ButtonData->"paclet:DanielS/Wireworld/ref/WireworldPlot"]], 
+  "InlineGuideFunction",ExpressionUUID->
+  "6321343e-d971-47b3-96ea-7002a877416d"],
  " \[LongDash] plot a Wireworld state"
 }], "GuideText",
  CellChangeTimes->{{3.850777172569604*^9, 3.850777177454636*^9}, {
@@ -121,8 +122,9 @@ Cell[TextData[{
  Cell[BoxData[
   ButtonBox["WireworldDraw",
    BaseStyle->"Link",
-   ButtonData->"paclet:Wireworld/ref/WireworldDraw"]], "InlineGuideFunction",
-  ExpressionUUID->"ba611c4c-30b0-4f1e-9ebd-5abe93e4ef88"],
+   ButtonData->"paclet:DanielS/Wireworld/ref/WireworldDraw"]], 
+  "InlineGuideFunction",ExpressionUUID->
+  "ba611c4c-30b0-4f1e-9ebd-5abe93e4ef88"],
  " \[LongDash] draw a Wireworld state"
 }], "GuideText",
  CellChangeTimes->{{3.850777817884348*^9, 3.850777819345036*^9}, {
@@ -134,7 +136,7 @@ Cell[TextData[{
  Cell[BoxData[
   ButtonBox["WireworldStateQ",
    BaseStyle->"Link",
-   ButtonData->"paclet:Wireworld/ref/WireworldStateQ"]], 
+   ButtonData->"paclet:DanielS/Wireworld/ref/WireworldStateQ"]], 
   "InlineGuideFunction",ExpressionUUID->
   "a52ce9ca-3386-4129-b8bd-31f6de7c6f50"],
  " \[LongDash] test for a valid Wireworld state"
@@ -153,7 +155,7 @@ Cell[TextData[{
  Cell[BoxData[
   ButtonBox["$WireworldFunctionRule",
    BaseStyle->"Link",
-   ButtonData->"paclet:Wireworld/ref/$WireworldFunctionRule"]], 
+   ButtonData->"paclet:DanielS/Wireworld/ref/$WireworldFunctionRule"]], 
   "InlineGuideFunction",ExpressionUUID->
   "7504adda-cb30-4bf7-8a10-57f9319d74c0"],
  " \[LongDash] Wireworld as a general ",
@@ -171,7 +173,7 @@ Cell[TextData[{
  Cell[BoxData[
   ButtonBox["$WireworldNumberRule",
    BaseStyle->"Link",
-   ButtonData->"paclet:Wireworld/ref/$WireworldNumberRule"]], 
+   ButtonData->"paclet:DanielS/Wireworld/ref/$WireworldNumberRule"]], 
   "InlineGuideFunction",ExpressionUUID->
   "563e0ee7-7df7-4ab7-82be-3b241dbd45ff"],
  " \[LongDash] Wireworld as a general ",
@@ -225,7 +227,8 @@ Cell["Tech Notes", "GuideTutorialsSection",
 
 Cell[TextData[ButtonBox["Wireworld Package",
  BaseStyle->"Link",
- ButtonData->"paclet:Wireworld/tutorial/WireworldPackage"]], "GuideTutorial",
+ ButtonData->
+  "paclet:DanielS/Wireworld/tutorial/WireworldPackage"]], "GuideTutorial",
  CellChangeTimes->{{3.851029409420726*^9, 3.851029416707254*^9}},
  CellID->1321648935,ExpressionUUID->"30099955-a474-4000-b788-1558347c9705"]
 }, Open  ]],
@@ -259,8 +262,8 @@ Cell[TextData[ButtonBox["https://en.wikipedia.org/wiki/Wireworld",
  BaseStyle->"Hyperlink",
  ButtonData->{
    URL["https://en.wikipedia.org/wiki/Wireworld"], 
-   None}]], "GuideRelatedLinks",ExpressionUUID->"a44b9a5e-25be-4711-83b5-\
-a7d345591dff"],
+   None}]], "GuideRelatedLinks",
+ CellID->78975436,ExpressionUUID->"a44b9a5e-25be-4711-83b5-a7d345591dff"],
 
 Cell[TextData[ButtonBox["https://mathworld.wolfram.com/WireWorld.html",
  BaseStyle->"Hyperlink",
@@ -274,21 +277,21 @@ universality-in-2d-cellular-automata",
  BaseStyle->"Hyperlink",
  ButtonData->{
    URL["https://www.wolframscience.com/nks/notes-11-10--universality-in-2d-\
-cellular-automata"], None}]], "GuideRelatedLinks",ExpressionUUID->"8f6129eb-\
-6da3-43bd-ac05-5d709dbe2d21"],
+cellular-automata"], None}]], "GuideRelatedLinks",
+ CellID->555125265,ExpressionUUID->"8f6129eb-6da3-43bd-ac05-5d709dbe2d21"],
 
 Cell[TextData[ButtonBox["http://www.heise.ws/wireworld.html",
  BaseStyle->"Hyperlink",
  ButtonData->{
-   URL["http://www.heise.ws/wireworld.html"], None}]], "GuideRelatedLinks",Exp\
-ressionUUID->"7d5cab72-d8fb-4445-b338-ec9bce4576c7"]
+   URL["http://www.heise.ws/wireworld.html"], None}]], "GuideRelatedLinks",
+ CellID->121522433,ExpressionUUID->"7d5cab72-d8fb-4445-b338-ec9bce4576c7"]
 }, Open  ]]
 },
 WindowSize->{700, 770},
 WindowMargins->{{Automatic, 107}, {6, Automatic}},
 TaggingRules-><|
  "Author" -> "daniels", "CreationDate" -> "01-09-2022 23:19:16"|>,
-FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (December 2, 2021)",
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (February 5, 2022)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStylesExt.nb", 
   CharacterEncoding -> "UTF-8"],
 ExpressionUUID->"b82e3d9c-3695-4c6d-bcf1-03c97542a896"
@@ -311,77 +314,80 @@ Cell[1160, 36, 139, 1, 20, "AuthorDate",ExpressionUUID->"5b7fbee2-c871-4323-bcc6
 Cell[CellGroupData[{
 Cell[1324, 41, 123, 1, 29, "CategorizationSection",ExpressionUUID->"662c53ad-3849-43ed-bda5-f51047a6760c",
  CellID->1441626515],
-Cell[1450, 44, 134, 2, 30, "Categorization",ExpressionUUID->"85924fdc-dada-4614-bb10-82cd452b1e18",
+Cell[1450, 44, 134, 2, 31, "Categorization",ExpressionUUID->"85924fdc-dada-4614-bb10-82cd452b1e18",
  CellID->1506332151],
-Cell[1587, 48, 137, 2, 30, "Categorization",ExpressionUUID->"c43cbf5b-d4d3-4e46-97fe-3f399b04d1bf",
+Cell[1587, 48, 145, 2, 31, "Categorization",ExpressionUUID->"c43cbf5b-d4d3-4e46-97fe-3f399b04d1bf",
  CellID->239747374],
-Cell[1727, 52, 134, 2, 30, "Categorization",ExpressionUUID->"9709f8bb-a1ac-471a-93c5-2a13808ce610",
+Cell[1735, 52, 142, 2, 31, "Categorization",ExpressionUUID->"9709f8bb-a1ac-471a-93c5-2a13808ce610",
  CellID->754793046],
-Cell[1864, 56, 145, 2, 30, "Categorization",ExpressionUUID->"07ceb44f-05f4-4888-9e1e-ba84f6b27843",
+Cell[1880, 56, 153, 2, 31, "Categorization",ExpressionUUID->"07ceb44f-05f4-4888-9e1e-ba84f6b27843",
  CellID->620821293]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2046, 63, 111, 1, 29, "KeywordsSection",ExpressionUUID->"b1daaf86-6664-46ba-9dfe-9d0ae22bc197",
+Cell[2070, 63, 111, 1, 29, "KeywordsSection",ExpressionUUID->"b1daaf86-6664-46ba-9dfe-9d0ae22bc197",
  CellID->1667914325],
-Cell[2160, 66, 100, 1, 19, "Keywords",ExpressionUUID->"b4508ff1-c805-4d68-9de1-9883186f2e27",
+Cell[2184, 66, 100, 1, 19, "Keywords",ExpressionUUID->"b4508ff1-c805-4d68-9de1-9883186f2e27",
  CellID->1532015984]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2297, 72, 106, 1, 77, "GuideTitle",ExpressionUUID->"3cc272b8-15ac-46a0-acda-34be80594bc5",
+Cell[2321, 72, 106, 1, 77, "GuideTitle",ExpressionUUID->"3cc272b8-15ac-46a0-acda-34be80594bc5",
  CellID->263715558],
-Cell[2406, 75, 538, 10, 40, "GuideAbstract",ExpressionUUID->"a0211ff6-c0bc-4a4e-ad67-22c536b8991e",
+Cell[2430, 75, 538, 10, 41, "GuideAbstract",ExpressionUUID->"a0211ff6-c0bc-4a4e-ad67-22c536b8991e",
  CellID->2008619545]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2981, 90, 108, 1, 70, "GuideFunctionsSection",ExpressionUUID->"60b6d45e-f67d-4a64-a83a-f6e4dec5f3a8",
+Cell[3005, 90, 108, 1, 70, "GuideFunctionsSection",ExpressionUUID->"60b6d45e-f67d-4a64-a83a-f6e4dec5f3a8",
  CellID->425761975],
-Cell[3092, 93, 521, 12, 25, "GuideText",ExpressionUUID->"1b980b57-f0f9-45bc-8771-b15c47b1ca4c",
+Cell[3116, 93, 529, 12, 25, "GuideText",ExpressionUUID->"1b980b57-f0f9-45bc-8771-b15c47b1ca4c",
  CellID->366002021],
-Cell[3616, 107, 465, 10, 25, "GuideText",ExpressionUUID->"0c45c792-d38a-4764-b126-aee72cf97683",
+Cell[3648, 107, 476, 11, 25, "GuideText",ExpressionUUID->"0c45c792-d38a-4764-b126-aee72cf97683",
  CellID->1002801939],
-Cell[4084, 119, 514, 11, 25, "GuideText",ExpressionUUID->"d0d1ec2f-b05a-4619-a40f-736482ddfc6f",
+Cell[4127, 120, 525, 12, 25, "GuideText",ExpressionUUID->"d0d1ec2f-b05a-4619-a40f-736482ddfc6f",
  CellID->964179972],
-Cell[4601, 132, 529, 12, 25, "GuideText",ExpressionUUID->"47852ff1-94b7-4474-b0ea-fdcb5a5f8e13",
+Cell[4655, 134, 537, 12, 25, "GuideText",ExpressionUUID->"47852ff1-94b7-4474-b0ea-fdcb5a5f8e13",
  CellID->770606587],
 Cell[CellGroupData[{
-Cell[5155, 148, 103, 1, 26, "GuideDelimiter",ExpressionUUID->"1e1e3185-bfde-42e4-95af-1ae2a98d3f26",
+Cell[5217, 150, 103, 1, 26, "GuideDelimiter",ExpressionUUID->"1e1e3185-bfde-42e4-95af-1ae2a98d3f26",
  CellID->381068117],
-Cell[5261, 151, 655, 16, 25, "GuideText",ExpressionUUID->"e6c3e478-7f69-4fe3-9cc8-a02bdf1970d5",
+Cell[5323, 153, 663, 16, 25, "GuideText",ExpressionUUID->"e6c3e478-7f69-4fe3-9cc8-a02bdf1970d5",
  CellID->815607065],
-Cell[5919, 169, 647, 16, 25, "GuideText",ExpressionUUID->"b483251b-fd99-4d0b-aad4-9d0882050ac3",
+Cell[5989, 171, 655, 16, 25, "GuideText",ExpressionUUID->"b483251b-fd99-4d0b-aad4-9d0882050ac3",
  CellID->1827087358]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6603, 190, 103, 1, 26, "GuideDelimiter",ExpressionUUID->"db6c8452-093c-4b0f-be65-8372ec38f09d",
+Cell[6681, 192, 103, 1, 26, "GuideDelimiter",ExpressionUUID->"db6c8452-093c-4b0f-be65-8372ec38f09d",
  CellID->640527117],
-Cell[6709, 193, 895, 23, 25, "InlineGuideFunctionListing",ExpressionUUID->"752612cf-ba20-42aa-bf89-60b59d4b04f5",
+Cell[6787, 195, 895, 23, 25, "InlineGuideFunctionListing",ExpressionUUID->"752612cf-ba20-42aa-bf89-60b59d4b04f5",
  CellID->3733008]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7653, 222, 118, 1, 72, "GuideTutorialsSection",ExpressionUUID->"aefb8e0a-491a-4071-a5f3-e5672675fbc7",
+Cell[7731, 224, 118, 1, 72, "GuideTutorialsSection",ExpressionUUID->"aefb8e0a-491a-4071-a5f3-e5672675fbc7",
  CellID->463639693],
-Cell[7774, 225, 284, 4, 22, "GuideTutorial",ExpressionUUID->"30099955-a474-4000-b788-1558347c9705",
+Cell[7852, 227, 295, 5, 22, "GuideTutorial",ExpressionUUID->"30099955-a474-4000-b788-1558347c9705",
  CellID->1321648935]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8095, 234, 191, 2, 72, "GuideMoreAboutSection",ExpressionUUID->"b66cedec-913c-46bd-8bb4-5135a9a5f517",
+Cell[8184, 237, 191, 2, 72, "GuideMoreAboutSection",ExpressionUUID->"b66cedec-913c-46bd-8bb4-5135a9a5f517",
  CellID->1313554096],
-Cell[8289, 238, 105, 1, 22, "GuideMoreAbout",ExpressionUUID->"c9d035b0-9078-43a0-8e4c-f32e6d7df519",
+Cell[8378, 241, 105, 1, 22, "GuideMoreAbout",ExpressionUUID->"c9d035b0-9078-43a0-8e4c-f32e6d7df519",
  CellID->771800312],
-Cell[8397, 241, 105, 1, 22, "GuideMoreAbout",ExpressionUUID->"79a25b8a-ea3c-445b-a379-7225d6317ccc",
+Cell[8486, 244, 105, 1, 22, "GuideMoreAbout",ExpressionUUID->"79a25b8a-ea3c-445b-a379-7225d6317ccc",
  CellID->846615904]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8539, 247, 125, 1, 72, "GuideRelatedLinksSection",ExpressionUUID->"0467a5f8-3f2b-4ad3-bed4-82f6b5af94e8",
+Cell[8628, 250, 125, 1, 72, "GuideRelatedLinksSection",ExpressionUUID->"0467a5f8-3f2b-4ad3-bed4-82f6b5af94e8",
  CellID->1994337153],
-Cell[8667, 250, 268, 5, 22, "GuideRelatedLinks",ExpressionUUID->"45ef5219-f139-4c25-877f-5d35752da6dd",
+Cell[8756, 253, 268, 5, 22, "GuideRelatedLinks",ExpressionUUID->"45ef5219-f139-4c25-877f-5d35752da6dd",
  CellID->993149038],
-Cell[8938, 257, 248, 5, 22, "GuideRelatedLinks",ExpressionUUID->"a44b9a5e-25be-4711-83b5-a7d345591dff"],
-Cell[9189, 264, 277, 5, 22, "GuideRelatedLinks",ExpressionUUID->"b5008d26-045e-4d09-bafb-72e119142c34",
+Cell[9027, 260, 265, 5, 22, "GuideRelatedLinks",ExpressionUUID->"a44b9a5e-25be-4711-83b5-a7d345591dff",
+ CellID->78975436],
+Cell[9295, 267, 277, 5, 22, "GuideRelatedLinks",ExpressionUUID->"b5008d26-045e-4d09-bafb-72e119142c34",
  CellID->1621421793],
-Cell[9469, 271, 338, 6, 38, "GuideRelatedLinks",ExpressionUUID->"8f6129eb-6da3-43bd-ac05-5d709dbe2d21"],
-Cell[9810, 279, 234, 4, 22, "GuideRelatedLinks",ExpressionUUID->"7d5cab72-d8fb-4445-b338-ec9bce4576c7"]
+Cell[9575, 274, 356, 6, 38, "GuideRelatedLinks",ExpressionUUID->"8f6129eb-6da3-43bd-ac05-5d709dbe2d21",
+ CellID->555125265],
+Cell[9934, 282, 252, 4, 22, "GuideRelatedLinks",ExpressionUUID->"7d5cab72-d8fb-4445-b338-ec9bce4576c7",
+ CellID->121522433]
 }, Open  ]]
 }
 ]

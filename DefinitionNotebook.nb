@@ -36,28 +36,14 @@ Cell["Paclet Directory", "Subsection",
  CellTags->{"Paclet Directory", "PacletDirectory", "TemplateCellGroup"},
  CellID->95800296,ExpressionUUID->"9de2f58a-d1a5-4c73-9c9d-959905fd9912"],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
- RowBox[{"FileNameJoin", "[", 
-  RowBox[{"{", 
-   RowBox[{
-    RowBox[{"ParentDirectory", "[", 
-     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ",", "$PublisherID", 
-    ",", "\"\<Wireworld\>\""}], "}"}], "]"}]], "LocalDirectoryInput",
+ RowBox[{"NotebookDirectory", "[", "]"}]], "LocalDirectoryInput",
  Deletable->False,
  TaggingRules->{},
- CellChangeTimes->{{3.851118683307798*^9, 3.85111870438971*^9}},
+ CellChangeTimes->{{3.851118683307798*^9, 3.85111870438971*^9}, 
+   3.85315490875274*^9},
  CellLabel->"In[3]:=",
- CellID->888683801,ExpressionUUID->"b4d828ac-0535-4f89-a604-c2da663213f3"],
-
-Cell[BoxData["\<\"/Users/dans/projects/DanielS/Wireworld\"\>"], "Output",
- TaggingRules->{},
- CellChangeTimes->{
-  3.8511163171539497`*^9, {3.851118710737311*^9, 3.8511187241159763`*^9}},
- CellLabel->"Out[3]=",
- CellID->624675306,ExpressionUUID->"ebe73325-388d-4489-9ce9-c74d2217fdd8"]
-}, Open  ]]
+ CellID->888683801,ExpressionUUID->"b4d828ac-0535-4f89-a604-c2da663213f3"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -82,6 +68,58 @@ Cell["Manifest", "Subsection",
  CellTags->{"Manifest", "PacletFiles", "TemplateCellGroup"},
  CellID->355131546,ExpressionUUID->"a5d4a938-4283-4a5b-90da-3e4bb7dd9256"],
 
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"build.zig\"", 
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "build.zig"}]]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[0]]& ],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "build.zig"}]],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 100},
+ TaggingRules->{},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->530318337,ExpressionUUID->"e9cf9525-ca29-4346-bf2b-141ed2103c7e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"DefinitionNotebook.nb\"", 
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "DefinitionNotebook.nb"}]]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[0]]& ],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "DefinitionNotebook.nb"}]],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 100},
+ TaggingRules->{},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->5820401,ExpressionUUID->"eb399107-1a54-43a0-9117-4a6c62cc5d8f"],
+
 Cell[CellGroupData[{
 
 Cell[TextData[Cell[BoxData[
@@ -105,9 +143,12 @@ Cell[TextData[Cell[BoxData[
     BaseStyle->{"Text"}],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[0]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Documentation"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"55c6fa5c-9f64-4e8e-937f-4f9db0e194cc"]], \
+   "Text"}]],ExpressionUUID->"95f7a10a-1f68-48ed-84c2-874d0556c9ec"]], \
 "FileManagerDirectory",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
@@ -118,7 +159,7 @@ Cell[TextData[Cell[BoxData[
       TemplateBox[{}, "FileManagerDocumentationIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->2062664704,ExpressionUUID->"55e2dbcc-0b32-4366-85c8-94b79a476645"],
+ CellID->318370502,ExpressionUUID->"6f102f96-2e1b-42df-a619-6c4058f1c1b2"],
 
 Cell[CellGroupData[{
 
@@ -143,9 +184,12 @@ Cell[TextData[Cell[BoxData[
     BaseStyle->{"Text"}],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Documentation/English"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"eaef43db-a2d7-4121-b61f-03b586b8f869"]], \
+   "Text"}]],ExpressionUUID->"7b2583a6-629e-4be8-be4b-5a34d649430b"]], \
 "FileManagerDirectory",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
@@ -156,7 +200,7 @@ Cell[TextData[Cell[BoxData[
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->377166607,ExpressionUUID->"1641830e-d393-4aac-b1e3-442734fe49b7"],
+ CellID->43684564,ExpressionUUID->"0241b921-5a80-4e04-aaca-00df60ad4b74"],
 
 Cell[CellGroupData[{
 
@@ -180,10 +224,12 @@ Cell[TextData[Cell[BoxData[
     BaseStyle->{"Text"}],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[2]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English/Guides"],
-  
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Documentation/English/Guides"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"ae87c77f-adbd-4ff8-93e7-9f2b9115b21a"]], \
+   "Text"}]],ExpressionUUID->"45a9c310-8264-435d-98bb-865ad413ec07"]], \
 "FileManagerDirectory",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
@@ -194,20 +240,22 @@ Cell[TextData[Cell[BoxData[
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1814921552,ExpressionUUID->"782484eb-bfae-4c64-8f3d-3c6e7105662a"],
+ CellID->842078330,ExpressionUUID->"b1bbd217-0b23-433d-9fa2-ebd531079ac1"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"Wireworld.nb\"", 
      File[
-     "/Users/dans/projects/DanielS/Wireworld/Documentation/English/Guides/\
-Wireworld.nb"]},
+      FileNameJoin[{
+        NotebookDirectory[], "Documentation/English/Guides/Wireworld.nb"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[3]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English/Guides/\
-Wireworld.nb"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Documentation/English/Guides/Wireworld.nb"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 130},
@@ -218,8 +266,8 @@ Wireworld.nb"],
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->528802476,ExpressionUUID->"a585a891-96ec-423a-b0cf-4341837ae133"]
-}, Closed]],
+ CellID->62172649,ExpressionUUID->"aefd09f8-26af-4133-a190-8d0b64ac58ef"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -244,10 +292,12 @@ Cell[TextData[Cell[BoxData[
     BaseStyle->{"Text"}],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[2]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Documentation/English/ReferencePages"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"36673d8b-ca39-4fdf-aac4-82e09ace1fd7"]], \
+   "Text"}]],ExpressionUUID->"13d12204-15b7-4088-8885-f356022289eb"]], \
 "FileManagerDirectory",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
@@ -258,7 +308,7 @@ ReferencePages"],
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1295882846,ExpressionUUID->"f95e597a-d058-4e7e-97c6-62aee2371d02"],
+ CellID->606229150,ExpressionUUID->"91cbf273-019c-4070-8deb-b58b358485a8"],
 
 Cell[CellGroupData[{
 
@@ -283,10 +333,12 @@ Cell[TextData[Cell[BoxData[
     BaseStyle->{"Text"}],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[3]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Documentation/English/ReferencePages/Symbols"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"0360f3c1-4fa6-43f6-86ce-16a94018a5ae"]], \
+   "Text"}]],ExpressionUUID->"956f9820-890d-4a19-ad7e-e306fe383b84"]], \
 "FileManagerDirectory",
  CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 130},
@@ -297,20 +349,24 @@ ReferencePages/Symbols"],
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->123844848,ExpressionUUID->"82d3ca7d-4f5a-41e4-88d1-8887ce4fb07d"],
+ CellID->116131468,ExpressionUUID->"af6d47de-3251-405f-a2af-e89fd1da7b25"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"WireworldDraw.nb\"", 
      File[
-     "/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols/WireworldDraw.nb"]},
+      FileNameJoin[{
+        NotebookDirectory[], 
+        "Documentation/English/ReferencePages/Symbols/WireworldDraw.nb"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols/WireworldDraw.nb"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], 
+     "Documentation/English/ReferencePages/Symbols/WireworldDraw.nb"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
@@ -321,20 +377,24 @@ ReferencePages/Symbols/WireworldDraw.nb"],
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->548706393,ExpressionUUID->"970b93ab-3257-4fbc-97bd-81268581a498"],
+ CellID->861079801,ExpressionUUID->"b3cba75d-d846-401a-8466-1f372a3ce7df"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"WireworldEvolve.nb\"", 
      File[
-     "/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols/WireworldEvolve.nb"]},
+      FileNameJoin[{
+        NotebookDirectory[], 
+        "Documentation/English/ReferencePages/Symbols/WireworldEvolve.nb"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols/WireworldEvolve.nb"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], 
+     "Documentation/English/ReferencePages/Symbols/WireworldEvolve.nb"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
@@ -345,20 +405,24 @@ ReferencePages/Symbols/WireworldEvolve.nb"],
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->813566933,ExpressionUUID->"46ef9fa3-7f5b-4f97-9a23-1fdbba970ef8"],
+ CellID->12832753,ExpressionUUID->"b4babead-78e1-4a34-bc45-363b712fada4"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"WireworldPlot.nb\"", 
      File[
-     "/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols/WireworldPlot.nb"]},
+      FileNameJoin[{
+        NotebookDirectory[], 
+        "Documentation/English/ReferencePages/Symbols/WireworldPlot.nb"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols/WireworldPlot.nb"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], 
+     "Documentation/English/ReferencePages/Symbols/WireworldPlot.nb"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
@@ -369,20 +433,24 @@ ReferencePages/Symbols/WireworldPlot.nb"],
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->591062482,ExpressionUUID->"b2cc702a-6312-4701-aafe-b9753bc3bc86"],
+ CellID->11188883,ExpressionUUID->"e02d27bf-5cd4-470a-bd53-ce17f97618d4"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"WireworldStateQ.nb\"", 
      File[
-     "/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols/WireworldStateQ.nb"]},
+      FileNameJoin[{
+        NotebookDirectory[], 
+        "Documentation/English/ReferencePages/Symbols/WireworldStateQ.nb"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols/WireworldStateQ.nb"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], 
+     "Documentation/English/ReferencePages/Symbols/WireworldStateQ.nb"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
@@ -393,20 +461,26 @@ ReferencePages/Symbols/WireworldStateQ.nb"],
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1875267599,ExpressionUUID->"3f897249-8225-4ee8-be1a-49674ddbab47"],
+ CellID->36926014,ExpressionUUID->"3b583731-61d7-4449-815c-018d4ab4ff57"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"$WireworldFunctionRule.nb\"", 
      File[
-     "/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols/$WireworldFunctionRule.nb"]},
+      FileNameJoin[{
+        NotebookDirectory[], 
+        "Documentation/English/ReferencePages/Symbols/$WireworldFunctionRule.\
+nb"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols/$WireworldFunctionRule.nb"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], 
+     "Documentation/English/ReferencePages/Symbols/$WireworldFunctionRule.nb"}\
+]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
@@ -417,20 +491,25 @@ ReferencePages/Symbols/$WireworldFunctionRule.nb"],
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1152533021,ExpressionUUID->"96238fc8-06dc-493c-8a6a-42170e391a60"],
+ CellID->32950999,ExpressionUUID->"0725a639-88c7-4d59-b7ad-cf5594889edd"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"$WireworldNumberRule.nb\"", 
      File[
-     "/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols/$WireworldNumberRule.nb"]},
+      FileNameJoin[{
+        NotebookDirectory[], 
+        "Documentation/English/ReferencePages/Symbols/$WireworldNumberRule.\
+nb"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-ReferencePages/Symbols/$WireworldNumberRule.nb"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], 
+     "Documentation/English/ReferencePages/Symbols/$WireworldNumberRule.nb"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
@@ -441,9 +520,9 @@ ReferencePages/Symbols/$WireworldNumberRule.nb"],
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->319988007,ExpressionUUID->"5bec3ea1-78b6-4f86-8887-5063e96d9499"]
-}, Closed]]
-}, Closed]],
+ CellID->494630571,ExpressionUUID->"2902a7b2-c807-4944-ba9f-2f91689a402b"]
+}, Open  ]]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -468,10 +547,12 @@ Cell[TextData[Cell[BoxData[
     BaseStyle->{"Text"}],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[2]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-Tutorials"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Documentation/English/Tutorials"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"4d5b8d4c-a9cc-451f-b13b-d93ad0899814"]], \
+   "Text"}]],ExpressionUUID->"e0a28395-fbbc-4ad0-83d2-dc041213811b"]], \
 "FileManagerDirectory",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
@@ -482,20 +563,24 @@ Tutorials"],
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->739381561,ExpressionUUID->"9832aa59-6d21-4076-a22b-e6e87df23a79"],
+ CellID->91364239,ExpressionUUID->"c4637629-2faf-48b4-a4df-3dfa0f9a86bc"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"WireworldPackage.nb\"", 
      File[
-     "/Users/dans/projects/DanielS/Wireworld/Documentation/English/Tutorials/\
-WireworldPackage.nb"]},
+      FileNameJoin[{
+        NotebookDirectory[], 
+        "Documentation/English/Tutorials/WireworldPackage.nb"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[3]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Documentation/English/\
-Tutorials/WireworldPackage.nb"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], 
+     "Documentation/English/Tutorials/WireworldPackage.nb"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 130},
@@ -506,10 +591,10 @@ Tutorials/WireworldPackage.nb"],
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1445514185,ExpressionUUID->"6c5cdd3e-ceed-42a5-be18-956729656b81"]
-}, Closed]]
-}, Closed]]
-}, Closed]],
+ CellID->47219702,ExpressionUUID->"0c6c6328-cd31-43b7-97ac-db13ce63f42d"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -534,9 +619,12 @@ Cell[TextData[Cell[BoxData[
     BaseStyle->{"Text"}],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[0]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Examples"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Examples"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"03d241f2-9531-43b5-93e7-85d09118ede8"]], \
+   "Text"}]],ExpressionUUID->"ec113d41-8071-47ff-9fa5-244e9b040630"]], \
 "FileManagerDirectory",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
@@ -547,17 +635,22 @@ Cell[TextData[Cell[BoxData[
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->274408784,ExpressionUUID->"ff98cc34-2f0c-447c-99d5-9b9a334fa8d4"],
+ CellID->54959682,ExpressionUUID->"52407597-4bf5-4e0f-9a81-bc82941870e1"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"two-diodes.wl\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/Examples/two-diodes.wl"]},
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "Examples/two-diodes.wl"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Examples/two-diodes.wl"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Examples/two-diodes.wl"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
@@ -568,17 +661,22 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1341042579,ExpressionUUID->"17dea051-5941-4901-a319-b376879fdb33"],
+ CellID->315799533,ExpressionUUID->"b9057107-f174-4639-9a41-2e151bca662a"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"wi-diode.wl\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/Examples/wi-diode.wl"]},
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "Examples/wi-diode.wl"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Examples/wi-diode.wl"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Examples/wi-diode.wl"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
@@ -589,17 +687,22 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1061749988,ExpressionUUID->"6fbf891b-5feb-48fa-b986-486c22ec0aef"],
+ CellID->13689697,ExpressionUUID->"b3ab30c1-8f7f-4c7c-a374-89ff8eb6ed65"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"wi-or.wl\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/Examples/wi-or.wl"]},
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "Examples/wi-or.wl"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Examples/wi-or.wl"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Examples/wi-or.wl"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
@@ -610,17 +713,22 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1390425393,ExpressionUUID->"85eb8939-22d9-4f04-aa28-d5d733f8a1a0"],
+ CellID->217474683,ExpressionUUID->"b1c16ec8-bfe3-40ef-a1d4-2c43841e3bb8"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"wi-signals.wl\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/Examples/wi-signals.wl"]},
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "Examples/wi-signals.wl"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Examples/wi-signals.wl"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Examples/wi-signals.wl"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
@@ -631,17 +739,22 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->2110017144,ExpressionUUID->"df24b946-ebee-4584-94d0-04b5a9bc13c2"],
+ CellID->279655007,ExpressionUUID->"1b8ac92c-ad1c-41b1-beed-54d666067d1f"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"wi-wire.wl\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/Examples/wi-wire.wl"]},
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "Examples/wi-wire.wl"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Examples/wi-wire.wl"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Examples/wi-wire.wl"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
@@ -652,17 +765,22 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1660676297,ExpressionUUID->"98a2aad1-5bf4-418f-9f2e-dd02f2503700"],
+ CellID->91497701,ExpressionUUID->"8f41b93d-b45c-447b-9e94-c2080fa4eb5e"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"XOR-gate.wl\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/Examples/XOR-gate.wl"]},
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "Examples/XOR-gate.wl"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Examples/XOR-gate.wl"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Examples/XOR-gate.wl"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
@@ -673,7 +791,7 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->141563620,ExpressionUUID->"236b288f-b8ba-43b8-96c4-e4a2a76d38f8"]
+ CellID->600701559,ExpressionUUID->"6b8f0637-50e9-481e-84f6-95abb373f770"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -698,9 +816,12 @@ Cell[TextData[Cell[BoxData[
     BaseStyle->{"Text"}],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[0]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Kernel"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Kernel"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"ea4ab996-f578-4abc-ac62-ed55de866241"]], \
+   "Text"}]],ExpressionUUID->"4d5cbafe-a903-48a8-9afe-13dbd89ebd36"]], \
 "FileManagerDirectory",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
@@ -711,17 +832,48 @@ Cell[TextData[Cell[BoxData[
       TemplateBox[{}, "FileManagerKernelIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1995364111,ExpressionUUID->"8777eb3e-1114-4e63-8363-b106fa25bb5c"],
+ CellID->535337518,ExpressionUUID->"f3099185-b048-4294-86ae-ea94e3462b0f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"libWireworld.wl\"", 
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "Kernel/libWireworld.wl"}]]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Kernel/libWireworld.wl"}]],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 110},
+ TaggingRules->{},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->64173422,ExpressionUUID->"d89e7845-024d-4dcd-87f9-6bc8386df4cb"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"WireworldDraw.wl\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/Kernel/WireworldDraw.wl"]},
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "Kernel/WireworldDraw.wl"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Kernel/WireworldDraw.wl"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Kernel/WireworldDraw.wl"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
@@ -732,17 +884,22 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->979982025,ExpressionUUID->"4b0ce894-c102-4d14-8c0b-91bb4706a30c"],
+ CellID->179061067,ExpressionUUID->"cb4357d7-9acf-47c1-be07-fde81c36d58b"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"Wireworld.wl\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/Kernel/Wireworld.wl"]},
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "Kernel/Wireworld.wl"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/Kernel/Wireworld.wl"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "Kernel/Wireworld.wl"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
@@ -753,15 +910,15 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1505805332,ExpressionUUID->"11fb27e3-3c2a-4150-b384-a60041847cd5"]
-}, Closed]],
+ CellID->232116635,ExpressionUUID->"7daf5797-d2cd-406f-87f5-33befeb77638"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[TextData[Cell[BoxData[
  InterpretationBox[
   TagBox[
-   ActionMenuBox["\<\"notebooks\"\>", {"\<\"Open/Close Group\"\>":>(
+   ActionMenuBox["\<\"libWireworld\"\>", {"\<\"Open/Close Group\"\>":>(
     SelectionMove[
       ParentCell[
        EvaluationCell[]], All, Cell]; FrontEndTokenExecute[
@@ -779,9 +936,12 @@ Cell[TextData[Cell[BoxData[
     BaseStyle->{"Text"}],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[0]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/notebooks"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "libWireworld"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"5455726c-0276-4a49-bda2-f0c2bf4deb5c"]], \
+   "Text"}]],ExpressionUUID->"2cd763c1-0a34-4289-9b23-cbd9a1407310"]], \
 "FileManagerDirectory",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
@@ -792,20 +952,22 @@ Cell[TextData[Cell[BoxData[
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->2122918676,ExpressionUUID->"01d3a972-1f94-416e-95a7-86a244a37bf8"],
+ CellID->53126302,ExpressionUUID->"3939c5cc-bc0d-49f4-986f-fa8477820182"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
-   TemplateBox[{"\"CellularAutomatonNumber-1-0-0-definition.nb\"", 
+   TemplateBox[{"\"libWireworld.c\"", 
      File[
-     "/Users/dans/projects/DanielS/Wireworld/notebooks/\
-CellularAutomatonNumber-1-0-0-definition.nb"]},
+      FileNameJoin[{
+        NotebookDirectory[], "libWireworld/libWireworld.c"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/notebooks/\
-CellularAutomatonNumber-1-0-0-definition.nb"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "libWireworld/libWireworld.c"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
@@ -813,20 +975,25 @@ CellularAutomatonNumber-1-0-0-definition.nb"],
  CellFrameLabels->{{
     Cell[
      BoxData[
-      TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
+      TemplateBox[{}, "FileManagerTXTIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1600876274,ExpressionUUID->"f2d1a211-a4bd-464b-8aaf-f55a45e15184"],
+ CellID->473219598,ExpressionUUID->"3841c5f6-984b-4ed4-b7b0-a1748e6fe7f3"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
-   TemplateBox[{"\"test.nb\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/notebooks/test.nb"]},
+   TemplateBox[{"\"wireworld.c\"", 
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "libWireworld/wireworld.c"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/notebooks/test.nb"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "libWireworld/wireworld.c"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
@@ -834,148 +1001,26 @@ Cell[BoxData[
  CellFrameLabels->{{
     Cell[
      BoxData[
-      TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
+      TemplateBox[{}, "FileManagerTXTIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->104923855,ExpressionUUID->"ac70112a-38f6-46a6-9609-e0cc7c595af0"],
-
-Cell[BoxData[
- InterpretationBox[
-  TagBox[
-   TemplateBox[{"\"two-diodes.gif\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/notebooks/two-diodes.gif"]},
-    
-    "FileManagerFileOpenerTemplate"],
-   Annotation[#, 
-    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/notebooks/two-diodes.gif"],
-  BaseStyle->{"Text"}]], "FileManagerFile",
- CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
- CellGroupingRules->{"SectionGrouping", 110},
- TaggingRules->{},
- CellFrameLabels->{{
-    Cell[
-     BoxData[
-      TemplateBox[{}, "FileManagerGIFIconTemplate"]], Background -> None], 
-    Inherited}, {Inherited, Inherited}},
- CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->371156798,ExpressionUUID->"0cd513a9-f1d2-483d-a39e-283d031146a6"],
-
-Cell[BoxData[
- InterpretationBox[
-  TagBox[
-   TemplateBox[{"\"Wireworld_01.nb\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/notebooks/Wireworld_01.nb"]},
-    "FileManagerFileOpenerTemplate"],
-   Annotation[#, 
-    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/notebooks/Wireworld_01.nb"],
-  BaseStyle->{"Text"}]], "FileManagerFile",
- CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
- CellGroupingRules->{"SectionGrouping", 110},
- TaggingRules->{},
- CellFrameLabels->{{
-    Cell[
-     BoxData[
-      TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
-    Inherited}, {Inherited, Inherited}},
- CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1739793098,ExpressionUUID->"f52a233a-e9cf-4df9-b3dc-981a682f988e"],
-
-Cell[BoxData[
- InterpretationBox[
-  TagBox[
-   TemplateBox[{"\"WireWorld2.nb\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/notebooks/WireWorld2.nb"]},
-    "FileManagerFileOpenerTemplate"],
-   Annotation[#, 
-    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/notebooks/WireWorld2.nb"],
-  BaseStyle->{"Text"}]], "FileManagerFile",
- CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
- CellGroupingRules->{"SectionGrouping", 110},
- TaggingRules->{},
- CellFrameLabels->{{
-    Cell[
-     BoxData[
-      TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
-    Inherited}, {Inherited, Inherited}},
- CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->565260534,ExpressionUUID->"67028f75-2410-49e0-ad85-156eca6f4695"],
-
-Cell[BoxData[
- InterpretationBox[
-  TagBox[
-   TemplateBox[{"\"WireWorld.nb\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/notebooks/WireWorld.nb"]},
-    "FileManagerFileOpenerTemplate"],
-   Annotation[#, 
-    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/notebooks/WireWorld.nb"],
-  BaseStyle->{"Text"}]], "FileManagerFile",
- CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
- CellGroupingRules->{"SectionGrouping", 110},
- TaggingRules->{},
- CellFrameLabels->{{
-    Cell[
-     BoxData[
-      TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
-    Inherited}, {Inherited, Inherited}},
- CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->2013624257,ExpressionUUID->"4bb12c97-07de-4445-b7f8-fd4d4bf39c86"],
-
-Cell[BoxData[
- InterpretationBox[
-  TagBox[
-   TemplateBox[{"\"Wireworld++.pdf\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/notebooks/Wireworld++.pdf"]},
-    "FileManagerFileOpenerTemplate"],
-   Annotation[#, 
-    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/notebooks/Wireworld++.pdf"],
-  BaseStyle->{"Text"}]], "FileManagerFile",
- CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
- CellGroupingRules->{"SectionGrouping", 110},
- TaggingRules->{},
- CellFrameLabels->{{
-    Cell[
-     BoxData[
-      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
-     Inherited}, {Inherited, Inherited}},
- CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->788094326,ExpressionUUID->"50838c80-52b0-498c-874f-c892af953950"],
-
-Cell[BoxData[
- InterpretationBox[
-  TagBox[
-   TemplateBox[{"\"XOR-gate.gif\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/notebooks/XOR-gate.gif"]},
-    "FileManagerFileOpenerTemplate"],
-   Annotation[#, 
-    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/notebooks/XOR-gate.gif"],
-  BaseStyle->{"Text"}]], "FileManagerFile",
- CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
- CellGroupingRules->{"SectionGrouping", 110},
- TaggingRules->{},
- CellFrameLabels->{{
-    Cell[
-     BoxData[
-      TemplateBox[{}, "FileManagerGIFIconTemplate"]], Background -> None], 
-    Inherited}, {Inherited, Inherited}},
- CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1969686033,ExpressionUUID->"05d43a69-f9a4-4fb8-b3f1-c7598788b468"]
+ CellID->146965906,ExpressionUUID->"fff7e27a-3acf-4a89-afd3-cd8065e275f7"]
 }, Closed]],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
    TemplateBox[{"\"PacletInfo.wl\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/PacletInfo.wl"]},
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "PacletInfo.wl"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[0]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/PacletInfo.wl"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "PacletInfo.wl"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
@@ -986,7 +1031,179 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerPacletInfoIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1052738126,ExpressionUUID->"8c95e64c-729e-4001-8e1e-d7aebdc35436"],
+ CellID->203618130,ExpressionUUID->"9cdaed3e-bb00-4446-bc1d-a9a83211b6c8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"README.md\"", 
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "README.md"}]]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[0]]& ],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "README.md"}]],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 100},
+ TaggingRules->{},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerTXTIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->440482610,ExpressionUUID->"1f1dd9b5-799e-4032-a3e8-19bb40f8cf0d"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   ActionMenuBox["\<\"screenshots\"\>", {"\<\"Open/Close Group\"\>":>(
+    SelectionMove[
+      ParentCell[
+       EvaluationCell[]], All, Cell]; FrontEndTokenExecute[
+      EvaluationNotebook[], "OpenCloseGroup"]), "\<\"Open Directory\"\>":>
+    DefinitionNotebookClient`FileTreeOpen[
+     ParentCell[
+      EvaluationCell[]]], "\<\"Un/Mark as Excluded\"\>":>
+    DefinitionNotebookClient`FileTreeExclusionToggle[
+     ParentCell[
+      EvaluationCell[]]], "\<\"Copy Path to Clipboard\"\>":>
+    DefinitionNotebookClient`FileTreeCopy[
+     ParentCell[
+      EvaluationCell[]]]},
+    Appearance->None,
+    BaseStyle->{"Text"}],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[0]]& ],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "screenshots"}]],
+  BoxID -> "FileTreePath",
+  BaseStyle->{
+   "Text"}]],ExpressionUUID->"c8ca50c0-bfda-410f-bf3e-a7659e9a822c"]], \
+"FileManagerDirectory",
+ CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 100},
+ TaggingRules->{},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
+     None], Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->63253150,ExpressionUUID->"42d8f1d8-fa13-4866-8b59-409fdd1af16c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"example-ClockGenerator.gif\"", 
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "screenshots/example-ClockGenerator.gif"}]]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "screenshots/example-ClockGenerator.gif"}]],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 110},
+ TaggingRules->{},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerGIFIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->427710991,ExpressionUUID->"23aeac26-aad3-446d-8e49-c88236f369f5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"example-Diode.gif\"", 
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "screenshots/example-Diode.gif"}]]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "screenshots/example-Diode.gif"}]],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 110},
+ TaggingRules->{},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerGIFIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->570987164,ExpressionUUID->"ae9188f2-0194-4969-af6c-49da06173884"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"example-OR.gif\"", 
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "screenshots/example-OR.gif"}]]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "screenshots/example-OR.gif"}]],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 110},
+ TaggingRules->{},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerGIFIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->237954639,ExpressionUUID->"f7830eba-d722-445e-935a-7a978a8fdf15"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"ref-WireworldEvolve.png\"", 
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "screenshots/ref-WireworldEvolve.png"}]]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "screenshots/ref-WireworldEvolve.png"}]],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 110},
+ TaggingRules->{},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerPNGIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->292197438,ExpressionUUID->"e7f2acb2-832d-4399-b0ab-e97f637bfb44"]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -1011,9 +1228,12 @@ Cell[TextData[Cell[BoxData[
     BaseStyle->{"Text"}],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[0]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/scripts"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "scripts"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"8d94e731-77d7-4610-9418-638ffd55fc9b"]], \
+   "Text"}]],ExpressionUUID->"0ff24cde-4e2b-41d5-8488-4875468e35c5"]], \
 "FileManagerDirectory",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
@@ -1024,18 +1244,22 @@ Cell[TextData[Cell[BoxData[
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->251916049,ExpressionUUID->"05c897b2-6735-4aef-83de-d29c056cfca4"],
+ CellID->194936369,ExpressionUUID->"9a4ce9ae-0337-4bc6-9967-e03562868ffc"],
 
 Cell[BoxData[
  InterpretationBox[
   TagBox[
-   TemplateBox[{"\"build_paclet.wls\"", 
-     File["/Users/dans/projects/DanielS/Wireworld/scripts/build_paclet.wls"]},
-    
+   TemplateBox[{"\"build_library.wls\"", 
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "scripts/build_library.wls"}]]},
     "FileManagerFileOpenerTemplate"],
    Annotation[#, 
     DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
-  File["/Users/dans/projects/DanielS/Wireworld/scripts/build_paclet.wls"],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "scripts/build_library.wls"}]],
+  BoxID -> "FileTreePath",
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
@@ -1046,14 +1270,40 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1262767306,ExpressionUUID->"b0b121dd-3f1c-47ef-aee0-bebbb9261713"]
+ CellID->166251291,ExpressionUUID->"4b76c7d8-dd25-4782-b85c-ea23554a2444"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"build_paclet.wls\"", 
+     File[
+      FileNameJoin[{
+        NotebookDirectory[], "scripts/build_paclet.wls"}]]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[1]]& ],
+  File[
+   FileNameJoin[{
+     NotebookDirectory[], "scripts/build_paclet.wls"}]],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 110},
+ TaggingRules->{},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->222202095,ExpressionUUID->"716952db-0e78-4f9f-9495-d0130468becd"]
 }, Closed]],
 
 Cell["", "FileManagerBottomSpacer",
  CellGroupingRules->{"SectionGrouping", 100},
  TaggingRules->{},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1896712288,ExpressionUUID->"a7aec7d4-79ce-42f7-968a-d9756e99dec4"]
+ CellID->41983526,ExpressionUUID->"6149b497-4480-4979-991a-25c9e9ec61c7"]
 }, Open  ]]
 }, Open  ]],
 
@@ -1598,7 +1848,6 @@ to a general overview of your paclet. ]]", "MoreInfoText"], Background ->
  TaggingRules->{"TemplateGroupName" -> "MainGuidePage"},
  DefaultNewCellStyle->{
   "LocalFileInput", TaggingRules -> {"FileInputProperty" -> "MainGuidePage"}},
- 
  CellTags->{"Main Guide Page", "MainGuidePage", "TemplateCellGroup"},
  CellID->93952416,ExpressionUUID->"36c79fec-7f07-4180-8646-e652d2cc567a"],
 
@@ -1614,7 +1863,7 @@ Wireworld.nb\>\"", "]"}]], "LocalFileInput",
        SelectedNotebook[], All, CellContents, AutoScroll -> True]], 
    PassEventsDown -> False, PassEventsUp -> False},
  CellChangeTimes->{{3.851116449174222*^9, 3.8511164505701227`*^9}, {
-  3.851117487366456*^9, 3.851117514027405*^9}},
+   3.851117487366456*^9, 3.851117514027405*^9}, 3.853155596641839*^9},
  CellTags->{"DefaultContent", "TabNext"},
  CellID->835369788,ExpressionUUID->"835e7bc0-d219-4575-a55e-219891d783dd"]
 }, Open  ]]
@@ -1800,9 +2049,9 @@ Cell[BoxData[
 OHXFd3YbuO7c8sL+hvvydTXT3tqfjMj9F//1PU7xoeLOM4z5eZYtd+wD6/ce
 avr93L5KOMy2OPO9/d1eiYAmwYv2S6S+VSfNfWjf0vj83uGlb0n272Bzz0hL
 D6PiEHEA/DrHag==
-                "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 
-               1, Axes -> False, Frame -> False, FrameLabel -> {None, None}, 
-               FrameStyle -> Directive[
+                "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 1, Axes -> 
+               False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
+               Directive[
                  Opacity[0.5], 
                  Thickness[Tiny], 
                  RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -1871,9 +2120,9 @@ D6PiEHEA/DrHag==
 OHXFd3YbuO7c8sL+hvvydTXT3tqfjMj9F//1PU7xoeLOM4z5eZYtd+wD6/ce
 avr93L5KOMy2OPO9/d1eiYAmwYv2S6S+VSfNfWjf0vj83uGlb0n272Bzz0hL
 D6PiEHEA/DrHag==
-                "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 
-               1, Axes -> False, Frame -> False, FrameLabel -> {None, None}, 
-               FrameStyle -> Directive[
+                "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 1, Axes -> 
+               False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
+               Directive[
                  Opacity[0.5], 
                  Thickness[Tiny], 
                  RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -2025,9 +2274,9 @@ Cell[BoxData[
 OHXFd3YbuO7c8sL+hvvydTXT3tqfjMj9F//1PU7xoeLOM4z5eZYtd+wD6/ce
 avr93L5KOMy2OPO9/d1eiYAmwYv2S6S+VSfNfWjf0vj83uGlb0n272Bzz0hL
 D6PiEHEA/DrHag==
-                "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 
-               1, Axes -> False, Frame -> False, FrameLabel -> {None, None}, 
-               FrameStyle -> Directive[
+                "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 1, Axes -> 
+               False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
+               Directive[
                  Opacity[0.5], 
                  Thickness[Tiny], 
                  RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -2094,9 +2343,9 @@ D6PiEHEA/DrHag==
 OHXFd3YbuO7c8sL+hvvydTXT3tqfjMj9F//1PU7xoeLOM4z5eZYtd+wD6/ce
 avr93L5KOMy2OPO9/d1eiYAmwYv2S6S+VSfNfWjf0vj83uGlb0n272Bzz0hL
 D6PiEHEA/DrHag==
-                "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 
-               1, Axes -> False, Frame -> False, FrameLabel -> {None, None}, 
-               FrameStyle -> Directive[
+                "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 1, Axes -> 
+               False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
+               Directive[
                  Opacity[0.5], 
                  Thickness[Tiny], 
                  RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -2193,8 +2442,7 @@ D6PiEHEA/DrHag==
                    "Column"], "SummaryItem"]}}, 
                GridBoxAlignment -> {
                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
-               False, 
-               GridBoxItemSize -> {
+               False, GridBoxItemSize -> {
                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
                GridBoxSpacings -> {
                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
@@ -2242,9 +2490,9 @@ D6PiEHEA/DrHag==
 OHXF7/ZKBDQJXrRfIvWtOmnuQ/uWxuf3Di99a7+z28B155YX9jfcl6+rmfbW
 /mRE7r/4r+8HzJ243EOq+BnG/DzLljv2gfV7DzX9fm5fJRxmW5z5Hmc4DBX3
 jLT0MCoOEQcAn1rFkg==
-                "], {{0, 0}, {11, 5}}, {0, 1}], 
-               AspectRatio -> 1, Axes -> False, Frame -> False, 
-               FrameLabel -> {None, None}, FrameStyle -> Directive[
+                "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 1, Axes -> 
+               False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
+               Directive[
                  Opacity[0.5], 
                  Thickness[Tiny], 
                  RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -2311,9 +2559,9 @@ jLT0MCoOEQcAn1rFkg==
 OHXF7/ZKBDQJXrRfIvWtOmnuQ/uWxuf3Di99a7+z28B155YX9jfcl6+rmfbW
 /mRE7r/4r+8HzJ243EOq+BnG/DzLljv2gfV7DzX9fm5fJRxmW5z5Hmc4DBX3
 jLT0MCoOEQcAn1rFkg==
-                "], {{0, 0}, {11, 5}}, {0, 1}], 
-               AspectRatio -> 1, Axes -> False, Frame -> False, 
-               FrameLabel -> {None, None}, FrameStyle -> Directive[
+                "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 1, Axes -> 
+               False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
+               Directive[
                  Opacity[0.5], 
                  Thickness[Tiny], 
                  RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -2458,9 +2706,9 @@ jLT0MCoOEQcAn1rFkg==
 OHXFzzDm51m23LEPrN97qOn3c/sq4TDb4sz39nd7JQKaBC/aL5H6Vp0096F9
 S+Pze4eXvh0wd+Jyz85uA9edW17Y33Bfvq5m2lv7kxG5/+K/vidZHFc44HIP
 teyllntGWnoYFYeIAwDpC8Gg
-                "], {{0, 0}, {11, 5}}, {0, 1}], 
-               AspectRatio -> 1, Axes -> False, Frame -> False, 
-               FrameLabel -> {None, None}, FrameStyle -> Directive[
+                "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 1, Axes -> 
+               False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
+               Directive[
                  Opacity[0.5], 
                  Thickness[Tiny], 
                  RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -2527,9 +2775,9 @@ teyllntGWnoYFYeIAwDpC8Gg
 OHXFzzDm51m23LEPrN97qOn3c/sq4TDb4sz39nd7JQKaBC/aL5H6Vp0096F9
 S+Pze4eXvh0wd+Jyz85uA9edW17Y33Bfvq5m2lv7kxG5/+K/vidZHFc44HIP
 teyllntGWnoYFYeIAwDpC8Gg
-                "], {{0, 0}, {11, 5}}, {0, 1}], 
-               AspectRatio -> 1, Axes -> False, Frame -> False, 
-               FrameLabel -> {None, None}, FrameStyle -> Directive[
+                "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 1, Axes -> 
+               False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
+               Directive[
                  Opacity[0.5], 
                  Thickness[Tiny], 
                  RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -2626,7 +2874,8 @@ teyllntGWnoYFYeIAwDpC8Gg
                    "Column"], "SummaryItem"]}}, 
                GridBoxAlignment -> {
                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
-               False, GridBoxItemSize -> {
+               False, 
+               GridBoxItemSize -> {
                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
                GridBoxSpacings -> {
                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
@@ -2901,8 +3150,7 @@ Cell[BoxData[
 1:eJzt10EKgCAQhWGhdfu2ncQ7dISgdVfuCB4hQ1wKE6mM0/+BKK3sOQ227ud2
 TM65OY4ljmcNADYEn+bLj/kcfVjNn3rWIecQhHPr/KX70Ya6ggR9DF/UOvfW
 /Zn61In+k9TOoXQ/KX0v1nIeZZ9v/e29uM/3ofX/l/MCAGtuSFWYMw==
-    "], {{0, 0}, {24,
-     13}}, {0, 1}], {
+    "], {{0, 0}, {24, 13}}, {0, 1}], {
     {RGBColor[
      0.33333333333333337`, 0.33333333333333337`, 0.33333333333333337`], 
      Thickness[Tiny], 
@@ -3210,7 +3458,7 @@ Cell[BoxData[
 Cell["Open a window and draw/edit a Wireworld state:", "Text",
  TaggingRules->{},
  CellChangeTimes->{{3.851116742273089*^9, 3.8511167772468033`*^9}},
- CellID->1135497039,ExpressionUUID->"99990a4d-d34e-4bf9-80ca-1bd795bc7f45"],
+ CellID->1135497039,ExpressionUUID->"120d9d9d-9121-4277-b62d-8e522939020a"],
 
 Cell[BoxData[
  RowBox[{"WireworldDraw", "[", 
@@ -3441,7 +3689,7 @@ tbI=
  TaggingRules->{},
  CellChangeTimes->{{3.850949309071349*^9, 3.850949311256235*^9}, 
    3.8510328942407637`*^9},
- CellID->1386540953,ExpressionUUID->"32c68238-6cde-48aa-9020-45707a397a42"],
+ CellID->1386540953,ExpressionUUID->"a73e2c5c-6e17-4308-8fd3-9381eb3e9e06"],
 
 Cell[BoxData[
  GraphicsBox[
@@ -3595,8 +3843,7 @@ l9bV1YFLKpYkSbIVKBSItHXr1tWrV9fU1IhLkiRZCfwBhcCirVlt3rx5+fLl
 4pIkSVYCf1asWLFp06Zt27Y1NDRs2bIFz1etWrVkyZLGxkahSZKkiyYwB+QB
 fzZu3AgWBSiFYglcAqwWLly4YMECFE5r166tra0N30PJq/C9ufAkd6Xaq73a
 q32B9vgJtqxbtw6cAW3AnOrqavAnItL/AyzB8O0=
-    "], {{0, 252.}, {391., 0}}, {0, 
-    255},
+    "], {{0, 252.}, {391., 0}}, {0, 255},
     ColorFunction->RGBColor],
    BoxForm`ImageTag["Byte", ColorSpace -> Automatic, Interleaving -> True],
    Selectable->False],
@@ -3605,7 +3852,7 @@ q32B9vgJtqxbtw6cAW3AnOrqavAnItL/AyzB8O0=
   PlotRange->{{0, 391.}, {0, 252.}}]], "Input",
  TaggingRules->{},
  CellChangeTimes->{3.851032894241321*^9},
- CellID->29081851,ExpressionUUID->"f2ae288f-4e2c-4a4f-96e9-6daf2894e3b2"]
+ CellID->29081851,ExpressionUUID->"1b90d61e-9d24-4437-8486-13862b29acbc"]
 }, Open  ]]
 }, Open  ]],
 
@@ -3659,8 +3906,8 @@ P5qeB1b8DGN+nmXLHfvA+r2Hmn4/t68SDrMtznxvf7dXIqBJ8KL9Eqlv1Ulz
 H9q3ND6/d3jpW5qHP6nuGWzhOZquRsUHQ7k32Pw7Kj44yxlal8+j6XNwio+W
 P9QNB1zpH1d+Ga7hPFTcOeov+pQDQ709P9TDfzS+RsVHxUfFR8VHxZHFARhF
 tbI=
-                  "], {{0, 0}, {24, 13}}, {0, 1}], AspectRatio -> 1, 
-                 Axes -> False, Frame -> False, FrameLabel -> {None, None}, 
+                  "], {{0, 0}, {24, 13}}, {0, 1}], AspectRatio -> 1, Axes -> 
+                 False, Frame -> False, FrameLabel -> {None, None}, 
                  FrameStyle -> Directive[
                    Opacity[0.5], 
                    Thickness[Tiny], 
@@ -3732,8 +3979,8 @@ P5qeB1b8DGN+nmXLHfvA+r2Hmn4/t68SDrMtznxvf7dXIqBJ8KL9Eqlv1Ulz
 H9q3ND6/d3jpW5qHP6nuGWzhOZquRsUHQ7k32Pw7Kj44yxlal8+j6XNwio+W
 P9QNB1zpH1d+Ga7hPFTcOeov+pQDQ709P9TDfzS+RsVHxUfFR8VHxZHFARhF
 tbI=
-                  "], {{0, 0}, {24, 13}}, {0, 1}], AspectRatio -> 1, 
-                 Axes -> False, Frame -> False, FrameLabel -> {None, None}, 
+                  "], {{0, 0}, {24, 13}}, {0, 1}], AspectRatio -> 1, Axes -> 
+                 False, Frame -> False, FrameLabel -> {None, None}, 
                  FrameStyle -> Directive[
                    Opacity[0.5], 
                    Thickness[Tiny], 
@@ -4169,8 +4416,7 @@ ujabzcOHD0eASS8AAICjMxJrhNbIrX/9138d3fXzn/98NJi/5QUAAHB0RmKN
 0Bq5tfv322+//TV+3V/0AgAAOAqjr7bRNX4w/aeFtr++/QNH9QUAAHAwI6W2
 f7y4/b7W5/5XHbd/4Dh4/PjxRwAAADiIkVLbprr4x4ufy6effjry7KcAAAA4
 iO2/MuLq4gIAAAAAAAAAAAAAAAAAvDj8P9qRWic=
-    "], {{0, 277.}, {404., 0}}, {0, 
-    255},
+    "], {{0, 277.}, {404., 0}}, {0, 255},
     ColorFunction->RGBColor,
     ImageResolution->144.],
    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
@@ -4244,9 +4490,9 @@ JTm/9f2oOFR8sMUjLnFc7h+oeN89qZZZctZFe6X4tD/yLY/tP51dsjuy8J39
 f/FfB1/6HGzuxGUvLncOVPwOtnikVv99sOVfavW/SPXvUK/XSM3XtG4P4BKn
 ljsHW3obbPmC1HgZ6uMkuNLVSHPnUI/HoVIOD/X+yGAr3wabO0fFR+N3VHw0
 fkea+Gj8Dm/xwdYuGmzig609PNquHo1fZHEAuwBwBQ==
-                  "], {{0, 0}, {
-                  20, 20}}, {0, 1}], AspectRatio -> 1, Axes -> False, Frame -> 
-                 False, FrameLabel -> {None, None}, FrameStyle -> Directive[
+                  "], {{0, 0}, {20, 20}}, {0, 1}], AspectRatio -> 1, Axes -> 
+                 False, Frame -> False, FrameLabel -> {None, None}, 
+                 FrameStyle -> Directive[
                    Opacity[0.5], 
                    Thickness[Tiny], 
                    RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -4318,9 +4564,9 @@ JTm/9f2oOFR8sMUjLnFc7h+oeN89qZZZctZFe6X4tD/yLY/tP51dsjuy8J39
 f/FfB1/6HGzuxGUvLncOVPwOtnikVv99sOVfavW/SPXvUK/XSM3XtG4P4BKn
 ljsHW3obbPmC1HgZ6uMkuNLVSHPnUI/HoVIOD/X+yGAr3wabO0fFR+N3VHw0
 fkea+Gj8Dm/xwdYuGmzig609PNquHo1fZHEAuwBwBQ==
-                  "], {{0, 0}, {
-                  20, 20}}, {0, 1}], AspectRatio -> 1, Axes -> False, Frame -> 
-                 False, FrameLabel -> {None, None}, FrameStyle -> Directive[
+                  "], {{0, 0}, {20, 20}}, {0, 1}], AspectRatio -> 1, Axes -> 
+                 False, Frame -> False, FrameLabel -> {None, None}, 
+                 FrameStyle -> Directive[
                    Opacity[0.5], 
                    Thickness[Tiny], 
                    RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -4481,7 +4727,6 @@ fkea+Gj8Dm/xwdYuGmzig609PNquHo1fZHEAuwBwBQ==
          RowBox[{"{", 
           RowBox[{"{", "1", "}"}], "}"}]}], "]"}]}], "]"}], 
      "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",
- 
  TaggingRules->{},
  CellChangeTimes->{3.851117204971527*^9},
  CellLabel->"In[468]:=",
@@ -4906,7 +5151,6 @@ publicly credited with contributing this paclet.", "MoreInfoText"],
  DefaultNewCellStyle->"Text",
  CellTags->{
   "Contributed By", "ContributorInformation", "Creator", "TemplateCellGroup"},
- 
  CellID->57534933,ExpressionUUID->"f17a85cb-6569-4869-9104-13051314c803"],
 
 Cell["Daniel Sanchez", "Text",
@@ -5856,8 +6100,9 @@ Cell["Additional information about limitations, issues, etc.", "Text",
 }, Open  ]]
 },
 WindowSize->{1010., Automatic},
-WindowMargins->{{104, Automatic}, {Automatic, 39}},
+WindowMargins->{{Automatic, 219.5}, {128, Automatic}},
 WindowTitle->"Wireworld | Definition Notebook",
+WindowStatusArea->Automatic,
 DockedCells->{
   Cell[
    BoxData[
@@ -5935,10 +6180,13 @@ QwYM48qyDMTSiJJ9UKfySW/HAvr3tbOYxxU/OS9jAy++HRxO+LEHs7jiIw0H
 hfh02szIqAiqrTEpf3kwpnBFPUFlETRpRhyvvEu25g3WNF++E/cXJTqMSlmk
 o4w=
       "]], "LastBuiltArchive" -> 
-    "/Users/dans/projects/DanielS/Wireworld/build/DanielS__Wireworld-1.0.1"}},\
-
+    "/Users/dans/projects/DanielS/Wireworld/build/DanielS__Wireworld-1.0.1"}, 
+  "NotebookIndexQ" -> True, "NotebookLastIndexed" -> 
+  DateObject[{2022, 2, 6, 11, 55, 20.6502542`9.067500336702395}, "Instant", 
+    "Gregorian", -5.], "NotebookUUID" -> 
+  "4f721c46-3653-4a95-abbc-01fbed9311b8"},
 CreateCellID->True,
-FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (December 2, 2021)",
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (February 5, 2022)",
 StyleDefinitions->Notebook[{
    Cell[
     StyleData[StyleDefinitions -> "Default.nb"]], 
@@ -6207,6 +6455,7 @@ X5RxYLv4XzxkhpjDona/Xv0OBH+hx9ZwiywJOB/mHxgf5l8Y30/526VcIyR+
                  GrayLevel[0.85], 
                  Thickness[
                   NCache[2/45, 0.044444444444444446`]], 
+                 
                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
                    0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 
                    0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
@@ -6359,8 +6608,7 @@ X5RxYLv4XzxkhpjDona/Xv0OBH+hx9ZwiywJOB/mHxgf5l8Y30/526VcIyR+
           Background -> RGBColor[0.960784, 0.960784, 0.960784], FrameStyle -> 
           RGBColor[0.898039, 0.898039, 0.898039], FrameMargins -> 8, 
           StripOnInput -> False], TooltipDelay -> 0.1, 
-         TooltipStyle -> {Background -> None, CellFrame -> 0}], 
-        Annotation[#, 
+         TooltipStyle -> {Background -> None, CellFrame -> 0}], Annotation[#, 
          Framed[
           Style[
           RSNB`$$tooltip, "Text", FontColor -> 
@@ -6427,28 +6675,25 @@ W7emTZsG0dXa2jofBoBsiCBQFqgGjyFAWYjK7u7ua9euoYU/UAQoDlGAbA6a
 IRA3TJgw4c+fP1jjESgOlIW4B6shQP9C3IDLBLg5EPfAwwfZEEhIXr9+nWC6
 AqqBhDNEIyQ1QmITEpIETYAASDhD4p0BDCg3hCou+U+9MKFW7FAlnVArxVIl
 78ABhbkYGVBYnpAEqGgIfkBMaQ8Ao5poRw==
-                  "], "Byte", ColorSpace -> 
-                  "RGB", ImageResolution -> 144, Interleaving -> True], 
-                "Hover" -> Image[CompressedData["
+                  "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                  Interleaving -> True], "Hover" -> Image[CompressedData["
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqA4ANlgA6GfHp45euxpRAEZJNqyPdNjf8qJP5nMSAjoAhQ
 nBhDPl8/8rvHDk07MgLKAtXgMQQoC1WcicMQmDiyOWiG4HcDmnuwGgL0L5Em
 QBA8fJANwQxJ/AioHqIRkhohsUmSCRAEiXcGMKDcEKq4hIphQq3YoUo6oVaK
 pUregQMKczEyoLA8IQlQ0RD8gJjSHgCjx6pq
-                  "], "Byte", ColorSpace -> 
-                  "RGB", ImageResolution -> 144, Interleaving -> True], 
-                "Pressed" -> Image[CompressedData["
+                  "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                  Interleaving -> True], "Pressed" -> Image[CompressedData["
 1:eJy9lD0OgkAQhYk2lnbW3sLW0hbjASAiscEETIichlt5AxoagRgKEvTpE4KA
 /GQ3fglkeDu8zM7+LPWTepgoiuLM8FI1d23b2mU7x8fOco6mZew31tkwDXul
 TyEuPs8rfvQxJAfcxPiDSRzH9wLEY03SNM3zvDZrKNCHmCRJkmUZ9SiKrgWI
 KWIUOR0mGKUShqHv++43UKAzoepTM2ENQRB4nue2AR2jrKfVBPNlDb8cSh/W
 U/anasJONmfRBDnsM3/kbuRqspO9DoR95rorb8RNpFQisSeyVkfKPpG1Y6Wc
 nRLBU1xF8D4ZhUSTbobc9k/SEjih
-                  "], "Byte", ColorSpace -> 
-                  "RGB", ImageResolution -> 144, Interleaving -> True]}, 
-              Background -> GrayLevel[16/17], Method -> "Queued", 
-              ImageSize -> {All, 20}, Evaluator -> Automatic], FrameStyle -> 
-             Directive[
+                  "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                  Interleaving -> True]}, Background -> GrayLevel[16/17], 
+              Method -> "Queued", ImageSize -> {All, 20}, Evaluator -> 
+              Automatic], FrameStyle -> Directive[
                GrayLevel[16/17], 
                AbsoluteThickness[2]], FrameMargins -> -1, ContentPadding -> 
              False, StripOnInput -> False], 
@@ -6504,28 +6749,25 @@ W7emTZsG0dXa2jofBoBsiCBQFqgGjyFAWYjK7u7ua9euoYU/UAQoDlGAbA6a
 IRA3TJgw4c+fP1jjESgOlIW4B6shQP9C3IDLBLg5EPfAwwfZEEhIXr9+nWC6
 AqqBhDNEIyQ1QmITEpIETYAASDhD4p0BDCg3hCou+U+9MKFW7FAlnVArxVIl
 78ABhbkYGVBYnpAEqGgIfkBMaQ8Ao5poRw==
-                  "], "Byte", ColorSpace -> 
-                  "RGB", ImageResolution -> 144, Interleaving -> True], 
-                "Hover" -> Image[CompressedData["
+                  "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                  Interleaving -> True], "Hover" -> Image[CompressedData["
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqA4ANlgA6GfHp45euxpRAEZJNqyPdNjf8qJP5nMSAjoAhQ
 nBhDPl8/8rvHDk07MgLKAtXgMQQoC1WcicMQmDiyOWiG4HcDmnuwGgL0L5Em
 QBA8fJANwQxJ/AioHqIRkhohsUmSCRAEiXcGMKDcEKq4hIphQq3YoUo6oVaK
 pUregQMKczEyoLA8IQlQ0RD8gJjSHgCjx6pq
-                  "], "Byte", ColorSpace -> 
-                  "RGB", ImageResolution -> 144, Interleaving -> True], 
-                "Pressed" -> Image[CompressedData["
+                  "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                  Interleaving -> True], "Pressed" -> Image[CompressedData["
 1:eJy9lD0OgkAQhYk2lnbW3sLW0hbjASAiscEETIichlt5AxoagRgKEvTpE4KA
 /GQ3fglkeDu8zM7+LPWTepgoiuLM8FI1d23b2mU7x8fOco6mZew31tkwDXul
 TyEuPs8rfvQxJAfcxPiDSRzH9wLEY03SNM3zvDZrKNCHmCRJkmUZ9SiKrgWI
 KWIUOR0mGKUShqHv++43UKAzoepTM2ENQRB4nue2AR2jrKfVBPNlDb8cSh/W
 U/anasJONmfRBDnsM3/kbuRqspO9DoR95rorb8RNpFQisSeyVkfKPpG1Y6Wc
 nRLBU1xF8D4ZhUSTbobc9k/SEjih
-                  "], "Byte", ColorSpace -> 
-                  "RGB", ImageResolution -> 144, Interleaving -> True]}, 
-              Background -> GrayLevel[16/17], Method -> "Queued", 
-              ImageSize -> {All, 20}, Evaluator -> Automatic], FrameStyle -> 
-             Directive[
+                  "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                  Interleaving -> True]}, Background -> GrayLevel[16/17], 
+              Method -> "Queued", ImageSize -> {All, 20}, Evaluator -> 
+              Automatic], FrameStyle -> Directive[
                GrayLevel[16/17], 
                AbsoluteThickness[2]], FrameMargins -> -1, ContentPadding -> 
              False, StripOnInput -> False], 
@@ -6582,28 +6824,25 @@ W7emTZsG0dXa2jofBoBsiCBQFqgGjyFAWYjK7u7ua9euoYU/UAQoDlGAbA6a
 IRA3TJgw4c+fP1jjESgOlIW4B6shQP9C3IDLBLg5EPfAwwfZEEhIXr9+nWC6
 AqqBhDNEIyQ1QmITEpIETYAASDhD4p0BDCg3hCou+U+9MKFW7FAlnVArxVIl
 78ABhbkYGVBYnpAEqGgIfkBMaQ8Ao5poRw==
-                  "], "Byte", ColorSpace -> 
-                  "RGB", ImageResolution -> 144, Interleaving -> True], 
-                "Hover" -> Image[CompressedData["
+                  "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                  Interleaving -> True], "Hover" -> Image[CompressedData["
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqA4ANlgA6GfHp45euxpRAEZJNqyPdNjf8qJP5nMSAjoAhQ
 nBhDPl8/8rvHDk07MgLKAtXgMQQoC1WcicMQmDiyOWiG4HcDmnuwGgL0L5Em
 QBA8fJANwQxJ/AioHqIRkhohsUmSCRAEiXcGMKDcEKq4hIphQq3YoUo6oVaK
 pUregQMKczEyoLA8IQlQ0RD8gJjSHgCjx6pq
-                  "], "Byte", ColorSpace -> 
-                  "RGB", ImageResolution -> 144, Interleaving -> True], 
-                "Pressed" -> Image[CompressedData["
+                  "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                  Interleaving -> True], "Pressed" -> Image[CompressedData["
 1:eJy9lD0OgkAQhYk2lnbW3sLW0hbjASAiscEETIichlt5AxoagRgKEvTpE4KA
 /GQ3fglkeDu8zM7+LPWTepgoiuLM8FI1d23b2mU7x8fOco6mZew31tkwDXul
 TyEuPs8rfvQxJAfcxPiDSRzH9wLEY03SNM3zvDZrKNCHmCRJkmUZ9SiKrgWI
 KWIUOR0mGKUShqHv++43UKAzoepTM2ENQRB4nue2AR2jrKfVBPNlDb8cSh/W
 U/anasJONmfRBDnsM3/kbuRqspO9DoR95rorb8RNpFQisSeyVkfKPpG1Y6Wc
 nRLBU1xF8D4ZhUSTbobc9k/SEjih
-                  "], "Byte", ColorSpace -> 
-                  "RGB", ImageResolution -> 144, Interleaving -> True]}, 
-              Background -> GrayLevel[16/17], Method -> "Queued", 
-              ImageSize -> {All, 20}, Evaluator -> Automatic], FrameStyle -> 
-             Directive[
+                  "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                  Interleaving -> True]}, Background -> GrayLevel[16/17], 
+              Method -> "Queued", ImageSize -> {All, 20}, Evaluator -> 
+              Automatic], FrameStyle -> Directive[
                GrayLevel[16/17], 
                AbsoluteThickness[2]], FrameMargins -> -1, ContentPadding -> 
              False, StripOnInput -> False], 
@@ -6655,35 +6894,31 @@ AsyncronousResourceInformationUpdates = False,
                   FontColor -> RGBColor[1., 0.853921568627451, 0.75], 
                    TaggingRules -> {"ButtonHovering" -> False}}], Evaluator -> 
                  "System"], Appearance -> {"Default" -> Image[CompressedData["
-
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqA4ANlgA6GPHr06BQMANmkGrJjx46WlpZyVAAUAYoTY8it
 W7emTZsG0dXa2jofBoBsiCBQFqgGjyFAWYjK7u7ua9euoYU/UAQoDlGAbA6a
 IRA3TJgw4c+fP1jjESgOlIW4B6shQP9C3IDLBLg5EPfAwwfZEEhIXr9+nWC6
 AqqBhDNEIyQ1QmITEpIETYAASDhD4p0BDCg3hCou+U+9MKFW7FAlnVArxVIl
 78ABhbkYGVBYnpAEqGgIfkBMaQ8Ao5poRw==
-                   "], "Byte", 
-                   ColorSpace -> "RGB", ImageResolution -> 144, Interleaving -> 
-                   True], "Hover" -> Image[CompressedData["
+                   "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                   Interleaving -> True], "Hover" -> Image[CompressedData["
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqA4ANlgA6GfHp45euxpRAEZJNqyPdNjf8qJP5nMSAjoAhQ
 nBhDPl8/8rvHDk07MgLKAtXgMQQoC1WcicMQmDiyOWiG4HcDmnuwGgL0L5Em
 QBA8fJANwQxJ/AioHqIRkhohsUmSCRAEiXcGMKDcEKq4hIphQq3YoUo6oVaK
 pUregQMKczEyoLA8IQlQ0RD8gJjSHgCjx6pq
-                   "], "Byte", 
-                   ColorSpace -> "RGB", ImageResolution -> 144, Interleaving -> 
-                   True], "Pressed" -> Image[CompressedData["
+                   "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                   Interleaving -> True], "Pressed" -> Image[CompressedData["
 1:eJy9lD0OgkAQhYk2lnbW3sLW0hbjASAiscEETIichlt5AxoagRgKEvTpE4KA
 /GQ3fglkeDu8zM7+LPWTepgoiuLM8FI1d23b2mU7x8fOco6mZew31tkwDXul
 TyEuPs8rfvQxJAfcxPiDSRzH9wLEY03SNM3zvDZrKNCHmCRJkmUZ9SiKrgWI
 KWIUOR0mGKUShqHv++43UKAzoepTM2ENQRB4nue2AR2jrKfVBPNlDb8cSh/W
 U/anasJONmfRBDnsM3/kbuRqspO9DoR95rorb8RNpFQisSeyVkfKPpG1Y6Wc
 nRLBU1xF8D4ZhUSTbobc9k/SEjih
-                   "], "Byte", ColorSpace -> 
-                   "RGB", ImageResolution -> 144, Interleaving -> True]}, 
-               Background -> GrayLevel[16/17], Method -> "Queued", 
-               ImageSize -> {All, 20}, Evaluator -> Automatic], FrameStyle -> 
-              Directive[
+                   "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                   Interleaving -> True]}, Background -> GrayLevel[16/17], 
+               Method -> "Queued", ImageSize -> {All, 20}, Evaluator -> 
+               Automatic], FrameStyle -> Directive[
                 GrayLevel[16/17], 
                 AbsoluteThickness[2]], FrameMargins -> -1, ContentPadding -> 
               False, StripOnInput -> False], {
@@ -6873,35 +7108,31 @@ AsyncronousResourceInformationUpdates = False,
                   FontColor -> RGBColor[1., 0.853921568627451, 0.75], 
                    TaggingRules -> {"ButtonHovering" -> False}}], Evaluator -> 
                  "System"], Appearance -> {"Default" -> Image[CompressedData["
-
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqA4ANlgA6GPHr06BQMANmkGrJjx46WlpZyVAAUAYoTY8it
 W7emTZsG0dXa2jofBoBsiCBQFqgGjyFAWYjK7u7ua9euoYU/UAQoDlGAbA6a
 IRA3TJgw4c+fP1jjESgOlIW4B6shQP9C3IDLBLg5EPfAwwfZEEhIXr9+nWC6
 AqqBhDNEIyQ1QmITEpIETYAASDhD4p0BDCg3hCou+U+9MKFW7FAlnVArxVIl
 78ABhbkYGVBYnpAEqGgIfkBMaQ8Ao5poRw==
-                   "], "Byte", 
-                   ColorSpace -> "RGB", ImageResolution -> 144, Interleaving -> 
-                   True], "Hover" -> Image[CompressedData["
+                   "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                   Interleaving -> True], "Hover" -> Image[CompressedData["
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqA4ANlgA6GfHp45euxpRAEZJNqyPdNjf8qJP5nMSAjoAhQ
 nBhDPl8/8rvHDk07MgLKAtXgMQQoC1WcicMQmDiyOWiG4HcDmnuwGgL0L5Em
 QBA8fJANwQxJ/AioHqIRkhohsUmSCRAEiXcGMKDcEKq4hIphQq3YoUo6oVaK
 pUregQMKczEyoLA8IQlQ0RD8gJjSHgCjx6pq
-                   "], "Byte", 
-                   ColorSpace -> "RGB", ImageResolution -> 144, Interleaving -> 
-                   True], "Pressed" -> Image[CompressedData["
+                   "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                   Interleaving -> True], "Pressed" -> Image[CompressedData["
 1:eJy9lD0OgkAQhYk2lnbW3sLW0hbjASAiscEETIichlt5AxoagRgKEvTpE4KA
 /GQ3fglkeDu8zM7+LPWTepgoiuLM8FI1d23b2mU7x8fOco6mZew31tkwDXul
 TyEuPs8rfvQxJAfcxPiDSRzH9wLEY03SNM3zvDZrKNCHmCRJkmUZ9SiKrgWI
 KWIUOR0mGKUShqHv++43UKAzoepTM2ENQRB4nue2AR2jrKfVBPNlDb8cSh/W
 U/anasJONmfRBDnsM3/kbuRqspO9DoR95rorb8RNpFQisSeyVkfKPpG1Y6Wc
 nRLBU1xF8D4ZhUSTbobc9k/SEjih
-                   "], "Byte", ColorSpace -> 
-                   "RGB", ImageResolution -> 144, Interleaving -> True]}, 
-               Background -> GrayLevel[16/17], Method -> "Queued", 
-               ImageSize -> {All, 20}, Evaluator -> Automatic], FrameStyle -> 
-              Directive[
+                   "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                   Interleaving -> True]}, Background -> GrayLevel[16/17], 
+               Method -> "Queued", ImageSize -> {All, 20}, Evaluator -> 
+               Automatic], FrameStyle -> Directive[
                 GrayLevel[16/17], 
                 AbsoluteThickness[2]], FrameMargins -> -1, ContentPadding -> 
               False, StripOnInput -> False], {
@@ -7035,35 +7266,31 @@ AsyncronousResourceInformationUpdates = False,
                   FontColor -> RGBColor[1., 0.853921568627451, 0.75], 
                    TaggingRules -> {"ButtonHovering" -> False}}], Evaluator -> 
                  "System"], Appearance -> {"Default" -> Image[CompressedData["
-
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqA4ANlgA6GPHr06BQMANmkGrJjx46WlpZyVAAUAYoTY8it
 W7emTZsG0dXa2jofBoBsiCBQFqgGjyFAWYjK7u7ua9euoYU/UAQoDlGAbA6a
 IRA3TJgw4c+fP1jjESgOlIW4B6shQP9C3IDLBLg5EPfAwwfZEEhIXr9+nWC6
 AqqBhDNEIyQ1QmITEpIETYAASDhD4p0BDCg3hCou+U+9MKFW7FAlnVArxVIl
 78ABhbkYGVBYnpAEqGgIfkBMaQ8Ao5poRw==
-                   "], "Byte", 
-                   ColorSpace -> "RGB", ImageResolution -> 144, Interleaving -> 
-                   True], "Hover" -> Image[CompressedData["
+                   "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                   Interleaving -> True], "Hover" -> Image[CompressedData["
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqA4ANlgA6GfHp45euxpRAEZJNqyPdNjf8qJP5nMSAjoAhQ
 nBhDPl8/8rvHDk07MgLKAtXgMQQoC1WcicMQmDiyOWiG4HcDmnuwGgL0L5Em
 QBA8fJANwQxJ/AioHqIRkhohsUmSCRAEiXcGMKDcEKq4hIphQq3YoUo6oVaK
 pUregQMKczEyoLA8IQlQ0RD8gJjSHgCjx6pq
-                   "], "Byte", 
-                   ColorSpace -> "RGB", ImageResolution -> 144, Interleaving -> 
-                   True], "Pressed" -> Image[CompressedData["
+                   "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                   Interleaving -> True], "Pressed" -> Image[CompressedData["
 1:eJy9lD0OgkAQhYk2lnbW3sLW0hbjASAiscEETIichlt5AxoagRgKEvTpE4KA
 /GQ3fglkeDu8zM7+LPWTepgoiuLM8FI1d23b2mU7x8fOco6mZew31tkwDXul
 TyEuPs8rfvQxJAfcxPiDSRzH9wLEY03SNM3zvDZrKNCHmCRJkmUZ9SiKrgWI
 KWIUOR0mGKUShqHv++43UKAzoepTM2ENQRB4nue2AR2jrKfVBPNlDb8cSh/W
 U/anasJONmfRBDnsM3/kbuRqspO9DoR95rorb8RNpFQisSeyVkfKPpG1Y6Wc
 nRLBU1xF8D4ZhUSTbobc9k/SEjih
-                   "], "Byte", ColorSpace -> 
-                   "RGB", ImageResolution -> 144, Interleaving -> True]}, 
-               Background -> GrayLevel[16/17], Method -> "Queued", 
-               ImageSize -> {All, 20}, Evaluator -> Automatic], FrameStyle -> 
-              Directive[
+                   "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+                   Interleaving -> True]}, Background -> GrayLevel[16/17], 
+               Method -> "Queued", ImageSize -> {All, 20}, Evaluator -> 
+               Automatic], FrameStyle -> Directive[
                 GrayLevel[16/17], 
                 AbsoluteThickness[2]], FrameMargins -> -1, ContentPadding -> 
               False, StripOnInput -> False], {
@@ -7185,7 +7412,6 @@ AsyncronousResourceInformationUpdates = False,
                     
                     FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{4.,
                      30.63}, {4., 43.68}, {15.31, 37.16}, {15.31, 24.1}}}]}, {
-                   
                     FaceForm[
                     RGBColor[1., 0.41569, 0.058824, 1.]]}, StripOnInput -> 
                    False], 
@@ -7209,7 +7435,6 @@ AsyncronousResourceInformationUpdates = False,
                     
                     FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{4.,
                      14.97}, {4., 28.02}, {28.87, 13.67}, {28.87, 0.62}}}]}, {
-                   
                     FaceForm[
                     RGBColor[0.98039, 0.66274, 0.25098, 1.]]}, StripOnInput -> 
                    False], 
@@ -7283,6 +7508,7 @@ AsyncronousResourceInformationUpdates = False,
             "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
             TemplateBox[{
               StyleBox[
+               
                TemplateBox[{
                 "\"Paclet Repository\"", "\" \[RightGuillemet]  \""}, 
                 "RowDefault"], "Text", FontColor -> RGBColor[1., 1., 1.], 
@@ -7460,6 +7686,7 @@ AsyncronousResourceInformationUpdates = False,
                     Null]; Null]]], Delimiter, "\"All\"" :> 
               With[{RSNB`nb$ = InputNotebook[], RSNB`$cp$ = $ContextPath}, 
                 Quiet[
+                 
                  Block[{$ContextPath = RSNB`$cp$, 
                    ResourceSystemClient`$\
 AsyncronousResourceInformationUpdates = False, 
@@ -7489,7 +7716,6 @@ AsyncronousResourceInformationUpdates = False,
                     CurrentValue[RSNB`nb$, {TaggingRules, "StatusMessage"}] = 
                     ""; DefinitionNotebookClient`$ButtonsDisabled = False; 
                     Null]; Null]]]}, Appearance -> None, Method -> "Queued"], 
-            
             ActionMenuBox[
              TemplateBox[{
                TemplateBox[{"\"Build\"", 
@@ -7564,7 +7790,6 @@ AsyncronousResourceInformationUpdates = False,
                     CurrentValue[RSNB`nb$, {TaggingRules, "StatusMessage"}] = 
                     ""; DefinitionNotebookClient`$ButtonsDisabled = False; 
                     Null]; Null]]]}, Appearance -> None, Method -> "Queued"], 
-            
             ActionMenuBox[
              TemplateBox[{
                TemplateBox[{"\"Deploy\"", 
@@ -7680,7 +7905,6 @@ AsyncronousResourceInformationUpdates = False,
                     CurrentValue[RSNB`nb$, {TaggingRules, "StatusMessage"}] = 
                     ""; DefinitionNotebookClient`$ButtonsDisabled = False; 
                     Null]; Null]]]}, Appearance -> None, Method -> "Queued"], 
-            
             ItemBox[
              StyleBox[
               DynamicBox[
@@ -7871,7 +8095,6 @@ Repository\""}, "PrettyTooltipTemplate"], Annotation[
                  
                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{42.43,
                    7.14}, {31.13, 0.62}, {31.13, 13.67}, {42.43, 20.19}}}]}, {
-                
                  FaceForm[
                   RGBColor[1., 0.41569, 0.058824, 1.]]}, StripOnInput -> 
                 False], 
@@ -7995,27 +8218,24 @@ UFAcikHs/4QAMWqAoIKBiRJEB0Pq2Ng6BHkhCMgm1ZB+SeHlhkqrzdSQEVAE
 KE6MIU1cnHM1ZOEaV8EQXAQoC1SDxxCgLJrtuBCyOWiGILsBPwKqxGoI0L9E
 mgBB8PBBNgQzJPEjoHqIRkhqhMQmSSZAECTeGcCAckOo4hIqhgm1Yocq6YRa
 KZYqeYdauZiK5QlJiIqG4AfElPYAYH5C2g==
-             "], "Byte", ColorSpace -> 
-             "RGB", ImageResolution -> 144, Interleaving -> True], "Hover" -> 
-           Image[CompressedData["
+             "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+             Interleaving -> True], "Hover" -> Image[CompressedData["
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqAoIKBiRJEB0Pq2Ng6BHkhCMgm1ZB+SeHlhkqrzdSQEVAE
 KE6MIU1cnHM1ZKEajVRX6SpDEJANEQTKAtXgMQQoC9VuqLJaQXa1uBQKAooA
 xcEKkM1BMwTqBgMVdO3IyEAF4h6shgD9C3UDHhMgCOweePggGwINSUxfYCIF
 WUg4QzRCUiMkNiEhSdgECAKHMyTeGcCAckOo4hIqhgm1Yocq6YRaKZYqeYda
 uZiK5QlJiIqG4AfElPYAAjcuaw==
-             "], "Byte", ColorSpace -> "RGB", 
-             ImageResolution -> 144, Interleaving -> True], "Pressed" -> 
-           Image[CompressedData["
+             "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+             Interleaving -> True], "Pressed" -> Image[CompressedData["
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqAoIKBiRJEB0M65BQWBQRCEJBNqiHbyso/PXuG5mugCFCc
 GEMm6hve2bsPIv7t+Ytnu/dAEJANEQTKAtXgMQQoCxH5fPfekZi41eJSyAgo
 AhSHKEA2B80QiBs+XL22VkYezQQIAooDZSHuwWoI0L8QN+AyAW4OxD3w8EE2
 BBKSmL7AREA1kHCGaISkRkhsQkKSoAkQBAlnSLwzgAHlhlDFJVQME2rFDlXS
 CbVSLFXyDrVyMRXLE5IQFQ3BD4gp7QFlfuGB
-             "], "Byte", ColorSpace -> 
-             "RGB", ImageResolution -> 144, Interleaving -> True]}, 
-         Background -> 
+             "], "Byte", ColorSpace -> "RGB", ImageResolution -> 144, 
+             Interleaving -> True]}, Background -> 
          RGBColor[0.47058823529411764`, 0., 0.00784313725490196], Method -> 
          "Queued", ImageSize -> {All, 23}, Evaluator -> Automatic], 
         FrameStyle -> Directive[
@@ -8203,8 +8423,8 @@ HM73UW/+6+ZdckoTQn/3M9PcKlUa62DnNBerCXEMTHfEz5HII9gvxbCp4D0+
 Zm4Vy0H3kjtx2Qh8LyShs1UunoPpIly9OD/OroytONx3La1+oar/rJHotB8N
 /4F6Kv1Onkz3hx+iWPRp/jm6Y/gX//sjU6U3eK4wvsIPcjvYzCRkph3sLy//
 DcvuuIyle//vxt/PCE6d
-                 "], {{0, 50.}, {50., 0}}, {0, 255}, 
-                 ColorFunction -> GrayLevel], 
+                 "], {{0, 50.}, {50., 0}}, {0, 255}, ColorFunction -> 
+                 GrayLevel], 
                 BoxForm`ImageTag[
                 "Byte", ColorSpace -> "Grayscale", Interleaving -> True], 
                 Selectable -> False], DefaultBaseStyle -> "ImageGraphics", 
@@ -8270,11 +8490,10 @@ IHf803boWTgnI5xRw6HF+/ic9C/aDpogh3poOEREub2yPart8N/u8aHGAg2I
 /+q1HSZyJXM73tOGuL9e1WGzZnjFdG4dhzh+taPH9VUdOIoCDvkA+TbZ22Mz
 zqk42Knvza+5q+2w7MOCm6X1Kg5FdzRl16zXdhAo6wptNlBxOM+v3OIere3w
 xJB56kdg/KDHJwAEHLkm
-             "], {{8.415530000000002, 11.}, {
-             12.638179999999998`, 11.}, {11.68506, 12.668}, {
-             10.791059999999998`, 11.72708}, {10.62513, 11.553912}, {10.36001,
-              11.522025000000001`}, {10.15775, 11.65091}, {9.221229999999998, 
-             12.254909999999999`}}}]}, 
+             "], {{8.415530000000002, 11.}, {12.638179999999998`, 11.}, {
+             11.68506, 12.668}, {10.791059999999998`, 11.72708}, {10.62513, 
+             11.553912}, {10.36001, 11.522025000000001`}, {10.15775, 
+             11.65091}, {9.221229999999998, 12.254909999999999`}}}]}, 
           FaceForm[
            RGBColor[0.29411800000000005`, 0.839216, 0.]]], 
          StyleBox[{
@@ -8316,30 +8535,29 @@ t2cT62Ud5jg9Ny3jFHeI32r0cPovWYcgvy2rJwSJORTlCb+bainnsOOHCMPj
 SlGHxcHhdqeN5Ryivu681TVXxOGVbF57m6ucA9eXThvPKGGHU1YysUtPyzo8
 uaB0+6eckEMmMBRknso4OO1ZF7/BWtDBtPJU1q570g4cRQGHfKIFHDJWBHoY
 dUs5PEh+6Sx+hd/B9HrmkqVGkvD4AQCmgKFd
-             "], {{5.49393, 
-             6.2940000000000005`}, {6.24061, 6.2940000000000005`}, {6.429096, 
-             6.284750000000001}, {6.614185999999998, 6.34661}, {
-             6.759240000000001, 6.467319999999999}, {6.890777, 
-             6.587419999999998}, {6.962032, 6.759840000000002}, {
-             6.953660000000001, 6.937759999999999}, {6.96995, 7.11698}, {
-             6.9035910000000005`, 7.293840000000001}, {6.77343, 7.41811}, {
-             6.613585999999999, 7.530479999999999}, {6.419682000000001, 
-             7.58385}, {6.224849999999999, 7.56911}, {5.49393, 7.56911}}, {{
-             5.49393, 5.8706}, {5.49393, 4.4308}, {6.31, 4.4308}, {6.509734, 
-             4.41999}, {6.705573, 4.48902}, {6.854379999999999, 4.62269}, {
-             6.9925049999999995`, 4.761840000000003}, {7.065081999999999, 
-             4.953080000000002}, {7.05406, 5.14884}, {7.08081, 5.3499}, {
-             7.011307, 5.551820000000001}, {6.866472, 5.693819999999999}, {
-             6.721637, 5.83582}, {6.518383999999999, 5.90132}, {
-             6.317889999999999, 5.8706}}, {{9.131169999999997, 8.}, {
-             10.356000000000002`, 4.736610000000001}, {11.5814, 8.}, {
-             12.221939999999998`, 8.}, {12.221939999999998`, 4.}, {
-             11.727999999999998`, 4.}, {11.727999999999998`, 
-             5.557409999999999}, {11.774239999999999`, 7.238630000000002}, {
-             10.544139999999999`, 4.}, {10.16581, 4.}, {8.937809999999999, 
-             7.231200000000001}, {8.986680000000002, 5.557409999999999}, {
-             8.986680000000002, 4.}, {8.492740000000001, 4.}, {
-             8.492740000000001, 8.}}, {{13.799369999999998`, 
+             "], {{5.49393, 6.2940000000000005`}, {6.24061, 
+             6.2940000000000005`}, {6.429096, 6.284750000000001}, {
+             6.614185999999998, 6.34661}, {6.759240000000001, 
+             6.467319999999999}, {6.890777, 6.587419999999998}, {6.962032, 
+             6.759840000000002}, {6.953660000000001, 6.937759999999999}, {
+             6.96995, 7.11698}, {6.9035910000000005`, 7.293840000000001}, {
+             6.77343, 7.41811}, {6.613585999999999, 7.530479999999999}, {
+             6.419682000000001, 7.58385}, {6.224849999999999, 7.56911}, {
+             5.49393, 7.56911}}, {{5.49393, 5.8706}, {5.49393, 4.4308}, {6.31,
+              4.4308}, {6.509734, 4.41999}, {6.705573, 4.48902}, {
+             6.854379999999999, 4.62269}, {6.9925049999999995`, 
+             4.761840000000003}, {7.065081999999999, 4.953080000000002}, {
+             7.05406, 5.14884}, {7.08081, 5.3499}, {7.011307, 
+             5.551820000000001}, {6.866472, 5.693819999999999}, {6.721637, 
+             5.83582}, {6.518383999999999, 5.90132}, {6.317889999999999, 
+             5.8706}}, {{9.131169999999997, 8.}, {10.356000000000002`, 
+             4.736610000000001}, {11.5814, 8.}, {12.221939999999998`, 8.}, {
+             12.221939999999998`, 4.}, {11.727999999999998`, 4.}, {
+             11.727999999999998`, 5.557409999999999}, {11.774239999999999`, 
+             7.238630000000002}, {10.544139999999999`, 4.}, {10.16581, 4.}, {
+             8.937809999999999, 7.231200000000001}, {8.986680000000002, 
+             5.557409999999999}, {8.986680000000002, 4.}, {8.492740000000001, 
+             4.}, {8.492740000000001, 8.}}, {{13.799369999999998`, 
              5.566080000000001}, {13.799369999999998`, 4.}, {
              13.305440000000003`, 4.}, {13.305440000000003`, 8.}, {14.68744, 
              8.}, {15.04065, 8.0207}, {15.387580000000002`, 
@@ -8625,7 +8843,6 @@ Lgc=
              0}, {1, 3, 3}}}, {{{16.75, 4.}, {3.25, 4.}, {3.111929, 4.}, {3., 
             4.111930000000001}, {3., 4.25}, {3., 13.}, {17., 13.}, {17., 
             4.25}, {17., 4.111930000000001}, {16.88807, 4.}, {16.75, 4.}}}]}, 
-          
           FaceForm[
            GrayLevel[1.]]], 
          StyleBox[{
@@ -8635,7 +8852,6 @@ Lgc=
             3., 15.75}, {3., 15.888071}, {3.111929, 16.}, {3.25, 16.}, {6.75, 
             16.}, {6.888071, 16.}, {7., 15.888071}, {7., 15.75}, {7., 15.}, {
             16.75, 15.}, {16.88807, 15.}, {17., 14.888071}, {17., 14.75}}}]}, 
-          
           FaceForm[
            GrayLevel[0.898039]]]}, ImageSize -> {20., 20.}, 
         PlotRange -> {{0., 20.}, {0., 20.}}, AspectRatio -> Automatic]& )}], 
@@ -8755,11 +8971,10 @@ IHf803boWTgnI5xRw6HF+/ic9C/aDpogh3poOEREub2yPart8N/u8aHGAg2I
 /+q1HSZyJXM73tOGuL9e1WGzZnjFdG4dhzh+taPH9VUdOIoCDvkA+TbZ22Mz
 zqk42Knvza+5q+2w7MOCm6X1Kg5FdzRl16zXdhAo6wptNlBxOM+v3OIere3w
 xJB56kdg/KDHJwAEHLkm
-             "], {{8.415530000000002, 11.}, {
-             12.638179999999998`, 11.}, {11.68506, 12.668}, {
-             10.791059999999998`, 11.72708}, {10.62513, 11.553912}, {10.36001,
-              11.522025000000001`}, {10.15775, 11.65091}, {9.221229999999998, 
-             12.254909999999999`}}}]}, 
+             "], {{8.415530000000002, 11.}, {12.638179999999998`, 11.}, {
+             11.68506, 12.668}, {10.791059999999998`, 11.72708}, {10.62513, 
+             11.553912}, {10.36001, 11.522025000000001`}, {10.15775, 
+             11.65091}, {9.221229999999998, 12.254909999999999`}}}]}, 
           FaceForm[
            RGBColor[0.29411800000000005`, 0.839216, 0.]]], 
          StyleBox[{
@@ -9324,6 +9539,7 @@ AP/nC/0B0DiClA==
           FaceForm[
            RGBColor[0.3372549999999999, 0.8352940000000001, 0.988235]]], 
          StyleBox[{
+           
            FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3,
              3}}, {{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
             3}}}, CompressedData["
@@ -9466,7 +9682,6 @@ G+P//+XfKeUiiA==
           FaceForm[
            GrayLevel[1.]]], 
          StyleBox[{
-           
            FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, {{{
             13.57129, 13.35693}, {12.979560000000001`, 13.357063}, {12.49995, 
             13.836817}, {12.49999, 14.42855}, {12.50003, 15.020283}, {
@@ -9493,11 +9708,10 @@ IHf803boWTgnI5xRw6HF+/ic9C/aDpogh3poOEREub2yPart8N/u8aHGAg2I
 /+q1HSZyJXM73tOGuL9e1WGzZnjFdG4dhzh+taPH9VUdOIoCDvkA+TbZ22Mz
 zqk42Knvza+5q+2w7MOCm6X1Kg5FdzRl16zXdhAo6wptNlBxOM+v3OIere3w
 xJB56kdg/KDHJwAEHLkm
-             "], {{8.415530000000002, 11.}, {
-             12.638179999999998`, 11.}, {11.68506, 12.668}, {
-             10.791059999999998`, 11.72708}, {10.62513, 11.553912}, {10.36001,
-              11.522025000000001`}, {10.15775, 11.65091}, {9.221229999999998, 
-             12.254909999999999`}}}]}, 
+             "], {{8.415530000000002, 11.}, {12.638179999999998`, 11.}, {
+             11.68506, 12.668}, {10.791059999999998`, 11.72708}, {10.62513, 
+             11.553912}, {10.36001, 11.522025000000001`}, {10.15775, 
+             11.65091}, {9.221229999999998, 12.254909999999999`}}}]}, 
           FaceForm[
            RGBColor[0.29411800000000005`, 0.839216, 0.]]], 
          StyleBox[{
@@ -9540,12 +9754,11 @@ LUzzUBVzSDp8WTtVUtjh3gmbT+yLxRzamBUjD7QIOTy8ZPhcUlvc4QXDQRnb
 f4IOj7NSwqOeiTvMkr4sPG2HINw/PoWhN8uPCjrszCk5558o6VCiMv3/hH2C
 Do9KJq3VE5dySMpRPOHIKeRQ77G/VnaGlMOhlFUJIZOEHN4cV/spKC/t8OCw
 6vG5RsIO8U6s7eIp0g4MJTP09YH+gMXXn6a7G3IvijgAAJv0uk0=
-             "], {{
-             8.27593, 5.600999999999999}, {8.27593, 4.0764499999999995`}, {
-             7.7903, 4.0764499999999995`}, {7.7903, 7.970409999999999}, {
-             9.149, 7.970409999999999}, {9.495699000000002, 
-             7.990780000000001}, {9.836413, 7.8734}, {10.097, 
-             7.643809999999998}, {10.32893, 7.4181300000000014`}, {
+             "], {{8.27593, 5.600999999999999}, {8.27593, 
+             4.0764499999999995`}, {7.7903, 4.0764499999999995`}, {7.7903, 
+             7.970409999999999}, {9.149, 7.970409999999999}, {
+             9.495699000000002, 7.990780000000001}, {9.836413, 7.8734}, {
+             10.097, 7.643809999999998}, {10.32893, 7.4181300000000014`}, {
              10.453540000000002`, 7.104199999999999}, {10.43952, 
              6.780890000000001}, {10.46035, 6.45471}, {10.337919999999999`, 
              6.13566}, {10.10423, 5.90714}, {9.834327999999998, 
@@ -9667,20 +9880,19 @@ IoTj88SYdyWPGylE5WnR6NEcEpR3uWlPkBAjQ3qKE+v6RtcMhCsdDjCD6HF+
 8Uup/ESxFDZmea7MF2BGuipI9+l0PJ+g1pqa+fCxpBNueBmubRk9wIdk2mpK
 1/E/uxYX3Ft2lB7PP7Qz3kuT7o4z8hOdadeFqF5aqcxfIkeXpeFR0Zu6Hrib
 aJ4Ycx+PK1oFI6CRZaPMdL9FwqzKzQPFrvCn9CrHOine3k//Ak892E8=
-             "], {{
-             9.617389999999999, 11.266640000000002`}, {9.355364000000002, 
-             11.506809}, {9.073421, 11.7243}, {8.7746, 11.91677}, {8.7746, 
-             11.91677}, {8.66219, 12.48534}, {8.587309999999999, 12.73394}, {
-             9.09304, 13.23107}, {9.16793, 13.30761}, {9.65491, 
-             13.785590000000001`}, {9.687847, 12.945878}, {9.675329, 
-             12.104999}, {9.61741, 11.266640000000002`}}, {{8.50275, 
-             9.731640000000002}, {9.072936000000002, 9.76756}, {9.631433, 
-             9.558930000000002}, {10.038419999999999`, 9.15798}, {
-             9.701419999999999, 9.06244}, {9.66393, 9.043289999999999}, {
-             9.32679, 8.947599999999998}, {9.042788, 9.148219999999998}, {
-             8.700315999999999, 9.24909}, {8.352910000000001, 9.23443}, {
-             8.391562, 9.40336}, {8.441624, 9.56948}, {8.50275, 
-             9.731640000000002}}}]}, 
+             "], {{9.617389999999999, 11.266640000000002`}, {
+             9.355364000000002, 11.506809}, {9.073421, 11.7243}, {8.7746, 
+             11.91677}, {8.7746, 11.91677}, {8.66219, 12.48534}, {
+             8.587309999999999, 12.73394}, {9.09304, 13.23107}, {9.16793, 
+             13.30761}, {9.65491, 13.785590000000001`}, {9.687847, 
+             12.945878}, {9.675329, 12.104999}, {9.61741, 
+             11.266640000000002`}}, {{8.50275, 9.731640000000002}, {
+             9.072936000000002, 9.76756}, {9.631433, 9.558930000000002}, {
+             10.038419999999999`, 9.15798}, {9.701419999999999, 9.06244}, {
+             9.66393, 9.043289999999999}, {9.32679, 8.947599999999998}, {
+             9.042788, 9.148219999999998}, {8.700315999999999, 9.24909}, {
+             8.352910000000001, 9.23443}, {8.391562, 9.40336}, {8.441624, 
+             9.56948}, {8.50275, 9.731640000000002}}}]}, 
           FaceForm[
            RGBColor[0.8666670000000001, 0.066667, 0.]]]}, 
         ImageSize -> {20., 20.}, PlotRange -> {{0., 20.}, {0., 20.}}, 
@@ -9761,20 +9973,19 @@ IoTj88SYdyWPGylE5WnR6NEcEpR3uWlPkBAjQ3qKE+v6RtcMhCsdDjCD6HF+
 8Uup/ESxFDZmea7MF2BGuipI9+l0PJ+g1pqa+fCxpBNueBmubRk9wIdk2mpK
 1/E/uxYX3Ft2lB7PP7Qz3kuT7o4z8hOdadeFqF5aqcxfIkeXpeFR0Zu6Hrib
 aJ4Ycx+PK1oFI6CRZaPMdL9FwqzKzQPFrvCn9CrHOine3k//Ak892E8=
-             "], {{
-             9.617389999999999, 11.266640000000002`}, {9.355364000000002, 
-             11.506809}, {9.073421, 11.7243}, {8.7746, 11.91677}, {8.7746, 
-             11.91677}, {8.66219, 12.48534}, {8.587309999999999, 12.73394}, {
-             9.09304, 13.23107}, {9.16793, 13.30761}, {9.65491, 
-             13.785590000000001`}, {9.687847, 12.945878}, {9.675329, 
-             12.104999}, {9.61741, 11.266640000000002`}}, {{8.50275, 
-             9.731640000000002}, {9.072936000000002, 9.76756}, {9.631433, 
-             9.558930000000002}, {10.038419999999999`, 9.15798}, {
-             9.701419999999999, 9.06244}, {9.66393, 9.043289999999999}, {
-             9.32679, 8.947599999999998}, {9.042788, 9.148219999999998}, {
-             8.700315999999999, 9.24909}, {8.352910000000001, 9.23443}, {
-             8.391562, 9.40336}, {8.441624, 9.56948}, {8.50275, 
-             9.731640000000002}}}]}, 
+             "], {{9.617389999999999, 11.266640000000002`}, {
+             9.355364000000002, 11.506809}, {9.073421, 11.7243}, {8.7746, 
+             11.91677}, {8.7746, 11.91677}, {8.66219, 12.48534}, {
+             8.587309999999999, 12.73394}, {9.09304, 13.23107}, {9.16793, 
+             13.30761}, {9.65491, 13.785590000000001`}, {9.687847, 
+             12.945878}, {9.675329, 12.104999}, {9.61741, 
+             11.266640000000002`}}, {{8.50275, 9.731640000000002}, {
+             9.072936000000002, 9.76756}, {9.631433, 9.558930000000002}, {
+             10.038419999999999`, 9.15798}, {9.701419999999999, 9.06244}, {
+             9.66393, 9.043289999999999}, {9.32679, 8.947599999999998}, {
+             9.042788, 9.148219999999998}, {8.700315999999999, 9.24909}, {
+             8.352910000000001, 9.23443}, {8.391562, 9.40336}, {8.441624, 
+             9.56948}, {8.50275, 9.731640000000002}}}]}, 
           FaceForm[
            RGBColor[0.8666670000000001, 0.066667, 0.]]]}, 
         ImageSize -> {20., 20.}, PlotRange -> {{0., 20.}, {0., 20.}}, 
@@ -9845,26 +10056,25 @@ TD91W9DPW8rhmF7gXlMGVYcYBcePyUB51ry7Z4NzFR2u/VJaqAvU39DULWqa
 oeBwaMUSP4dgGYe603P0uj3FHTbNfb/8WLeSQ15Y7bptStIOX70i2yyA7pv0
 tsbe9J6QwzFv805HoPslpl7hzADKH0lZlRAC9F/Dwbwb2zzEHbafeblpBtD/
 /AJnLj5OV3AQWrr3oDgwfKYaXP62PkfRAQBEtY9z
-             "], {{14.80901, 
-             9.345419999999999}, {13.743519999999998`, 9.70987}, {
-             13.016919999999999`, 10.654219999999999`}, {13.952580000000003`, 
-             10.306610000000001`}}, {{11.37113, 7.1364199999999975`}, {
-             10.71228, 6.004419999999998}, {10.71228, 7.177}, {11.39769, 
-             8.1788}}, {{9.82133, 12.979130000000001`}, {8.690819999999999, 
-             13.38113}, {8.03666, 14.26438}, {9.224139999999998, 
-             13.742750000000001`}}, {{11.738219999999997`, 13.74254}, {
-             12.92535, 14.26367}, {12.27094, 13.381170000000001`}, {
-             11.140869999999998`, 12.97931}}, {{13.176730000000001`, 
-             12.69978}, {12.60295, 11.88607}, {12.63669, 13.113}, {13.30869, 
-             14.019279999999998`}}, {{10.48084, 7.6483799999999995`}, {
-             9.600349999999999, 8.933119999999999}, {10.48084, 10.12788}, {
-             11.36133, 8.933119999999999}}, {{8.82607, 11.30619}, {8.782, 
-             12.866109999999999`}, {10.24941, 12.343890000000002`}, {10.24941,
-              10.82582}}, {{10.71228, 12.343890000000002`}, {12.17853, 
-             12.866109999999999`}, {12.13679, 11.30619}, {10.71228, 
-             10.82582}}, {{7.78548, 12.70037}, {7.653829999999999, 
-             14.01924}, {8.325000000000001, 13.113}, {8.35872, 
-             11.886630000000002`}}, {{10.113909999999999`, 
+             "], {{14.80901, 9.345419999999999}, {13.743519999999998`, 
+             9.70987}, {13.016919999999999`, 10.654219999999999`}, {
+             13.952580000000003`, 10.306610000000001`}}, {{11.37113, 
+             7.1364199999999975`}, {10.71228, 6.004419999999998}, {10.71228, 
+             7.177}, {11.39769, 8.1788}}, {{9.82133, 12.979130000000001`}, {
+             8.690819999999999, 13.38113}, {8.03666, 14.26438}, {
+             9.224139999999998, 13.742750000000001`}}, {{11.738219999999997`, 
+             13.74254}, {12.92535, 14.26367}, {12.27094, 
+             13.381170000000001`}, {11.140869999999998`, 12.97931}}, {{
+             13.176730000000001`, 12.69978}, {12.60295, 11.88607}, {12.63669, 
+             13.113}, {13.30869, 14.019279999999998`}}, {{10.48084, 
+             7.6483799999999995`}, {9.600349999999999, 8.933119999999999}, {
+             10.48084, 10.12788}, {11.36133, 8.933119999999999}}, {{8.82607, 
+             11.30619}, {8.782, 12.866109999999999`}, {10.24941, 
+             12.343890000000002`}, {10.24941, 10.82582}}, {{10.71228, 
+             12.343890000000002`}, {12.17853, 12.866109999999999`}, {12.13679,
+              11.30619}, {10.71228, 10.82582}}, {{7.78548, 12.70037}, {
+             7.653829999999999, 14.01924}, {8.325000000000001, 13.113}, {
+             8.35872, 11.886630000000002`}}, {{10.113909999999999`, 
              10.394459999999999`}, {9.233909999999998, 9.200330000000001}, {
              7.73775, 9.64138}, {8.6871, 10.875230000000002`}}, {{9.56485, 
              8.17925}, {10.24941, 7.17699}, {10.24941, 6.00399}, {
@@ -9908,7 +10118,6 @@ tsbe9J6QwzFv805HoPslpl7hzADKH0lZlRAC9F/Dwbwb2zzEHbafeblpBtD/
           FaceForm[
            GrayLevel[0.65098]]], 
          StyleBox[{
-           
            FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 
              1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
              0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{
@@ -10016,11 +10225,10 @@ IHf803boWTgnI5xRw6HF+/ic9C/aDpogh3poOEREub2yPart8N/u8aHGAg2I
 /+q1HSZyJXM73tOGuL9e1WGzZnjFdG4dhzh+taPH9VUdOIoCDvkA+TbZ22Mz
 zqk42Knvza+5q+2w7MOCm6X1Kg5FdzRl16zXdhAo6wptNlBxOM+v3OIere3w
 xJB56kdg/KDHJwAEHLkm
-             "], {{8.415530000000002, 11.}, {
-             12.638179999999998`, 11.}, {11.68506, 12.668}, {
-             10.791059999999998`, 11.72708}, {10.62513, 11.553912}, {10.36001,
-              11.522025000000001`}, {10.15775, 11.65091}, {9.221229999999998, 
-             12.254909999999999`}}}]}, 
+             "], {{8.415530000000002, 11.}, {12.638179999999998`, 11.}, {
+             11.68506, 12.668}, {10.791059999999998`, 11.72708}, {10.62513, 
+             11.553912}, {10.36001, 11.522025000000001`}, {10.15775, 
+             11.65091}, {9.221229999999998, 12.254909999999999`}}}]}, 
           FaceForm[
            RGBColor[0.29411800000000005`, 0.839216, 0.]]], 
          StyleBox[{
@@ -10159,9 +10367,8 @@ i3+Yelj6gJkHSz8w+2DpC+YeWPqDuRc1faLz9dDSt57D6Zb4V8/XAtPFlZnV
 HgX6DrLMm67v1tdxCDii1CarZOCgvE94c9waXYcPPdu0Ot/oO8xWeGXHoKnv
 0NCwNev6FH2HDr0V+TOFDRwsfOfLFujqOWx5VbxV9Le+w8b7wq9DVuo4PL2g
 dPvnOX0HraKOHZaq2g7zbXSuzGrTc3iSfV6HE56+EfkTAK7YJ3o=
-             "], {{14.5, 
-             15.}, {14.223859999999998`, 15.}, {14., 14.776142}, {14., 
-             14.5}, {14., 14.223858}, {14.223859999999998`, 14.}, {14.5, 
+             "], {{14.5, 15.}, {14.223859999999998`, 15.}, {14., 14.776142}, {
+             14., 14.5}, {14., 14.223858}, {14.223859999999998`, 14.}, {14.5, 
              14.}, {14.77614, 14.}, {15., 14.223858}, {15., 14.5}, {14.99981, 
              14.776065000000001`}, {14.77606, 14.999812}, {14.5, 15.}}, {{10.,
               14.}, {11., 14.}, {11., 15.}, {10., 15.}}, {{6.5, 15.}, {
@@ -10213,12 +10420,11 @@ Oaj+OsWqVu3XksK4mQMFHJQOxXKHgyUgm/6qfT3IQXeihTDEkAKld+pi9R4u
 xI7XqlrzKTh1ZigrnnMR2aUlqplOY+S8bt9WBQ+cq28E/WofKdRvqmc5gbSQ
 OpKt9hv3a7UhugiEp+a4S8opmDfPMbkTx0dCJHdnmzmFMtN5NmFq3ukv/4lX
 uUsQoZjUNkwlYeZ179g5XzFqnL2f8acJ8P9/+S9+xjWt
-             "], {{9.87376, 
-             4.758600000000001}, {10.95876, 7.970409999999999}, {11.50686, 
-             7.970409999999999}, {10.097999999999999`, 4.076469999999999}, {
-             9.6543, 4.076469999999999}, {8.248099999999997, 
-             7.970409999999999}, {8.79353, 
-             7.970409999999999}}, CompressedData["
+             "], {{9.87376, 4.758600000000001}, {10.95876, 
+             7.970409999999999}, {11.50686, 7.970409999999999}, {
+             10.097999999999999`, 4.076469999999999}, {9.6543, 
+             4.076469999999999}, {8.248099999999997, 7.970409999999999}, {
+             8.79353, 7.970409999999999}}, CompressedData["
 1:eJxlkntMUwcUxrtOCjEotw9pQ5/AgHt7b33UigwMfEMGrUMKDBfpNoLlkdGw
 YBdgk4kTgqaUh4ouIArqNiVDGUJAJq8xWEEXh1ZUJCAyYSIKm+8NEbcum+yP
 neTk5HdOTnLyfcfTmBGbwmaxWEGO/Lv+E8vhezVYuieeh22cJfP8dhWiiCz5
@@ -10267,7 +10473,6 @@ IlTcEEqj81ng/IKp6gJlpxjR5Bng5sH4qPZB+Qw8cH4D/3SZ8lOcaOZxoNkH
             3., 15.75}, {3., 15.888071}, {3.111929, 16.}, {3.25, 16.}, {7.75, 
             16.}, {7.888071, 16.}, {8., 15.888071}, {8., 15.75}, {8., 15.}, {
             17.75, 15.}, {17.88807, 15.}, {18., 14.888071}, {18., 14.75}}}]}, 
-          
           FaceForm[
            GrayLevel[0.898039]]], 
          StyleBox[{
@@ -10304,57 +10509,56 @@ Z2UHK6kD0QqM8g42tyySdOtUHSwEJrH6MEg5iBo0RpcD5cPAFos4cL+KflYC
 tQa67wS77ezQ+cwOem8y2/cD3W+w2i48GiifGnvHjRnoP47iLz/2nuV06HRM
 eHoB6H+zs9Z+FycKOyx++SalIMTQ4dRT+yX3/4k4pJqdUFE2N3CQOwkU+C/p
 ILrO/WEVUH7NLIVXdgzyDgCwloC6
-             "], {{14.356890000000002`, 
-             8.80715}, {15.26808, 9.20715}, {14.75798, 8.51929}, {
-             13.889980000000001`, 8.210630000000002}}, {{15.50572, 
-             9.055660000000001}, {15.40481, 8.047169999999998}, {14.95886, 
-             7.41475}, {14.98468, 8.353030000000002}}, {{14.69925, 8.2}, {
-             14.66778, 7.05536}, {13.62143, 6.702780000000002}, {13.62143, 
-             7.816750000000001}}, {{13.48092, 9.9899}, {14.09851, 8.93313}, {
-             13.48093, 8.144059999999998}, {12.86377, 8.933209999999999}}, {{
-             12.60539, 8.80729}, {13.07211, 8.2105}, {12.20383, 8.51926}, {
-             11.69399, 9.207640000000001}}, {{13.34039, 7.816750000000001}, {
-             13.34039, 6.702810000000001}, {12.293999999999999`, 
-             7.055390000000001}, {12.262530000000002`, 8.2}}, {{11.97714, 
-             8.353090000000002}, {12.00295, 7.415180000000001}, {11.55736, 
-             8.047659999999999}, {11.456740000000002`, 9.055730000000002}}, {{
-             10.16199, 7.578840000000001}, {11.359990000000002`, 
-             7.839730000000001}, {11.93624, 7.021730000000002}, {10.97586, 
-             6.66539}}, {{11.016440000000001`, 6.38067}, {11.74664, 
-             6.651610000000002}, {11.18759, 5.92502}, {10.357750000000001`, 
-             5.64171}}, {{10.419440000000002`, 5.365740000000002}, {11.27625, 
-             5.65826}, {12.181249999999999`, 5.391480000000001}, {11.41413, 
-             5.14879}}, {{11.429440000000001`, 3.6768399999999986`}, {
-             11.551440000000001`, 4.897399999999999}, {12.526169999999999`, 
-             5.205770000000001}, {12.55101, 4.16919}}, {{12.60754, 
-             5.558840000000002}, {11.509590000000001`, 5.88251}, {12.20647, 
-             6.788230000000002}, {13.253540000000001`, 6.435409999999999}}, {{
-             13.34042, 3.2504900000000028`}, {12.833490000000001`, 
-             4.117919999999998}, {12.814119999999999`, 4.925980000000001}, {
-             13.34042, 4.15807}}, {{13.48096, 4.450240000000001}, {12.83467, 
-             5.3932400000000005`}, {13.48096, 6.270240000000001}, {
-             14.127249999999998`, 5.3932400000000005`}}, {{
-             14.127959999999998`, 4.117769999999998}, {13.62153, 
-             3.250720000000001}, {13.62153, 4.15807}, {14.147639999999999`, 
-             4.925700000000001}}, {{13.708409999999999`, 6.435409999999999}, {
-             14.755480000000002`, 6.788230000000002}, {15.45236, 5.88251}, {
-             14.35436, 5.558840000000002}}, {{14.41041, 4.168940000000001}, {
-             14.43565, 5.205680000000003}, {15.41, 4.897}, {
-             15.531869999999998`, 3.6763200000000005`}}, {{
-             15.547509999999999`, 5.1483599999999985`}, {14.780389999999999`, 
-             5.391360000000001}, {15.68567, 5.65821}, {16.542669999999998`, 
-             5.365090000000002}}, {{16.60379, 5.641249999999999}, {
-             15.774359999999998`, 5.924939999999999}, {15.21554, 
-             6.651240000000001}, {15.945540000000001`, 6.380030000000001}}, {{
-             15.98616, 6.66484}, {15.025730000000001`, 7.021660000000001}, {
-             15.602219999999999`, 7.8392}, {16.8, 7.578090000000001}}}]}, 
+             "], {{14.356890000000002`, 8.80715}, {15.26808, 9.20715}, {
+             14.75798, 8.51929}, {13.889980000000001`, 8.210630000000002}}, {{
+             15.50572, 9.055660000000001}, {15.40481, 8.047169999999998}, {
+             14.95886, 7.41475}, {14.98468, 8.353030000000002}}, {{14.69925, 
+             8.2}, {14.66778, 7.05536}, {13.62143, 6.702780000000002}, {
+             13.62143, 7.816750000000001}}, {{13.48092, 9.9899}, {14.09851, 
+             8.93313}, {13.48093, 8.144059999999998}, {12.86377, 
+             8.933209999999999}}, {{12.60539, 8.80729}, {13.07211, 8.2105}, {
+             12.20383, 8.51926}, {11.69399, 9.207640000000001}}, {{13.34039, 
+             7.816750000000001}, {13.34039, 6.702810000000001}, {
+             12.293999999999999`, 7.055390000000001}, {12.262530000000002`, 
+             8.2}}, {{11.97714, 8.353090000000002}, {12.00295, 
+             7.415180000000001}, {11.55736, 8.047659999999999}, {
+             11.456740000000002`, 9.055730000000002}}, {{10.16199, 
+             7.578840000000001}, {11.359990000000002`, 7.839730000000001}, {
+             11.93624, 7.021730000000002}, {10.97586, 6.66539}}, {{
+             11.016440000000001`, 6.38067}, {11.74664, 6.651610000000002}, {
+             11.18759, 5.92502}, {10.357750000000001`, 5.64171}}, {{
+             10.419440000000002`, 5.365740000000002}, {11.27625, 5.65826}, {
+             12.181249999999999`, 5.391480000000001}, {11.41413, 5.14879}}, {{
+             11.429440000000001`, 3.6768399999999986`}, {11.551440000000001`, 
+             4.897399999999999}, {12.526169999999999`, 5.205770000000001}, {
+             12.55101, 4.16919}}, {{12.60754, 5.558840000000002}, {
+             11.509590000000001`, 5.88251}, {12.20647, 6.788230000000002}, {
+             13.253540000000001`, 6.435409999999999}}, {{13.34042, 
+             3.2504900000000028`}, {12.833490000000001`, 4.117919999999998}, {
+             12.814119999999999`, 4.925980000000001}, {13.34042, 4.15807}}, {{
+             13.48096, 4.450240000000001}, {12.83467, 5.3932400000000005`}, {
+             13.48096, 6.270240000000001}, {14.127249999999998`, 
+             5.3932400000000005`}}, {{14.127959999999998`, 
+             4.117769999999998}, {13.62153, 3.250720000000001}, {13.62153, 
+             4.15807}, {14.147639999999999`, 4.925700000000001}}, {{
+             13.708409999999999`, 6.435409999999999}, {14.755480000000002`, 
+             6.788230000000002}, {15.45236, 5.88251}, {14.35436, 
+             5.558840000000002}}, {{14.41041, 4.168940000000001}, {14.43565, 
+             5.205680000000003}, {15.41, 4.897}, {15.531869999999998`, 
+             3.6763200000000005`}}, {{15.547509999999999`, 
+             5.1483599999999985`}, {14.780389999999999`, 5.391360000000001}, {
+             15.68567, 5.65821}, {16.542669999999998`, 5.365090000000002}}, {{
+             16.60379, 5.641249999999999}, {15.774359999999998`, 
+             5.924939999999999}, {15.21554, 6.651240000000001}, {
+             15.945540000000001`, 6.380030000000001}}, {{15.98616, 6.66484}, {
+             15.025730000000001`, 7.021660000000001}, {15.602219999999999`, 
+             7.8392}, {16.8, 7.578090000000001}}}]}, 
           FaceForm[
            GrayLevel[0.65098]]], 
          StyleBox[{
            FilledCurveBox[{CompressedData["
 1:eJxTTMoPSmJiYGDYBsTMQMzIwszIDEUMjAxw9qjIgDtgkIgAAMeOBqk=
-             "], {{
-             1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+             "], {{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
              3}}}, {CompressedData["
 1:eJx1eXk4Ve33vimhZMyQ6czHcHDOTprtJSpNaBJ56xUpSUVJkwypjBUVigxp
 ogFNUtFLSpNCJZpRhkqlMoXyW48+XNevc33PP6772GfvZ+9nrXtYm+m+bp6n
@@ -10487,8 +10691,7 @@ z5rbThQETtAf7Yh+PIrkBby++5fFU6zQr/e/nwIKWtq/7Ou8rwo7ZG7vEzlQ
 wcof80RXxCHVGTspSCC5HvNG6IZpBzsSKGgl7xswj5BxEXm/ByQ/YV7pCfIu
 8H+J56/5N8Dhtzgm8kbeH1roLN8fh3nob2zZH+wpsKpiji3BPLVIXiN8dA4F
 pI2KMG+RFJ2ShuebXrdVPVsDhjfYXleIw/0bQghaA/5+v/z/ADhf7kk=
-             "], {{
-             13.48089, 1.9509299999999996`}, {10.96851, 
+             "], {{13.48089, 1.9509299999999996`}, {10.96851, 
              1.9509499999999989`}, {8.931845, 3.9876499999999986`}, {
              8.931859999999999, 6.500030000000001}, {8.931874999999998, 
              9.0124}, {10.96857, 11.049077}, {13.48094, 
@@ -10523,7 +10726,6 @@ IlTcEEqj81ng/IKp6gJlpxjR5Bng5sH4qPZB+Qw8cH4D/3SZ8lOcaOZxoNkH
             3., 15.75}, {3., 15.888071}, {3.111929, 16.}, {3.25, 16.}, {7.75, 
             16.}, {7.888071, 16.}, {8., 15.888071}, {8., 15.75}, {8., 15.}, {
             17.75, 15.}, {17.88807, 15.}, {18., 14.888071}, {18., 14.75}}}]}, 
-          
           FaceForm[
            GrayLevel[0.898039]]], 
          StyleBox[{
@@ -10613,8 +10815,7 @@ HAw9fKDznRHVxF4qjuOgbj2mjSwVQ3IoKuiqksP3QUfGTuOC5ZPSln56Tv/x
 jvd0yy7y/k3zsTGKI53RbloZELGHIvRCUoBrghMaZs854/nFG4gTeQ62sAgv
 2+gxMd0bAst6c7WAgVN+lLRe643Mtb8X/Rg/CRZJy9DuAIpIeYru1C8hvEKa
 lWZe3w9XmX+XrxDO49u4DL4PW41HWmL5PvwFn0hNig==
-             "], {{
-             14.929780000000001`, 6.679259999999999}, {14.99634, 
+             "], {{14.929780000000001`, 6.679259999999999}, {14.99634, 
              6.637309999999998}, {15.059230000000001`, 6.58981}, {15.11778, 
              6.537259999999998}, {15.13069, 6.72777}, {15.13348, 
              6.918830000000002}, {15.12614, 7.109630000000001}, {15.0175, 
@@ -10637,11 +10838,10 @@ w8zGUz++39R3MDqyUS8vWcxB694Jm0/L9R1SPhfmrvgh6vCsR+Mtb52+A0vx
 lx9734o6+L9M+Ds/GMHnnnFg7W5NhPolBbZc14P1HOZ92fdxq7qYg+D9zkj9
 MKD58xyd/y8Rdqg71sqsKGngcM2SLWX9dhEHI+apH98D08+WnLX6QrPEHCoj
 VpieBfKPPTyz/hkwfQEAdeMU4A==
-             "], {{13.11765, 
-             9.647049999999998}, {16.647060000000003`, 9.647049999999998}, {
-             16.647060000000003`, 10.23529}, {13.11765, 10.23529}}, {{
-             13.11765, 8.47058}, {16.647060000000003`, 8.47058}, {
-             16.647060000000003`, 9.058810000000001}, {13.11765, 
+             "], {{13.11765, 9.647049999999998}, {16.647060000000003`, 
+             9.647049999999998}, {16.647060000000003`, 10.23529}, {13.11765, 
+             10.23529}}, {{13.11765, 8.47058}, {16.647060000000003`, 
+             8.47058}, {16.647060000000003`, 9.058810000000001}, {13.11765, 
              9.058810000000001}}}]}, {
            EdgeForm[
             CapForm["Butt"]], 
@@ -10708,11 +10908,10 @@ IHf803boWTgnI5xRw6HF+/ic9C/aDpogh3poOEREub2yPart8N/u8aHGAg2I
 /+q1HSZyJXM73tOGuL9e1WGzZnjFdG4dhzh+taPH9VUdOIoCDvkA+TbZ22Mz
 zqk42Knvza+5q+2w7MOCm6X1Kg5FdzRl16zXdhAo6wptNlBxOM+v3OIere3w
 xJB56kdg/KDHJwAEHLkm
-             "], {{8.415530000000002, 11.}, {
-             12.638179999999998`, 11.}, {11.68506, 12.668}, {
-             10.791059999999998`, 11.72708}, {10.62513, 11.553912}, {10.36001,
-              11.522025000000001`}, {10.15775, 11.65091}, {9.221229999999998, 
-             12.254909999999999`}}}]}, 
+             "], {{8.415530000000002, 11.}, {12.638179999999998`, 11.}, {
+             11.68506, 12.668}, {10.791059999999998`, 11.72708}, {10.62513, 
+             11.553912}, {10.36001, 11.522025000000001`}, {10.15775, 
+             11.65091}, {9.221229999999998, 12.254909999999999`}}}]}, 
           FaceForm[
            RGBColor[0.29411800000000005`, 0.839216, 0.]]], 
          StyleBox[{
@@ -10928,20 +11127,19 @@ IoTj88SYdyWPGylE5WnR6NEcEpR3uWlPkBAjQ3qKE+v6RtcMhCsdDjCD6HF+
 8Uup/ESxFDZmea7MF2BGuipI9+l0PJ+g1pqa+fCxpBNueBmubRk9wIdk2mpK
 1/E/uxYX3Ft2lB7PP7Qz3kuT7o4z8hOdadeFqF5aqcxfIkeXpeFR0Zu6Hrib
 aJ4Ycx+PK1oFI6CRZaPMdL9FwqzKzQPFrvCn9CrHOine3k//Ak892E8=
-             "], {{
-             9.617389999999999, 11.266640000000002`}, {9.355364000000002, 
-             11.506809}, {9.073421, 11.7243}, {8.7746, 11.91677}, {8.7746, 
-             11.91677}, {8.66219, 12.48534}, {8.587309999999999, 12.73394}, {
-             9.09304, 13.23107}, {9.16793, 13.30761}, {9.65491, 
-             13.785590000000001`}, {9.687847, 12.945878}, {9.675329, 
-             12.104999}, {9.61741, 11.266640000000002`}}, {{8.50275, 
-             9.731640000000002}, {9.072936000000002, 9.76756}, {9.631433, 
-             9.558930000000002}, {10.038419999999999`, 9.15798}, {
-             9.701419999999999, 9.06244}, {9.66393, 9.043289999999999}, {
-             9.32679, 8.947599999999998}, {9.042788, 9.148219999999998}, {
-             8.700315999999999, 9.24909}, {8.352910000000001, 9.23443}, {
-             8.391562, 9.40336}, {8.441624, 9.56948}, {8.50275, 
-             9.731640000000002}}}]}, 
+             "], {{9.617389999999999, 11.266640000000002`}, {
+             9.355364000000002, 11.506809}, {9.073421, 11.7243}, {8.7746, 
+             11.91677}, {8.7746, 11.91677}, {8.66219, 12.48534}, {
+             8.587309999999999, 12.73394}, {9.09304, 13.23107}, {9.16793, 
+             13.30761}, {9.65491, 13.785590000000001`}, {9.687847, 
+             12.945878}, {9.675329, 12.104999}, {9.61741, 
+             11.266640000000002`}}, {{8.50275, 9.731640000000002}, {
+             9.072936000000002, 9.76756}, {9.631433, 9.558930000000002}, {
+             10.038419999999999`, 9.15798}, {9.701419999999999, 9.06244}, {
+             9.66393, 9.043289999999999}, {9.32679, 8.947599999999998}, {
+             9.042788, 9.148219999999998}, {8.700315999999999, 9.24909}, {
+             8.352910000000001, 9.23443}, {8.391562, 9.40336}, {8.441624, 
+             9.56948}, {8.50275, 9.731640000000002}}}]}, 
           FaceForm[
            RGBColor[0.8666670000000001, 0.066667, 0.]]]}, 
         ImageSize -> {20., 20.}, PlotRange -> {{0., 20.}, {0., 20.}}, 
@@ -11226,11 +11424,9 @@ FpG1n6WfSeLb27c2Volz+/dhBxtxrIPL2Ar/oQtZg16JsQ879Gyxx3vEuygx
    Cell[
     StyleData["Subsection"], Evaluatable -> True, 
     CellEvaluationFunction -> (($Line = 0; Null)& ), ShowCellLabel -> False], 
-   
    Cell[
     StyleData["Subsubsection"], Evaluatable -> True, 
     CellEvaluationFunction -> (($Line = 0; Null)& ), ShowCellLabel -> False], 
-   
    Cell[
     StyleData["ExampleImage"], PageWidth :> First[{650}], 
     CellMargins -> {{66, 66}, {16, 5}}, Evaluatable -> False, ShowCellLabel -> 
@@ -11434,7 +11630,7 @@ later."]]]]],
     StyleData["DockedCell"], CellFrameColor -> GrayLevel[0.75], Background -> 
     GrayLevel[
       Rational[16, 17]]]}, Visible -> False, FrontEndVersion -> 
-  "13.0 for Mac OS X ARM (64-bit) (December 2, 2021)", StyleDefinitions -> 
+  "13.1 for Microsoft Windows (64-bit) (February 5, 2022)", StyleDefinitions -> 
   "PrivateStylesheetFormatting.nb"],
 ExpressionUUID->"4f721c46-3653-4a95-abbc-01fbed9311b8"
 ]

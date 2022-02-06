@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-BeginPackage["Wireworld`"]
+BeginPackage["DanielS`Wireworld`"]
 
 WireworldStateQ
 $WireworldFunctionRule

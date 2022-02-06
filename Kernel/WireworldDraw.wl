@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-BeginPackage["Wireworld`WireworldDraw`"]
+BeginPackage["DanielS`Wireworld`WireworldDraw`"]
 
 Needs["Wireworld`"]
 

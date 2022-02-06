@@ -20,6 +20,9 @@ jobs:
     - name: Checkout Code
       id: checkout-code
       uses: actions/checkout@v2
+    - name: Build Libraries
+      id: build-libraries
+      run: wolframscript scripts/build_library.wls
     - name: Build Paclet
       id: build-paclet-step
       uses: rhennigan/build-paclet@v1.4.0
