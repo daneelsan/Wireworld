@@ -14,8 +14,8 @@ Wireworld
 
 WireworldDraw
 
-ClearAll["Wireworld`*"]
-ClearAll["Wireworld`Private`*"]
+ClearAll["DanielS`Wireworld`*"]
+ClearAll["DanielS`Wireworld`Private`*"]
 
 Begin["`Private`"]  (* Begin Wireworld`Private`*)
 
@@ -246,31 +246,31 @@ MakeBoxes[w_Wireworld, fmt_] /; WireworldQ[w] :=
 	]*)
 
 
-Needs["Wireworld`WireworldDraw`"]
+Needs["DanielS`Wireworld`WireworldDraw`"]
 
 
-Needs["Wireworld`libWireworld`"]
+Needs["DanielS`Wireworld`libWireworld`"]
 
-Wireworld`Library`WireworldStepImmutable :=
+DanielS`Wireworld`Library`WireworldStepImmutable :=
 	Module[{funs},
 		funs = InitializeWireworldLibrary[];
 		If[FailureQ[funs],
 			Return[funs]
 		];
 
-		ClearAll[Wireworld`Library`WireworldStepImmutable];
-		Wireworld`Library`WireworldStepImmutable = funs["wireworld_step_immutable"]
+		ClearAll[DanielS`Wireworld`Library`WireworldStepImmutable];
+		DanielS`Wireworld`Library`WireworldStepImmutable = funs["wireworld_step_immutable"]
 	]
 
-Wireworld`Library`WireworldStepMutable :=
+DanielS`Wireworld`Library`WireworldStepMutable :=
 	Module[{funs},
 		funs = InitializeWireworldLibrary[];
 		If[FailureQ[funs],
 			Return[funs]
 		];
 
-		ClearAll[Wireworld`Library`WireworldStepMutable];
-		Wireworld`Library`WireworldStepMutable = funs["wireworld_step_mutable"]
+		ClearAll[DanielS`Wireworld`Library`WireworldStepMutable];
+		DanielS`Wireworld`Library`WireworldStepMutable = funs["wireworld_step_mutable"]
 	]
 
 
