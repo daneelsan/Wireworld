@@ -15,7 +15,9 @@ env:
 jobs: 
   BuildLibraries-Windows-x86-64:
 
+    name: Build Libraries (Windows-x86-64)
     runs-on: windows-latest
+    timeout-minutes: 20
 
     env:
       WOLFRAM_SYSTEM_ID: Windows-x86-64
@@ -75,11 +77,13 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.WOLFRAM_SYSTEM_ID }}
-          path: ${{ env.WOLFRAM_LIBRARY_BUILD_OUTPUT }}
+          path: ${{ env.WOLFRAM_LIBRARY_BUILD_OUTPUT }}/${{ env.WOLFRAM_SYSTEM_ID }}
 
   BuildLibraries-MacOSX-x86-64:
 
+    name: Build Libraries (MacOSX-x86-64)
     runs-on: macos-latest
+    timeout-minutes: 20
 
     env:
       WOLFRAM_SYSTEM_ID: MacOSX-x86-64
@@ -113,15 +117,18 @@ jobs:
         run: |
           export PATH="${{ env.WOLFRAMENGINE_EXECUTABLES_DIRECTORY }}:$PATH"
           wolframscript -debug -verbose -script ${{ env.WOLFRAM_LIBRARY_BUILD_SCRIPT }}
-          
+
       - name: Archive compiled libraries
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.WOLFRAM_SYSTEM_ID }}
-          path: ${{ env.WOLFRAM_LIBRARY_BUILD_OUTPUT }}
+          path: ${{ env.WOLFRAM_LIBRARY_BUILD_OUTPUT }}/${{ env.WOLFRAM_SYSTEM_ID }}
 
   BuildLibraries-Linux-x86-64:
+
+    name: Build Libraries (Linux-x86-64)
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     container:
       image: wolframresearch/wolframengine:latest
@@ -146,7 +153,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.WOLFRAM_SYSTEM_ID }}
-          path: ${{ env.WOLFRAM_LIBRARY_BUILD_OUTPUT }}
+          path: ${{ env.WOLFRAM_LIBRARY_BUILD_OUTPUT }}/${{ env.WOLFRAM_SYSTEM_ID }}
 
   BuildPaclet: 
     name: Build Paclet
@@ -165,7 +172,7 @@ jobs:
     env: 
       WOLFRAM_SYSTEM_ID: Linux-x86-64
     
-    timeout-minutes: 10
+    timeout-minutes: 20
 
     steps: 
     - name: Checkout Code
