@@ -19,7 +19,7 @@ libPath = CCompilerDriver`CreateLibrary[
 	"TargetDirectory" -> libDirTarget,
 	"CleanIntermediate" -> True,
 	"Language" -> "C",
-	"CompileOptions" -> warningsFlags
+	"CompileOptions" -> If[ $OperatingSystem === "Windows", { }, warningsFlags ]
 ];
 If[!FileExistsQ[libPath],
 	Print["Failed to build the library."];

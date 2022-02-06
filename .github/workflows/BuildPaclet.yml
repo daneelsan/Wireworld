@@ -1,31 +1,176 @@
 name: Build Paclet
+
 on: 
   push: 
-    branches:  [master]
+    branches: [master]
   pull_request: 
-    branches:  [master]
+    branches: [master]
   workflow_dispatch:
+
+env:
+  WOLFRAMSCRIPT_ENTITLEMENTID: ${{ secrets.WOLFRAMSCRIPT_ENTITLEMENTID }}
+
 jobs: 
+  BuildLibraries-Windows-x86-64:
+    runs-on: windows-latest
+    env:
+      WOLFRAM_SYSTEM_ID: Windows-x86-64
+      WOLFRAMENGINE_INSTALL_MSI_DOWNLOAD_URL: https://files.wolframcdn.com/packages/winget/13.0.0.0/WolframEngine_13.0.0_WIN.msi
+      WOLFRAMENGINE_CACHE_KEY: WolframEngine-A
+      WOLFRAMENGINE_INSTALLATION_SUBDIRECTORY: WolframEngine
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Cache/restore Wolfram Engine install
+        id: cache-restore
+        uses: actions/cache@v2
+        env:
+          WOLFRAMENGINE_INSTALLATION_DIRECTORY: '${{ runner.temp }}\${{ env.WOLFRAMENGINE_INSTALLATION_SUBDIRECTORY }}'
+        with:
+          path: ${{ env.WOLFRAMENGINE_INSTALLATION_DIRECTORY }}
+          key: wolframengine-${{ env.WOLFRAM_SYSTEM_ID }}-${{ env.WOLFRAMENGINE_CACHE_KEY }}
+
+      - name: Download and install Wolfram Engine
+        if: steps.cache-restore.outputs.cache-hit != 'true'
+        env:
+          WOLFRAMENGINE_INSTALLATION_DIRECTORY: '${{ runner.temp }}\${{ env.WOLFRAMENGINE_INSTALLATION_SUBDIRECTORY }}'
+          WOLFRAMENGINE_INSTALL_MSI_PATH: '${{ runner.temp }}\WolframEngine-Install.msi'
+          WOLFRAMENGINE_INSTALL_LOG_PATH: '${{ runner.temp }}\WolframEngine-Install.log'
+        run: |
+          echo 'Downloading Wolfram Engine installer...'
+          $msiFile = '${{ env.WOLFRAMENGINE_INSTALL_MSI_PATH }}'
+          $logFile = '${{ env.WOLFRAMENGINE_INSTALL_LOG_PATH }}'
+          Import-Module BitsTransfer
+          Start-BitsTransfer '${{ env.WOLFRAMENGINE_INSTALL_MSI_DOWNLOAD_URL }}' $msiFile
+          echo 'Downloaded Wolfram Engine installer.'
+          $DataStamp = get-date -Format yyyyMMddTHHmmss
+          $MSIArguments = @(
+              "/i"
+              ('"{0}"' -f $msiFile)
+              'INSTALLLOCATION="${{ env.WOLFRAMENGINE_INSTALLATION_DIRECTORY }}"'
+              "/qn"
+              "/norestart"
+              "/L*v"
+              $logFile
+          )
+          echo 'Installing Wolfram Engine...'
+          Start-Process "msiexec.exe" -ArgumentList $MSIArguments -Wait -NoNewWindow
+          echo 'Installed Wolfram Engine.'
+      - name: Compile Libraries
+        env:
+          WOLFRAMENGINE_INSTALLATION_DIRECTORY: '${{ runner.temp }}\${{ env.WOLFRAMENGINE_INSTALLATION_SUBDIRECTORY }}'
+          WOLFRAMINIT: "-pwfile !cloudlm.wolfram.com -entitlement ${{ secrets.WOLFRAMSCRIPT_ENTITLEMENTID }}"
+        run: |
+          $env:Path += ';${{ env.WOLFRAMENGINE_INSTALLATION_DIRECTORY }}\'
+          wolfram -script ./scripts/build_library.wls
+      - name: Archive compiled libraries
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.WOLFRAM_SYSTEM_ID }}
+          path: |
+            LibraryResources/
+          if-no-files-found: error
+
+  BuildLibraries-MacOSX-x86-64:
+    runs-on: macos-latest
+    env:
+      WOLFRAM_SYSTEM_ID: MacOSX-x86-64
+      WOLFRAMENGINE_CACHE_KEY: WolframEngine-A
+      WOLFRAMENGINE_INSTALLATION_DIRECTORY: "/Applications/Wolfram Engine.app"
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Cache/restore Wolfram Engine install
+        id: cache-restore
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.WOLFRAMENGINE_INSTALLATION_DIRECTORY }}
+          key: wolframengine-${{ env.WOLFRAM_SYSTEM_ID }}-${{ env.WOLFRAMENGINE_CACHE_KEY }}
+
+      - name: Install Wolfram Engine
+        if: steps.cache-restore.outputs.cache-hit != 'true'
+        run: |
+          echo 'Installing Wolfram Engine...'
+          brew install --cask wolfram-engine
+          echo 'Installed Wolfram Engine.'
+      - name: Compile function
+        env:
+          WOLFRAMENGINE_EXECUTABLES_DIRECTORY: "${{ env.WOLFRAMENGINE_INSTALLATION_DIRECTORY }}/Contents/Resources/Wolfram Player.app/Contents/MacOS"
+          WOLFRAMSCRIPT_ENTITLEMENTID: ${{ secrets.WOLFRAMSCRIPT_ENTITLEMENTID }}
+          WOLFRAMSCRIPT_KERNELPATH: "${{ env.WOLFRAMENGINE_INSTALLATION_DIRECTORY }}/Contents/MacOS/WolframKernel"
+        run: |
+          export PATH="${{ env.WOLFRAMENGINE_EXECUTABLES_DIRECTORY }}:$PATH"
+          wolframscript -debug -verbose -script ./compile.wls
+      - name: Archive compiled libraries
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.WOLFRAM_SYSTEM_ID }}
+          path: |
+            LibraryResources/
+          if-no-files-found: error
+
+  BuildLibraries-Linux-x86-64:
+    runs-on: ubuntu-latest
+    container:
+      image: wolframresearch/wolframengine:latest
+      options: --user root
+    env:
+      WOLFRAM_SYSTEM_ID: Linux-x86-64
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Install build tools
+        run: |
+          apt-get -y update
+          apt-get -y install build-essential
+      - name: Compile function
+        env:
+          WOLFRAMSCRIPT_ENTITLEMENTID: ${{ secrets.WOLFRAMSCRIPT_ENTITLEMENTID }}
+        run: |
+          wolframscript -script ./compile.wls
+      - name: Archive compiled libraries
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.WOLFRAM_SYSTEM_ID }}
+          path: |
+            LibraryResources/
+          if-no-files-found: error
+
   BuildPaclet: 
     name: Build Paclet
+
+    needs: 
+      - BuildLibraries-Windows-x86-64
+      - BuildLibraries-MacOSX-x86-64
+      - BuildLibraries-Linux-x86-64
+
     runs-on: ubuntu-latest
+    
     container: 
       image: wolframresearch/wolframengine:latest
       options: --user root
+    
     env: 
       WOLFRAM_SYSTEM_ID: Linux-x86-64
-      WOLFRAMSCRIPT_ENTITLEMENTID: ${{ secrets.WOLFRAMSCRIPT_ENTITLEMENTID }}
+    
     timeout-minutes: 10
+
     steps: 
     - name: Checkout Code
       id: checkout-code
       uses: actions/checkout@v2
-    - name: Build Libraries
-      id: build-libraries
-      run: |
-        apt-get -y update
-        apt-get -y install build-essential
-        wolframscript scripts/build_library.wls
+
+    - uses: actions/download-artifact@v2
+      with:
+        path: LibraryResources
+
+    - name: Display structure of downloaded files
+      run: ls -R
+      working-directory: LibraryResources
+
     - name: Build Paclet
       id: build-paclet-step
       uses: rhennigan/build-paclet@v1.4.0
@@ -33,9 +178,11 @@ jobs:
         target: Submit
         paclet_cicd_version: 0.2.2
         definition_notebook: ./DefinitionNotebook.nb
+
     - name: Upload Build Artifacts
       id: upload-build-artifacts-step
       uses: actions/upload-artifact@v2
       with: 
+        name: BuiltPaclet
         path: ${{ env.BUILD_DIR }}
         if-no-files-found: error
