@@ -1766,17 +1766,12 @@ text that users will see when visiting the main landing page of your paclet. \
  CellTags->{"Basic Description", "LongDescription", "TemplateCellGroup"},
  CellID->903367029,ExpressionUUID->"7f31b3e8-4a7a-4e94-8086-21aba54d7607"],
 
-Cell[TextData[{
- "Wireworld",
- StyleBox[" is a Turing-complete cellular automaton first proposed by Brian \
+Cell["\<\
+Wireworld is a Turing-complete cellular automaton first proposed by Brian \
 Silverman in 1987 suited for simulating logic gates and other real-world \
-computer elements.",
-  FontFamily->"Helvetica"]
-}], "Text",
- TaggingRules->{},
- CellChangeTimes->{{3.851116395832657*^9, 3.8511164264486113`*^9}},
- CellTags->"DefaultContent",
- CellID->441612482,ExpressionUUID->"7958737f-5309-44ec-aa0a-a16b54aff528"]
+computer elements.\
+\>", "Text",
+ CellID->682099647,ExpressionUUID->"a45b4653-0037-464e-9c2c-617059411f6c"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1851,10 +1846,8 @@ to a general overview of your paclet. ]]", "MoreInfoText"], Background ->
  CellTags->{"Main Guide Page", "MainGuidePage", "TemplateCellGroup"},
  CellID->93952416,ExpressionUUID->"36c79fec-7f07-4180-8646-e652d2cc567a"],
 
-Cell[BoxData[
- RowBox[{"File", "[", 
-  "\"\</Users/dans/projects/DanielS/Wireworld/Documentation/English/Guides/\
-Wireworld.nb\>\"", "]"}]], "LocalFileInput",
+Cell[BoxData["\"\<Documentation/English/Guides/Wireworld.nb\>\""], \
+"LocalFileInput",
  TaggingRules->{"FileInputProperty" -> "MainGuidePage"},
  CellEventActions->{Inherited, {"KeyDown", "\t"} :> Replace[SelectionMove[
        SelectedNotebook[], After, Cell]; NotebookFind[
@@ -2442,7 +2435,8 @@ D6PiEHEA/DrHag==
                    "Column"], "SummaryItem"]}}, 
                GridBoxAlignment -> {
                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
-               False, GridBoxItemSize -> {
+               False, 
+               GridBoxItemSize -> {
                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
                GridBoxSpacings -> {
                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
@@ -2874,8 +2868,7 @@ teyllntGWnoYFYeIAwDpC8Gg
                    "Column"], "SummaryItem"]}}, 
                GridBoxAlignment -> {
                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
-               False, 
-               GridBoxItemSize -> {
+               False, GridBoxItemSize -> {
                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
                GridBoxSpacings -> {
                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
