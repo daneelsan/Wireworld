@@ -1,0 +1,35 @@
+name: Build Paclet
+on: 
+  push: 
+    branches:  [master]
+  pull_request: 
+    branches:  [master]
+  workflow_dispatch:
+jobs: 
+  BuildPaclet: 
+    name: Build Paclet
+    runs-on: ubuntu-latest
+    container: 
+      image: wolframresearch/wolframengine:latest
+      options: --user root
+    env: 
+      WOLFRAM_SYSTEM_ID: Linux-x86-64
+      WOLFRAMSCRIPT_ENTITLEMENTID: ${{ secrets.WOLFRAMSCRIPT_ENTITLEMENTID }}
+    timeout-minutes: 10
+    steps: 
+    - name: Checkout Code
+      id: checkout-code
+      uses: actions/checkout@v2
+    - name: Build Paclet
+      id: build-paclet-step
+      uses: rhennigan/build-paclet@v1.4.0
+      with: 
+        target: Submit
+        paclet_cicd_version: 0.2.2
+        definition_notebook: ./DefinitionNotebook.nb
+    - name: Upload Build Artifacts
+      id: upload-build-artifacts-step
+      uses: actions/upload-artifact@v2
+      with: 
+        path: ${{ env.BUILD_DIR }}
+        if-no-files-found: error
