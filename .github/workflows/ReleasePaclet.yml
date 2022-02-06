@@ -1,10 +1,8 @@
-name: Build Paclet
+name: Release Paclet
 
 on: 
   push: 
-    branches: [master]
-  pull_request: 
-    branches: [master]
+    branches:  [release/*]
   workflow_dispatch:
 
 env:
@@ -13,6 +11,7 @@ env:
   WOLFRAM_LIBRARY_BUILD_OUTPUT: LibraryResources/
 
 jobs: 
+
   BuildLibraries-Windows-x86-64:
 
     name: Build Libraries (Windows-x86-64)
@@ -155,8 +154,8 @@ jobs:
           name: ${{ env.WOLFRAM_SYSTEM_ID }}
           path: ${{ env.WOLFRAM_LIBRARY_BUILD_OUTPUT }}/${{ env.WOLFRAM_SYSTEM_ID }}
 
-  BuildPaclet: 
-    name: Build Paclet
+  ReleasePaclet: 
+    name: Release Paclet
 
     needs: 
       - BuildLibraries-Windows-x86-64
@@ -164,14 +163,14 @@ jobs:
       - BuildLibraries-Linux-x86-64
 
     runs-on: ubuntu-latest
-    
+
     container: 
       image: wolframresearch/wolframengine:latest
       options: --user root
-    
+
     env: 
       WOLFRAM_SYSTEM_ID: Linux-x86-64
-    
+
     timeout-minutes: 20
 
     steps: 
@@ -182,7 +181,7 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         path: LibraryResources
-
+    
     - name: Build Paclet
       id: build-paclet-step
       uses: rhennigan/build-paclet@v1.4.0
@@ -190,7 +189,7 @@ jobs:
         target: Submit
         paclet_cicd_version: 0.2.2
         definition_notebook: ./DefinitionNotebook.nb
-
+    
     - name: Upload Build Artifacts
       id: upload-build-artifacts-step
       uses: actions/upload-artifact@v2
@@ -198,3 +197,25 @@ jobs:
         name: Paclet
         path: ${{ env.BUILD_DIR }}
         if-no-files-found: error
+    
+    - name: Create Release
+      id: create-release-step
+      uses: actions/create-release@v1
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with: 
+        tag_name: ${{ env.RELEASE_TAG }}
+        release_name: Release ${{ env.RELEASE_TAG }}
+        draft: false
+        prerelease: false
+    
+    - name: Upload Release Asset
+      id: upload-release-asset-step
+      uses: actions/upload-release-asset@v1
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with: 
+        upload_url: ${{ steps.create-release-step.outputs.upload_url }}
+        asset_path: ${{ env.PACLET_PATH }}
+        asset_name: ${{ env.PACLET_FILE }}
+        asset_content_type: application/zip

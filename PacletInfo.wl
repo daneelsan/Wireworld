@@ -3,7 +3,7 @@ PacletObject[ <|
     "Description"    -> "Explore the Wireworld Turing-complete cellular automaton",
     "PublisherID"    -> "DanielS",
     "Creator"        -> "Daniel Sanchez",
-    "Version"        -> "1.0.1",
+    "Version"        -> "1.0.2",
     "WolframVersion" -> "13.+",
     "Extensions"     -> {
         {
