@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Daniel Sanchez",
     "License" -> "MIT",
     "PublisherID" -> "DanielS",
-    "Version" -> "1.0.3",
+    "Version" -> "1.0.4",
     "WolframVersion" -> "13.+",
     "Extensions" -> {
       {
