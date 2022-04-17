@@ -195,7 +195,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with: 
         name: Paclet
-        path: ${{ env.BUILD_DIR }}
+        path: ${{ env.PACLET_BUILD_DIR }}
         if-no-files-found: error
     
     - name: Create Release
