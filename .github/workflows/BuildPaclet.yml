@@ -185,11 +185,11 @@ jobs:
 
     - name: Build Paclet
       id: build-paclet-step
-      uses: rhennigan/build-paclet@v1.4.0
+      uses: rhennigan/build-paclet@v1.7.1
       with: 
         target: Submit
-        paclet_cicd_version: 0.2.2
-        definition_notebook: ./DefinitionNotebook.nb
+        paclet_cicd_version: 0.22.0
+        definition_notebook: ./ResourceDefinition.nb
 
     - name: Upload Build Artifacts
       id: upload-build-artifacts-step
