@@ -7,6 +7,7 @@ on:
 
 env:
   WOLFRAMSCRIPT_ENTITLEMENTID: ${{ secrets.WOLFRAMSCRIPT_ENTITLEMENTID }}
+  RESOURCE_PUBLISHER_TOKEN: ${{ secrets.RESOURCE_PUBLISHER_TOKEN }}
   WOLFRAM_LIBRARY_BUILD_SCRIPT: ./scripts/build_library.wls
   WOLFRAM_LIBRARY_BUILD_OUTPUT: LibraryResources/
 
@@ -187,7 +188,7 @@ jobs:
       uses: rhennigan/build-paclet@v1.7.1
       with: 
         target: Submit
-        paclet_cicd_version: 0.22.0
+        paclet_cicd_version: 0.25.0
         definition_notebook: ./ResourceDefinition.nb
     
     - name: Upload Build Artifacts

@@ -188,7 +188,7 @@ jobs:
       uses: rhennigan/build-paclet@v1.7.1
       with: 
         target: Submit
-        paclet_cicd_version: 0.22.0
+        paclet_cicd_version: 0.25.0
         definition_notebook: ./ResourceDefinition.nb
 
     - name: Upload Build Artifacts
