@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-BeginPackage["Wireworld`libWireworld`"]
+BeginPackage["DanielS`Wireworld`libWireworld`"]
 
 InitializeWireworldLibrary
 

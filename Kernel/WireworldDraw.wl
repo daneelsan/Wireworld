@@ -1,17 +1,17 @@
 (* ::Package:: *)
 
-BeginPackage["Wireworld`WireworldDraw`"]
+BeginPackage["DanielS`Wireworld`WireworldDraw`"]
 
-Needs["Wireworld`"]
+Needs["DanielS`Wireworld`"]
 
 Begin["`Private`"]
 
 
-SyntaxInformation[Wireworld`WireworldDraw] = {
+SyntaxInformation[DanielS`Wireworld`WireworldDraw] = {
 	"ArgumentsPattern" -> {_, OptionsPattern[]}
 };
 
-expr : Wireworld`WireworldDraw[___] /; CheckArguments[expr, {0, 1}] :=
+expr : DanielS`Wireworld`WireworldDraw[___] /; CheckArguments[expr, {0, 1}] :=
 	Module[{args, opts, init},
 		{args, opts} = ArgumentsOptions[expr, {0, 1}];
 		init = First[args];
@@ -21,7 +21,7 @@ expr : Wireworld`WireworldDraw[___] /; CheckArguments[expr, {0, 1}] :=
 		If[!WireworldStateQ[init],
 			Return @ Failure["WireworldFailure", <|
 				"MessageTemplate" -> "Argument `1` should be a list specifying the number of rows and columns of a new Wireworld state or a matrix of Wireworld cell states (`2`).",
-				"MessageParameters" -> {init, StringRiffle[Wireworld`Private`$cellStates, ", "]},
+				"MessageParameters" -> {init, StringRiffle[DanielS`Wireworld`Private`$cellStates, ", "]},
 				"Input" -> init
 			|>]
 		];
@@ -230,7 +230,7 @@ lowerRightButtons[] :=
 	]
 
 getStatePlot[state_, opts_] :=
-	Wireworld`Private`iWireworldPlot[
+	DanielS`Wireworld`Private`iWireworldPlot[
 		state,
 		Epilog -> {
 			lowerLeftButtons[],
@@ -243,7 +243,7 @@ topAlignedRow[list_] := Grid[{list}, Alignment -> Top, Spacings -> {0, 0}]
 
 mainPanel[] :=
 	EventHandler[
-		Dynamic[Wireworld`Private`iWireworldPlot[$state, {}]],
+		Dynamic[DanielS`Wireworld`Private`iWireworldPlot[$state, {}]],
 		(*Dynamic[getStatePlot[$state, PlotRangePadding -> Scaled[0.075]]],*)
 		{
 			"MouseClicked" :> handleMouseClicked[Automatic, MousePosition["Graphics"]],
