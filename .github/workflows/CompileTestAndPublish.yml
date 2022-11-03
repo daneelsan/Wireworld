@@ -233,7 +233,7 @@ jobs:
         if-no-files-found: ignore
   Submit: 
     name: Submit
-    needs:  [Check]
+    needs:  [Check, Compile-Windows-x86-64, Compile-MacOSX-x86-64, Compile-Linux-x86-64]
     runs-on: ubuntu-latest
     container: 
       image: wolframresearch/wolframengine:13.0.1
