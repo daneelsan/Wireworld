@@ -1,5 +1,4 @@
 notebooks/
-build/
 .vscode/
 zig-cache/
 zig-out/
