@@ -1,6 +1,8 @@
 notebooks/
 build/
 LibraryResources/
+64Bit/
+32Bit/
 .vscode/
 zig-cache/
 zig-out/

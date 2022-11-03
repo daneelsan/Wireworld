@@ -7,6 +7,7 @@ If[ FailureQ @ FindFile[ "Wolfram`PacletCICD`" ],
     PacletInstall[ "Wolfram/PacletCICD" ]
 ];
 
+Needs[ "GeneralUtilities`" -> None];
 Needs[ "Wolfram`PacletCICD`" -> "cicd`" ];
 
 $inputFileName = Replace[ $InputFileName, "" :> NotebookFileName[ ] ];
@@ -26,7 +27,7 @@ If[ FileExistsQ @ $mxFile,
 
 Print[ "Loading paclet..." ];
 PacletDirectoryLoad @ $pacletDir;
-Needs[ "Daniels`Wireworld`" ];
+Needs[ "DanielS`Wireworld`" ];
 
 $mxDir = GeneralUtilities`EnsureDirectory @ DirectoryName @ $mxFile;
 Print[ "MX target directory: ", $mxDir  ];
@@ -35,8 +36,8 @@ Print[ "Building MX file: "   , $mxFile ];
 DumpSave[
     $mxFile,
     {
-        "Daniels`Wireworld`",
-        "Daniels`Wireworld`Private`"
+        "DanielS`Wireworld`",
+        "DanielS`Wireworld`Private`"
     },
     "SymbolAttributes" -> False
 ];
