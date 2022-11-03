@@ -279,12 +279,6 @@ jobs:
             wolframscript -code 'PacletInstall["PacletManager"];PacletSiteRegister["${{ env.WLPR_PACLET_SITE }}"];PacletSiteUpdate[PacletSites[]];Quit[]' > /dev/null
         fi
         wolframscript Scripts/SetPacletInfo.wls
-    - name: DownloadWorkflowValues
-      id: download-workflow-values-step
-      uses: actions/download-artifact@v3
-      with: 
-        name: paclet-workflow-values
-        path: .paclet-workflow-values
     - name: CheckFiles
       run: |
         apt-get install tree -y > /dev/null
