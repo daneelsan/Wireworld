@@ -101,25 +101,45 @@ Module[{file},
 
 
 (* ::Subsubsection:: *)
-(*Submit*)
+(*Release*)
 
 
-submitJob = WorkflowJob["Submit", <|"Needs" -> {"Check"}|>];
-
-
-submitWF = Workflow[
-	"Submit",
+releaseWF = Workflow[
+	"Release",
 	<|
-		"Jobs" -> Join[
-			Values @ compileBuildTestCheckWF["Jobs"],
-			{submitJob}
-		]
+		"Jobs" -> {
+			Splice @ Values @ compileBuildTestCheckWF["Jobs"],
+			WorkflowJob[
+				{
+					"Checkout",
+					"Build",
+					"UploadArtifact",
+					"CreateRelease",
+					"UploadRelease"
+				},
+				<|
+					"Name"  -> "Release",
+					"Needs" -> {"Check"}
+				|>
+			],
+			WorkflowJob[
+				{
+					"Checkout",
+					"Submit",
+					"UploadArtifact"
+				},
+				<|
+					"Name"  -> "Submit",
+					"Needs" -> {"Release"}
+				|>
+			]
+		}
 	|>
 ];
 
 
 Module[{file},
-	file = WorkflowExport[$pacletDir, submitWF];
+	file = WorkflowExport[$pacletDir, releaseWF];
 	If[FileExistsQ[file],
 		Print["Successfully workflow exported: ", file],
 		Exit[1]
