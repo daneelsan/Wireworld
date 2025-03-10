@@ -4,5 +4,5 @@ LibraryResources/
 64Bit/
 32Bit/
 .vscode/
-zig-cache/
+.zig-cache/
 zig-out/
