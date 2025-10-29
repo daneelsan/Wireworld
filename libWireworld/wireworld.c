@@ -135,6 +135,26 @@ static void wireworld_step_immutable_impl(mint *state_in, mint *state_out, int r
 	}
 }
 
+static void wireworld_run_immutable_impl(mint *state_in, mint *state_out, int rows, int cols, int steps)
+{
+	mint *src = state_in;
+	mint *dst = state_out;
+	for (int step = 0; step < steps; step += 1) {
+		wireworld_step_immutable_impl(src, dst, rows, cols);
+		// Swap src/dst for next step
+		mint *tmp = src;
+		src = dst;
+		dst = (dst == state_out) ? state_in : state_out;
+	}
+	// If final result is in state_in, copy to state_out
+	size_t size = rows * cols;
+	if (src != state_out) {
+		for (size_t i = 0; i < size; ++i) {
+			state_out[i] = src[i];
+		}
+	}
+}
+
 static void wireworld_step_mutable_impl(mint *state, int rows, int cols)
 {
 	mint *raw_cell;
