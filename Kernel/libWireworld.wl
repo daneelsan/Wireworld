@@ -36,7 +36,7 @@ InitializeWireworldLibrary[] :=
 		wireworldRun = LibraryFunctionLoad[
 			libWireworld,
 			"wireworld_run",
-			{LibraryDataType[SparseArray, Integer], Integer},
+			{{LibraryDataType[SparseArray, Integer], "Constant"}, Integer},
 			LibraryDataType[SparseArray, Integer]
 		];
 		If[Head[wireworldRun] =!= LibraryFunction,
