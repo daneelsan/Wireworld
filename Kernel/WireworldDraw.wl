@@ -248,12 +248,18 @@ mainPanel[] :=
 			(*Dynamic[getStatePlot[$state, PlotRangePadding -> Scaled[0.075]]],*)
 			{
 				"MouseClicked" :> handleMouseClicked[Automatic, MousePosition["Graphics"]],
-				"MouseDragged" :> handleMouseDragged[Automatic, MousePosition["Graphics"]],
-				"MouseUp" :> handleMouseUp[Automatic, MousePosition["Graphics"]]
+				"MouseDragged" :> handleMouseDragged[draggedCellValue, MousePosition["Graphics"]],
+				"MouseUp" :> handleMouseUp[draggedCellValue, MousePosition["Graphics"]]
 			}
 		],
-		{{showMesh, True, "Show mesh"}, {True, False}, ControlType -> Checkbox},
-		AppearanceElements -> None
+		OpenerView[{"Advanced Options",
+			Column[{
+				Control[{{showMesh, True, "Show mesh"}, {False, True}}],
+				Control[{{draggedCellValue, 3, "Dragged cell value"}, {0, 1, 2, 3}}]
+			}]
+		}],
+		AppearanceElements -> None,
+		ControlPlacement -> Bottom
 	]
 
 dialogInput[nb_, opts_] :=
