@@ -242,14 +242,18 @@ getStatePlot[state_, opts_] :=
 topAlignedRow[list_] := Grid[{list}, Alignment -> Top, Spacings -> {0, 0}]
 
 mainPanel[] :=
-	EventHandler[
-		Dynamic[DanielS`Wireworld`Private`iWireworldPlot[$state, {}]],
-		(*Dynamic[getStatePlot[$state, PlotRangePadding -> Scaled[0.075]]],*)
-		{
-			"MouseClicked" :> handleMouseClicked[Automatic, MousePosition["Graphics"]],
-			"MouseDragged" :> handleMouseDragged[Automatic, MousePosition["Graphics"]],
-			"MouseUp" :> handleMouseUp[Automatic, MousePosition["Graphics"]]
-		}
+	Manipulate[
+		EventHandler[
+			Dynamic[DanielS`Wireworld`Private`iWireworldPlot[$state, {}, Frame -> None, Mesh -> showMesh]],
+			(*Dynamic[getStatePlot[$state, PlotRangePadding -> Scaled[0.075]]],*)
+			{
+				"MouseClicked" :> handleMouseClicked[Automatic, MousePosition["Graphics"]],
+				"MouseDragged" :> handleMouseDragged[Automatic, MousePosition["Graphics"]],
+				"MouseUp" :> handleMouseUp[Automatic, MousePosition["Graphics"]]
+			}
+		],
+		{{showMesh, True, "Show mesh"}, {True, False}, ControlType -> Checkbox},
+		AppearanceElements -> None
 	]
 
 dialogInput[nb_, opts_] :=
