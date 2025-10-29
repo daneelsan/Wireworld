@@ -262,14 +262,14 @@ DanielS`Wireworld`Library`WireworldStepImmutable :=
 		DanielS`Wireworld`Library`WireworldStepImmutable = funs["wireworld_step_immutable"]
 	]
 
-DanielS`Wireworld`Library`WireworldRunImmutable :=
+DanielS`Wireworld`Library`WireworldRun :=
 	Module[{funs},
 		funs = InitializeWireworldLibrary[];
 		If[FailureQ[funs],
 			Return[funs]
 		];
-		ClearAll[DanielS`Wireworld`Library`WireworldRunImmutable];
-		DanielS`Wireworld`Library`WireworldRunImmutable = funs["wireworld_run_immutable"]
+		ClearAll[DanielS`Wireworld`Library`WireworldRun];
+		DanielS`Wireworld`Library`WireworldRun = funs["wireworld_run"]
 	]
 
 DanielS`Wireworld`Library`WireworldStepMutable :=

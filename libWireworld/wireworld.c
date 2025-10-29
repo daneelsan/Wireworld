@@ -1,14 +1,15 @@
 #include "WolframLibrary.h"
 
-enum WIREWORLD_CELL {
-	EMPTY           = 0,
-	ELECTRON_HEAD   = 1,
-	ELECTRON_TAIL   = 2,
-	WIRE            = 3,
+enum WIREWORLD_CELL
+{
+	EMPTY = 0,
+	ELECTRON_HEAD = 1,
+	ELECTRON_TAIL = 2,
+	WIRE = 3,
 
-	PHOTON_HEAD     = 4,
-	PHOTON_TAIL     = 5,
-	VACUUM          = 6,
+	PHOTON_HEAD = 4,
+	PHOTON_TAIL = 5,
+	VACUUM = 6,
 
 	CELL_COUNT,
 };
@@ -19,9 +20,10 @@ enum WIREWORLD_CELL {
 
 	Electron heads and photon heads are considered to be alive.
 */
-static inline int is_alive(uint8_t cell)
+static inline int is_alive(mint cell)
 {
-	return (ELECTRON_HEAD == cell || PHOTON_HEAD == cell);
+	uint8_t cell_low = cell & 0xFF;
+	return (ELECTRON_HEAD == cell_low || PHOTON_HEAD == cell_low);
 }
 
 static inline int cyclic_pos(int pos, int size)
@@ -64,70 +66,44 @@ static inline int count_live_neighbors(mint *state, int rows, int cols, int row,
 	return count;
 }
 
-static inline uint8_t evolve_cell(mint* state, int rows, int cols, int row, int col, uint8_t cell_in)
+// clang-format off
+// Lookup table: [cell_type][live_neighbor_count]
+static const uint8_t wireworld_next_state[CELL_COUNT][9] = {
+    // EMPTY
+    {EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY},
+    // ELECTRON_HEAD
+    {ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL},
+    // ELECTRON_TAIL
+    {WIRE, WIRE, WIRE, WIRE, WIRE, WIRE, WIRE, WIRE, WIRE},
+    // WIRE
+    {WIRE, ELECTRON_HEAD, ELECTRON_HEAD, WIRE, WIRE, WIRE, WIRE, WIRE, WIRE},
+    // PHOTON_HEAD
+    {PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL},
+    // PHOTON_TAIL
+    {VACUUM, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM},
+    // VACUUM
+    {VACUUM, VACUUM, PHOTON_HEAD, PHOTON_HEAD, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM}
+};
+// clang-format on
+
+static inline mint evolve_cell(mint *state, int rows, int cols, int row, int col, mint cell_in)
 {
-	uint8_t cell_out;
-	switch (cell_in) {
-		/*
-			1. Wire cells with 1 or 2 live neighbors (electron heads or
-			photon heads) turn into electron heads.
-		*/
-		case WIRE: {
-			int count = count_live_neighbors(state, rows, cols, row, col);
-			cell_out = (1 == count || 2 == count) ? ELECTRON_HEAD : WIRE;
-		} break;
-		/*
-			2. Electron heads turn into electron tails.
-		*/
-		case ELECTRON_HEAD: {
-			cell_out = ELECTRON_TAIL;
-		} break;
-		/*
-			3. Electron tails turn into wire cells.
-		*/
-		case ELECTRON_TAIL: {
-			cell_out = WIRE;
-		} break;
-		/*
-			4. Vacuum cells with 2 or 3 live neighbors (electron heads or
-			photon heads) turn into photon heads.
-		*/
-		case VACUUM: {
-			int count = count_live_neighbors(state, rows, cols, row, col);
-			cell_out = (2 == count || 3 == count) ? PHOTON_HEAD : VACUUM;
-		} break;
-		/*
-			5. Photon heads turn into photon tails.
-		*/
-		case PHOTON_HEAD: {
-			cell_out = PHOTON_TAIL;
-		} break;
-		/*
-			6. Photon tails turn into vacuum cells.
-		*/
-		case PHOTON_TAIL: {
-			cell_out = VACUUM;
-		} break;
-
-		/* Empty cells do not evolve. */
-		case EMPTY: {
-			cell_out = EMPTY;
-		} break;
-
-		/* Unknown cells become empty cells. */
-		default: {
-			cell_out = EMPTY;
-		} break;
-	}
-	return cell_out;
+	uint8_t cell = cell_in & 0xFF;
+	int count = 0;
+	// Only WIRE and VACUUM depend on neighbor count
+	if (cell == WIRE || cell == VACUUM)
+		count = count_live_neighbors(state, rows, cols, row, col);
+	return wireworld_next_state[cell][count];
 }
 
 static void wireworld_step_immutable_impl(mint *state_in, mint *state_out, int rows, int cols)
 {
 	mint *cell_in = state_in;
 	mint *cell_out = state_out;
-	for (int row = 0; row < rows; row += 1) {
-		for (int col = 0; col < cols; col += 1) {
+	for (int row = 0; row < rows; row += 1)
+	{
+		for (int col = 0; col < cols; col += 1)
+		{
 			*cell_out = evolve_cell(state_in, rows, cols, row, col, *cell_in);
 			cell_in += 1;
 			cell_out += 1;
@@ -135,45 +111,26 @@ static void wireworld_step_immutable_impl(mint *state_in, mint *state_out, int r
 	}
 }
 
-static void wireworld_run_immutable_impl(mint *state_in, mint *state_out, int rows, int cols, int steps)
+static void wireworld_step_mutable_impl(mint *state, int rows, int cols)
 {
-	mint *src = state_in;
-	mint *dst = state_out;
-	for (int step = 0; step < steps; step += 1) {
-		wireworld_step_immutable_impl(src, dst, rows, cols);
-		// Swap src/dst for next step
-		mint *tmp = src;
-		src = dst;
-		dst = (dst == state_out) ? state_in : state_out;
+	// First pass: compute new state and store in high 8 bits
+	int size = rows * cols;
+	for (int i = 0; i < size; i += 1)
+	{
+		mint cell_out = evolve_cell(state, rows, cols, i / cols, i % cols, state[i]);
+		state[i] |= (cell_out & 0xFF) << 8;
 	}
-	// If final result is in state_in, copy to state_out
-	size_t size = rows * cols;
-	if (src != state_out) {
-		for (size_t i = 0; i < size; ++i) {
-			state_out[i] = src[i];
-		}
+	// Second pass: move new state to low 8 bits
+	for (int i = 0; i < size; i += 1)
+	{
+		state[i] = (state[i] >> 8) & 0xFF;
 	}
 }
 
-static void wireworld_step_mutable_impl(mint *state, int rows, int cols)
+static void wireworld_run_impl(mint *state, int rows, int cols, int steps)
 {
-	mint *raw_cell;
-
-	raw_cell = state;
-	for (int row = 0; row < rows; row += 1) {
-		for (int col = 0; col < cols; col += 1) {
-			/* Store the old value in the low 16-bits of the cell. */
-			int cell_out = evolve_cell(state, rows, cols, row, col, *raw_cell);
-			/* Store the new value in the high 16-bits of the cell. */
-			*raw_cell |= cell_out << 8;
-			raw_cell += 1;
-		}
-	}
-
-	raw_cell = state;
-	/* Move the high 16-bits to the low 16-bits. */
-	for (int i = 0; i < rows * cols; i += 1) {
-		*raw_cell >>= 8;
-		raw_cell += 1;
+	for (int step = 0; step < steps; step += 1)
+	{
+		wireworld_step_mutable_impl(state, rows, cols);
 	}
 }

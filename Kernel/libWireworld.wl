@@ -10,7 +10,7 @@ Begin["`Private`"]
 $libName = "Wireworld";
 
 InitializeWireworldLibrary[] :=
-	Module[{libWireworld, wireworldStepImm, wireworldRunImm, wireworldStepMut},
+	Module[{libWireworld, wireworldStepImm, wireworldRun, wireworldStepMut},
 		libWireworld = FindLibrary[$libName];
 		If[!FileExistsQ[libWireworld],
 			Return @ Failure["WireworldFailure", <|
@@ -33,16 +33,16 @@ InitializeWireworldLibrary[] :=
 			|>]
 		];
 
-		wireworldRunImm = LibraryFunctionLoad[
+		wireworldRun = LibraryFunctionLoad[
 			libWireworld,
-			"wireworld_run_immutable",
+			"wireworld_run",
 			{LibraryDataType[SparseArray, Integer], Integer},
 			LibraryDataType[SparseArray, Integer]
 		];
-		If[Head[wireworldRunImm] =!= LibraryFunction,
+		If[Head[wireworldRun] =!= LibraryFunction,
 			Return @ Failure["WireworldFailure", <|
 				"MessageTemplate" -> "Unable to load the `1` library function.",
-				"MessageParameters" -> {"wireworld_run_immutable"},
+				"MessageParameters" -> {"wireworld_run"},
 				"Library" -> libWireworld
 			|>]
 		];
@@ -64,7 +64,7 @@ InitializeWireworldLibrary[] :=
 		ClearAll[InitializeWireworldLibrary];
 		InitializeWireworldLibrary[] = <|
 			"wireworld_step_immutable" -> wireworldStepImm,
-			"wireworld_run_immutable" -> wireworldRunImm,
+			"wireworld_run" -> wireworldRun,
 			"wireworld_step_mutable" -> wireworldStepMut
 		|>
 	]

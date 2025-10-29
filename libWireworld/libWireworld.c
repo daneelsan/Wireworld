@@ -52,7 +52,7 @@ EXTERN_C DLLEXPORT int wireworld_step_immutable(WolframLibraryData libData, mint
 	return error;
 }
 
-EXTERN_C DLLEXPORT int wireworld_run_immutable(WolframLibraryData libData, mint argc, MArgument *args, MArgument res)
+EXTERN_C DLLEXPORT int wireworld_run(WolframLibraryData libData, mint argc, MArgument *args, MArgument res)
 {
 	WolframSparseLibrary_Functions sparseFuns = libData->sparseLibraryFunctions;
 
@@ -75,38 +75,28 @@ EXTERN_C DLLEXPORT int wireworld_run_immutable(WolframLibraryData libData, mint 
 		return LIBRARY_FUNCTION_ERROR;
 	}
 
-	MTensor state_tensor_in;
-	error = sparseFuns->MSparseArray_toMTensor(state_array_in, &state_tensor_in);
+	MTensor state_tensor = NULL;
+	error = sparseFuns->MSparseArray_toMTensor(state_array_in, &state_tensor);
 	if (error)
 	{
 		return LIBRARY_FUNCTION_ERROR;
 	}
 
-	if (libData->MTensor_getType(state_tensor_in) != MType_Integer)
+	if (libData->MTensor_getType(state_tensor) != MType_Integer)
 	{
 		return LIBRARY_TYPE_ERROR;
 	}
 
-	const mint *dims = libData->MTensor_getDimensions(state_tensor_in);
+	const mint *dims = libData->MTensor_getDimensions(state_tensor);
 
-	MTensor state_tensor_out;
-	error = libData->MTensor_new(MType_Integer, 2, dims, &state_tensor_out);
-	if (error)
-	{
-		return error;
-	}
+	mint *state = libData->MTensor_getIntegerData(state_tensor);
+	wireworld_run_impl(state, dims[0], dims[1], n_steps);
 
-	mint *state_in = libData->MTensor_getIntegerData(state_tensor_in);
-	mint *state_out = libData->MTensor_getIntegerData(state_tensor_out);
-
-	wireworld_run_immutable_impl(state_in, state_out, dims[0], dims[1], n_steps);
-
-	MSparseArray state_array_out;
-	error = sparseFuns->MSparseArray_fromMTensor(state_tensor_out, NULL, &state_array_out);
+	MSparseArray state_array_out = NULL;
+	error = sparseFuns->MSparseArray_fromMTensor(state_tensor, NULL, &state_array_out);
 
 	// Free tensors after conversion
-	libData->MTensor_free(state_tensor_in);
-	libData->MTensor_free(state_tensor_out);
+	libData->MTensor_free(state_tensor);
 
 	if (error)
 	{
