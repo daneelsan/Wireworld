@@ -31,58 +31,43 @@ static inline int cyclic_pos(int pos, int size)
 	return (pos + size) % size;
 }
 
+// clang-format off
+static const int neighbor_offsets[8][2] = {
+	{-1, -1}, {-1, 0}, {-1, 1},
+	{ 0, -1},          { 0, 1},
+	{ 1, -1}, { 1, 0}, { 1, 1}
+};
+// clang-format on
+
 static inline int count_live_neighbors(mint *state, int rows, int cols, int row, int col)
 {
 	int count = 0;
-	int pad;
-
-	int row_before = cyclic_pos(row - 1, rows);
-	int row_after = cyclic_pos(row + 1, rows);
-	int col_before = cyclic_pos(col - 1, cols);
-	int col_after = cyclic_pos(col + 1, cols);
-
-	pad = row_before * cols;
-	/* NW: {-1, -1} */
-	count += is_alive(state[pad + col_before]);
-	/* N: {0, -1} */
-	count += is_alive(state[pad + col]);
-	/* NE: {1, -1} */
-	count += is_alive(state[pad + col_after]);
-
-	pad = row * cols;
-	/* W: {-1, 0} */
-	count += is_alive(state[pad + col_before]);
-	/* E: {1, 0} */
-	count += is_alive(state[pad + col_after]);
-
-	pad = row_after * cols;
-	/* SW: {-1, 1} */
-	count += is_alive(state[pad + col_before]);
-	/* S: {0, 1} */
-	count += is_alive(state[pad + col]);
-	/* SE: {1, 1} */
-	count += is_alive(state[pad + col_after]);
-
+	for (int i = 0; i < 8; ++i)
+	{
+		int n_row = cyclic_pos(row + neighbor_offsets[i][0], rows);
+		int n_col = cyclic_pos(col + neighbor_offsets[i][1], cols);
+		count += is_alive(state[n_row * cols + n_col]);
+	}
 	return count;
 }
 
 // clang-format off
 // Lookup table: [cell_type][live_neighbor_count]
 static const uint8_t wireworld_next_state[CELL_COUNT][9] = {
-    // EMPTY
-    {EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY},
-    // ELECTRON_HEAD
-    {ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL},
-    // ELECTRON_TAIL
-    {WIRE, WIRE, WIRE, WIRE, WIRE, WIRE, WIRE, WIRE, WIRE},
-    // WIRE
-    {WIRE, ELECTRON_HEAD, ELECTRON_HEAD, WIRE, WIRE, WIRE, WIRE, WIRE, WIRE},
-    // PHOTON_HEAD
-    {PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL},
-    // PHOTON_TAIL
-    {VACUUM, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM},
-    // VACUUM
-    {VACUUM, VACUUM, PHOTON_HEAD, PHOTON_HEAD, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM}
+	// EMPTY
+	{EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY},
+	// ELECTRON_HEAD
+	{ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL, ELECTRON_TAIL},
+	// ELECTRON_TAIL
+	{WIRE, WIRE, WIRE, WIRE, WIRE, WIRE, WIRE, WIRE, WIRE},
+	// WIRE
+	{WIRE, ELECTRON_HEAD, ELECTRON_HEAD, WIRE, WIRE, WIRE, WIRE, WIRE, WIRE},
+	// PHOTON_HEAD
+	{PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL, PHOTON_TAIL},
+	// PHOTON_TAIL
+	{VACUUM, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM},
+	// VACUUM
+	{VACUUM, VACUUM, PHOTON_HEAD, PHOTON_HEAD, VACUUM, VACUUM, VACUUM, VACUUM, VACUUM}
 };
 // clang-format on
 
@@ -95,6 +80,10 @@ static inline mint evolve_cell(mint *state, int rows, int cols, int row, int col
 		count = count_live_neighbors(state, rows, cols, row, col);
 	return wireworld_next_state[cell][count];
 }
+
+/*=============================================================================
+	Wireworld step and run implementations
+=============================================================================*/
 
 static void wireworld_step_immutable_impl(mint *state_in, mint *state_out, int rows, int cols)
 {
