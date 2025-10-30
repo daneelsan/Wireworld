@@ -61,12 +61,14 @@ Options[WireworldPlot] = Options[ArrayPlot];
 
 SetOptions[WireworldPlot, {
 	ColorRules -> $cellColorRules,
-	Mesh -> True,
+	Mesh -> Automatic,
 	MeshStyle -> Directive[Thin, Darker[Gray]]
 }];
 
+$meshThreshold = 10000;
+
 WireworldPlot[args___] /; CheckArguments[WireworldPlot[args], 1] :=
-	Module[{arg1, opts},
+	Module[{arg1, opts, meshOpt},
 		{arg1, opts} = ArgumentsOptions[WireworldPlot[args], 1];
 		arg1 = First[arg1];
 		If[!WireworldStateQ[arg1],
@@ -76,7 +78,15 @@ WireworldPlot[args___] /; CheckArguments[WireworldPlot[args], 1] :=
 				"Input" -> arg1
 			|>]
 		];
-		iWireworldPlot[arg1, opts]
+		meshOpt = OptionValue[WireworldPlot, {Mesh -> None}, Mesh];
+		If[meshOpt === Automatic,
+			If[Times @@ Dimensions[arg1] <= $meshThreshold,
+				meshOpt = True
+				,
+				meshOpt = False
+			]
+		];
+		iWireworldPlot[arg1, Mesh -> meshOpt, opts]
 	]
 
 iWireworldPlot[state_, opts___] :=
