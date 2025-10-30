@@ -8,12 +8,12 @@ $WireworldNumberRule
 WireworldEvolve
 WireworldPlot
 ParseWireworld
-(*
+
 WireworldQ
 Wireworld
-*)
 
 WireworldDraw
+
 
 ClearAll["DanielS`Wireworld`*"]
 ClearAll["DanielS`Wireworld`Private`*"]
@@ -44,6 +44,8 @@ WireworldStateQ
 SyntaxInformation[WireworldStateQ] = {
 	"ArgumentsPattern" -> {_}
 };
+
+WireworldStateQ[_?WireworldQ] := True;
 
 WireworldStateQ[state_] /; CheckArguments[WireworldStateQ[state], 1] :=
 	MatrixQ[state, MemberQ[$cellStates, #] &]
@@ -87,7 +89,11 @@ WireworldPlot[args___] /; CheckArguments[WireworldPlot[args], 1] :=
 			]
 		];
 		iWireworldPlot[arg1, Mesh -> meshOpt, opts]
-	]
+	];
+
+
+iWireworldPlot[ww_?WireworldQ, opts___] :=
+	iWireworldPlot[Normal[ww], opts];
 
 iWireworldPlot[state_, opts___] :=
 	ArrayPlot[
@@ -223,7 +229,7 @@ WireworldEvolveFunction = CellularAutomaton[$WireworldNumberRule, #1, {#2, Autom
 Wireworld, WireworldQ
 *******************************************************************************)
 
-(*SyntaxInformation[Wireworld] = {
+SyntaxInformation[Wireworld] = {
 	"ArgumentsPattern" -> {_}
 };
 
@@ -236,31 +242,51 @@ Wireworld[arg1_] ? System`Private`HoldEntryQ :=
 				"Input" -> arg1
 			|>]
 		];
-		If[ListQ[arg1],
-			state = SparseArray[arg1]
-		];
+		state = NumericArray[arg1, "UnsignedInteger8"];
 		System`Private`ConstructNoEntry[Wireworld, state]
 	]
 
-Wireworld /: HoldPattern[Normal[Wireworld[state_]]] := state;
-Wireworld /: Dimensions[w_Wireworld ? WireworldQ] := Dimensions[Normal[w]];
+Wireworld /: HoldPattern[Normal[Wireworld[state_]]] :=
+	state;
+
+Wireworld /: Dimensions[w_Wireworld ? WireworldQ] :=
+	Dimensions[Normal[w]];
+
+Wireworld /: MatrixQ[w_Wireworld ? WireworldQ] :=
+	True;
+
+Wireworld /: SparseArray[w_Wireworld ? WireworldQ] :=
+	SparseArray[Normal[Normal[w]]];
+
+Wireworld /: NumericArray[w_Wireworld ? WireworldQ] :=
+	Normal[w];
+
+Wireworld /: NumericArray[w_Wireworld ? WireworldQ, type_] :=
+	NumericArray[Normal[w], type];
+
 
 SyntaxInformation[WireworldQ] = {
 	"ArgumentsPattern" -> {_}
 };
 
-WireworldQ[expr_Wireworld] := System`Private`NoEntryQ[expr];
-WireworldQ[_] := False;
+WireworldQ[expr_Wireworld] :=
+	System`Private`NoEntryQ[expr];
+
+WireworldQ[_] :=
+	False;
+
 
 stateIcon[state_] :=
 	MatrixPlot[
 		state,
 		Frame -> False,
 		PlotTheme -> "Basic",
-		ColorRules \[Rule] $cellColorRules,
+		ColorRules -> $cellColorRules,
 		MaxPlotPoints -> 30,
-		Evaluate @ ElisionsDump`commonGraphicsOptions
-	]
+		AspectRatio -> 1,
+		ImageSize -> Dynamic[{Automatic, 3.5 * CurrentValue["FontCapHeight"] / AbsoluteCurrentValue[Magnification]}]
+	];
+
 
 MakeBoxes[w_Wireworld, fmt_] /; WireworldQ[w] :=
 	Module[{state, dims, icon},
@@ -278,7 +304,7 @@ MakeBoxes[w_Wireworld, fmt_] /; WireworldQ[w] :=
 			{},
 			fmt
 		]
-	]*)
+	];
 
 
 Needs["DanielS`Wireworld`WireworldDraw`"]
