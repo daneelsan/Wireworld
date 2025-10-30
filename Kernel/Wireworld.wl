@@ -149,8 +149,12 @@ SyntaxInformation[WireworldEvolve] = {
 	"ArgumentsPattern" -> {_, _.}
 };
 
+Options[WireworldEvolve] = {
+	Method -> Automatic
+};
+
 WireworldEvolve[iargs___] /; CheckArguments[WireworldEvolve[iargs], {1, 2}] :=
-	Module[{args, opts, init, tspec, res},
+	Module[{args, opts, init, tspec},
 		{args, opts} = ArgumentsOptions[WireworldEvolve[iargs], {1, 2}];
 		init = args[[1]];
 		If[!WireworldStateQ[init],
@@ -162,10 +166,19 @@ WireworldEvolve[iargs___] /; CheckArguments[WireworldEvolve[iargs], {1, 2}] :=
 		];
 		If[Length[args] === 1,
 			tspec = 1
-		,
+			,
 			tspec = args[[2]]
 		];
+		If[OptionValue[WireworldEvolve, {opts}, Method] === "Library",
+			iWireworldEvolveLibrary[init, tspec]
+			,
+			iWireworldEvolveBuiltin[init, tspec]
+		]
+	];
 
+
+iWireworldEvolveBuiltin[init_, tspec_] :=
+	Module[{res},
 		Quiet[
 			res = Check[
 				WireworldEvolveFunction[init, tspec]
@@ -190,7 +203,18 @@ WireworldEvolve[iargs___] /; CheckArguments[WireworldEvolve[iargs], {1, 2}] :=
 		,
 			SparseArray /@ res
 		]
-	]
+	];
+
+
+iWireworldEvolveLibrary[init_, {{tspec_Integer}}] :=
+	DanielS`Wireworld`Library`WireworldRun[init, tspec];
+
+iWireworldEvolveLibrary[init_, tspec_Integer] :=
+	NestList[DanielS`Wireworld`Library`WireworldRun[#, 1] &, init, tspec];
+
+iWireworldEvolveLibrary[init_, tspec_] :=
+	$Failed;
+
 
 WireworldEvolveFunction = CellularAutomaton[$WireworldNumberRule, #1, {#2, Automatic}] &
 
