@@ -62,7 +62,7 @@ VerificationTest[(* 6 *)
 VerificationTest[
   DanielS`Wireworld`WireworldEvolve[{{3, 3, 1, 2, "a"}}],
   Failure["WireworldFailure", Association["MessageTemplate" -> "Initial state `1` should be a matrix of Wireworld cell states (`2`).", "MessageParameters" -> {{{3, 3, 1, 2, "a"}}, "0, 1, 2, 3"}, "Input" -> {{3, 3, 1, 2, "a"}}]],
-  TestID -> "Untitled-2@@Tests/WireworldEvolve.wlt:62,1-67,2"
+  TestID -> "Untitled-2@@Tests/WireworldEvolve.wlt:62,1-66,2"
 ]
 
 VerificationTest[(* 8 *)
@@ -72,7 +72,7 @@ VerificationTest[(* 8 *)
   Association["MessageTemplate" -> "Time specification `1` should be t, {t}, {{t}}, {t1, t2}, or {t1, t2, dt} where t, t1, t2, and dt are machine integers and dt is positive.",  
    "MessageParameters" -> {{{{2}}}}, "Input" -> {{{2}}}]]	
 	,
-	TestID -> "1454aa6e-243c-494d-8b76-83ddbb42929d@@Tests/WireworldEvolve.wlt:69,1-77,2"
+	TestID -> "1454aa6e-243c-494d-8b76-83ddbb42929d@@Tests/WireworldEvolve.wlt:68,1-76,2"
 ]
 
 EndTestSection[]

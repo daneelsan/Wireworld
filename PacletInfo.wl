@@ -19,6 +19,7 @@ PacletObject[
                 "Root" -> "Kernel",
                 "Context" -> {"DanielS`Wireworld`"},
                 "Symbols" -> {
+                    "DanielS`Wireworld`Wireworld",
                     "DanielS`Wireworld`WireworldEvolve",
                     "DanielS`Wireworld`WireworldPlot",
                     "DanielS`Wireworld`WireworldDraw",

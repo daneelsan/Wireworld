@@ -1,10 +1,11 @@
-(* ::Package:: *)
-
 BeginPackage["DanielS`Wireworld`WireworldDraw`"]
 
-Needs["DanielS`Wireworld`"]
 
 Begin["`Private`"]
+
+
+Needs["DanielS`Wireworld`"]
+Needs["DanielS`Wireworld`Utilities`"]
 
 
 SyntaxInformation[DanielS`Wireworld`WireworldDraw] = {
@@ -12,7 +13,7 @@ SyntaxInformation[DanielS`Wireworld`WireworldDraw] = {
 };
 
 expr : DanielS`Wireworld`WireworldDraw[___] /; CheckArguments[expr, {0, 1}] :=
-	Module[{args, opts, init},
+	Module[{args, opts, init, ww},
 		{args, opts} = ArgumentsOptions[expr, {0, 1}];
 		init = First[args];
 		If[ListQ[init] && Length[init] === 2 && AllTrue[init, Function[n, IntegerQ[n] && n > 0]],
@@ -21,14 +22,12 @@ expr : DanielS`Wireworld`WireworldDraw[___] /; CheckArguments[expr, {0, 1}] :=
 		If[!WireworldStateQ[init],
 			Return @ Failure["WireworldFailure", <|
 				"MessageTemplate" -> "Argument `1` should be a list specifying the number of rows and columns of a new Wireworld state or a matrix of Wireworld cell states (`2`).",
-				"MessageParameters" -> {init, StringRiffle[DanielS`Wireworld`Private`$cellStates, ", "]},
+				"MessageParameters" -> {init, StringRiffle[$CellStates, ", "]},
 				"Input" -> init
 			|>]
 		];
-		If[Head[init] === List,
-			init = SparseArray[init]
-		];
-		iWireworldDraw[init, opts]
+		ww = Wireworld[init];
+		iWireworldDraw[SparseArray[ww], opts]
 	]
 
 iWireworldDraw[init_, opts___] :=
@@ -93,7 +92,7 @@ clearAllVariables[] :=
 
 dialogReturn[arg_] := (clearAllVariables[]; DialogReturn[arg])
 
-returnState[] := dialogReturn[$state]
+returnState[] := dialogReturn[Wireworld[$state]]
 
 escape[] :=
 	If[CurrentValue["MouseButtons"] === {},
@@ -230,7 +229,7 @@ lowerRightButtons[] :=
 	]
 
 getStatePlot[state_, opts_] :=
-	DanielS`Wireworld`Private`iWireworldPlot[
+	DanielS`Wireworld`WireworldPlot`iWireworldPlot[
 		state,
 		Epilog -> {
 			lowerLeftButtons[],
@@ -244,7 +243,7 @@ topAlignedRow[list_] := Grid[{list}, Alignment -> Top, Spacings -> {0, 0}]
 mainPanel[] :=
 	Manipulate[
 		EventHandler[
-			Dynamic[DanielS`Wireworld`Private`iWireworldPlot[$state, {}, Frame -> None, Mesh -> showMesh]],
+			Dynamic[DanielS`Wireworld`WireworldPlot`iWireworldPlot[$state, {}, Frame -> None, Mesh -> showMesh]],
 			(*Dynamic[getStatePlot[$state, PlotRangePadding -> Scaled[0.075]]],*)
 			{
 				"MouseClicked" :> handleMouseClicked[Automatic, MousePosition["Graphics"]],
