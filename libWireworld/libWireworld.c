@@ -1,4 +1,5 @@
 #include "WolframLibrary.h"
+#include "WolframNumericArrayLibrary.h"
 #include "WolframSparseLibrary.h"
 
 #include "wireworld.c"
@@ -15,8 +16,10 @@ EXTERN_C DLLEXPORT int WolframLibrary_initialize(WolframLibraryData libData)
 
 /*****************************************************************************/
 
-EXTERN_C DLLEXPORT int wireworld_step_immutable(WolframLibraryData libData, mint argc, MArgument *args, MArgument res)
+EXTERN_C DLLEXPORT int wireworld_numeric_array_step_immutable(WolframLibraryData libData, mint argc, MArgument *args, MArgument res)
 {
+	WolframNumericArrayLibrary_Functions numericFuns = libData->numericarrayLibraryFunctions;
+
 	mint error = LIBRARY_NO_ERROR;
 
 	if (argc != 1)
@@ -24,37 +27,36 @@ EXTERN_C DLLEXPORT int wireworld_step_immutable(WolframLibraryData libData, mint
 		return LIBRARY_FUNCTION_ERROR;
 	}
 
-	MTensor state_tensor_in = MArgument_getMTensor(args[0]);
-	if (libData->MTensor_getRank(state_tensor_in) != 2)
+	MNumericArray state_array_in = MArgument_getMNumericArray(args[0]);
+	if (numericFuns->MNumericArray_getRank(state_array_in) != 2)
 	{
 		return LIBRARY_RANK_ERROR;
 	}
-	if (libData->MTensor_getType(state_tensor_in) != MType_Integer)
+	if (numericFuns->MNumericArray_getType(state_array_in) != MNumericArray_Type_UBit8)
 	{
 		return LIBRARY_TYPE_ERROR;
 	}
 
-	const mint *dims = libData->MTensor_getDimensions(state_tensor_in);
-
-	MTensor state_tensor_out;
-	error = libData->MTensor_new(MType_Integer, 2, dims, &state_tensor_out);
+	MNumericArray state_array_out = NULL;
+	error = numericFuns->MNumericArray_clone(state_array_in, &state_array_out);
 	if (error)
 	{
-		return error;
+		return LIBRARY_FUNCTION_ERROR;
 	}
 
-	mint *state_in = libData->MTensor_getIntegerData(state_tensor_in);
-	mint *state_out = libData->MTensor_getIntegerData(state_tensor_out);
+	const mint *dims = numericFuns->MNumericArray_getDimensions(state_array_out);
 
-	wireworld_step_immutable_impl(state_in, state_out, dims[0], dims[1]);
+	uint8_t *data_in = (uint8_t *)numericFuns->MNumericArray_getData(state_array_in);
+	uint8_t *data_out = (uint8_t *)numericFuns->MNumericArray_getData(state_array_out);
+	wireworld_step_immutable_impl(data_in, data_out, dims[0], dims[1]);
 
-	MArgument_setMTensor(res, state_tensor_out);
+	MArgument_setMNumericArray(res, state_array_out);
 	return error;
 }
 
-EXTERN_C DLLEXPORT int wireworld_run(WolframLibraryData libData, mint argc, MArgument *args, MArgument res)
+EXTERN_C DLLEXPORT int wireworld_numeric_array_run_mutable(WolframLibraryData libData, mint argc, MArgument *args, MArgument res)
 {
-	WolframSparseLibrary_Functions sparseFuns = libData->sparseLibraryFunctions;
+	WolframNumericArrayLibrary_Functions numericFuns = libData->numericarrayLibraryFunctions;
 
 	mint error = LIBRARY_NO_ERROR;
 
@@ -63,10 +65,14 @@ EXTERN_C DLLEXPORT int wireworld_run(WolframLibraryData libData, mint argc, MArg
 		return LIBRARY_FUNCTION_ERROR;
 	}
 
-	MSparseArray state_array_in = MArgument_getMSparseArray(args[0]);
-	if (sparseFuns->MSparseArray_getRank(state_array_in) != 2)
+	MNumericArray state_array_in = MArgument_getMNumericArray(args[0]);
+	if (numericFuns->MNumericArray_getRank(state_array_in) != 2)
 	{
 		return LIBRARY_RANK_ERROR;
+	}
+	if (numericFuns->MNumericArray_getType(state_array_in) != MNumericArray_Type_UBit8)
+	{
+		return LIBRARY_TYPE_ERROR;
 	}
 
 	mint n_steps = MArgument_getInteger(args[1]);
@@ -75,70 +81,18 @@ EXTERN_C DLLEXPORT int wireworld_run(WolframLibraryData libData, mint argc, MArg
 		return LIBRARY_FUNCTION_ERROR;
 	}
 
-	MTensor state_tensor = NULL;
-	error = sparseFuns->MSparseArray_toMTensor(state_array_in, &state_tensor);
+	MNumericArray state_array_out = NULL;
+	error = numericFuns->MNumericArray_clone(state_array_in, &state_array_out);
 	if (error)
 	{
 		return LIBRARY_FUNCTION_ERROR;
 	}
 
-	if (libData->MTensor_getType(state_tensor) != MType_Integer)
-	{
-		return LIBRARY_TYPE_ERROR;
-	}
+	const mint *dims = numericFuns->MNumericArray_getDimensions(state_array_out);
 
-	const mint *dims = libData->MTensor_getDimensions(state_tensor);
+	uint8_t *data_out = (uint8_t *)(numericFuns->MNumericArray_getData(state_array_out));
+	wireworld_run_mutable_impl(data_out, dims[0], dims[1], n_steps);
 
-	mint *state = libData->MTensor_getIntegerData(state_tensor);
-	wireworld_run_impl(state, dims[0], dims[1], n_steps);
-
-	MSparseArray state_array_out = NULL;
-	error = sparseFuns->MSparseArray_fromMTensor(state_tensor, NULL, &state_array_out);
-
-	// Free tensors after conversion
-	libData->MTensor_free(state_tensor);
-
-	if (error)
-	{
-		return error;
-	}
-
-	MArgument_setMSparseArray(res, state_array_out);
-	return error;
-}
-
-EXTERN_C DLLEXPORT int wireworld_step_mutable(WolframLibraryData libData, mint argc, MArgument *args, MArgument res)
-{
-	mint error = LIBRARY_NO_ERROR;
-
-	if (argc != 2)
-	{
-		return LIBRARY_FUNCTION_ERROR;
-	}
-
-	MTensor state_tensor = MArgument_getMTensor(args[0]);
-	if (libData->MTensor_getRank(state_tensor) != 2)
-	{
-		return LIBRARY_RANK_ERROR;
-	}
-	if (libData->MTensor_getType(state_tensor) != MType_Integer)
-	{
-		return LIBRARY_TYPE_ERROR;
-	}
-
-	mint steps = MArgument_getInteger(args[1]);
-	if (steps < 0)
-	{
-		return LIBRARY_FUNCTION_ERROR;
-	}
-
-	const mint *dims = libData->MTensor_getDimensions(state_tensor);
-	mint *state = libData->MTensor_getIntegerData(state_tensor);
-
-	for (int i = 0; i < steps; i += 1)
-	{
-		wireworld_step_mutable_impl(state, dims[0], dims[1]);
-	}
-
+	MArgument_setMNumericArray(res, state_array_out);
 	return error;
 }

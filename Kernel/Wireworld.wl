@@ -20,6 +20,8 @@ ClearAll["DanielS`Wireworld`Private`*"]
 
 Begin["`Private`"]  (* Begin Wireworld`Private`*)
 
+Needs["DanielS`Wireworld`libWireworld`"]
+
 
 (*******************************************************************************
 cell state information
@@ -47,7 +49,10 @@ SyntaxInformation[WireworldStateQ] = {
 
 WireworldStateQ[_?WireworldQ] := True;
 
-WireworldStateQ[state_] /; CheckArguments[WireworldStateQ[state], 1] :=
+WireworldStateQ[na_?NumericArrayQ] :=
+	WireworldStateQ[Normal[na]];
+
+WireworldStateQ[state_] :=
 	MatrixQ[state, MemberQ[$cellStates, #] &]
 
 
@@ -160,7 +165,7 @@ Options[WireworldEvolve] = {
 };
 
 WireworldEvolve[iargs___] /; CheckArguments[WireworldEvolve[iargs], {1, 2}] :=
-	Module[{args, opts, init, tspec},
+	Module[{args, opts, init, state, tspec, res, head},
 		{args, opts} = ArgumentsOptions[WireworldEvolve[iargs], {1, 2}];
 		init = args[[1]];
 		If[!WireworldStateQ[init],
@@ -175,54 +180,60 @@ WireworldEvolve[iargs___] /; CheckArguments[WireworldEvolve[iargs], {1, 2}] :=
 			,
 			tspec = args[[2]]
 		];
+		state = Wireworld[init];
 		If[OptionValue[WireworldEvolve, {opts}, Method] === "Library",
-			iWireworldEvolveLibrary[init, tspec]
+			iWireworldEvolveLibrary[state, tspec]
 			,
-			iWireworldEvolveBuiltin[init, tspec]
-		]
-	];
-
-
-iWireworldEvolveBuiltin[init_, tspec_] :=
-	Module[{res},
-		Quiet[
-			res = Check[
-				WireworldEvolveFunction[init, tspec]
-			,
-				Failure["WireworldFailure", <|
-					"MessageTemplate" -> "Time specification `1` should be t, {t}, {{t}}, {t1, t2}, or {t1, t2, dt} where t, t1, t2, and dt are machine integers and dt is positive.",
-					"MessageParameters" -> {tspec},
-					"Input" -> tspec
-				|>]
-			,
-				{CellularAutomaton::offtg, CellularAutomaton::offts, CellularAutomaton::offtm}
+			res = iWireworldEvolveBuiltin[state, tspec];
+			If[FailureQ[res] || Head[init] === List,
+				Return[res]
+			];
+			head = Head[init];
+			If[MatchQ[tspec, {{_}}],
+				head[res]
+				,
+				head /@ res
 			]
-		,
-			{CellularAutomaton::offtg, CellularAutomaton::offts, CellularAutomaton::offtm}
-		];
-		If[FailureQ[res] || Head[init] === List,
-			Return[res]
-		];
-
-		If[MatchQ[tspec, {{_}}],
-			SparseArray[res]
-		,
-			SparseArray /@ res
 		]
 	];
 
 
-iWireworldEvolveLibrary[init_, {{tspec_Integer}}] :=
-	DanielS`Wireworld`Library`WireworldRun[init, tspec];
+iWireworldEvolveBuiltin[state_, tspec_] :=
+	Quiet[
+		Check[
+			WireworldEvolveFunction[Normal[state], tspec]
+			,
+			Failure["WireworldFailure", <|
+				"MessageTemplate" -> "Time specification `1` should be t, {t}, {{t}}, {t1, t2}, or {t1, t2, dt} where t, t1, t2, and dt are machine integers and dt is positive.",
+				"MessageParameters" -> {tspec},
+				"Input" -> tspec
+			|>]
+			,
+			{CellularAutomaton::offtg, CellularAutomaton::offts, CellularAutomaton::offtm}
+		]
+		,
+		{CellularAutomaton::offtg, CellularAutomaton::offts, CellularAutomaton::offtm}
+	];
 
-iWireworldEvolveLibrary[init_, tspec_Integer] :=
-	NestList[DanielS`Wireworld`Library`WireworldRun[#, 1] &, init, tspec];
+
+(* WireworldEvolveFunction is a wrapper around the CellularAutomaton function for the Wireworld cellular automaton *)
+WireworldEvolveFunction = CellularAutomaton[$WireworldNumberRule, #1, {#2, Automatic}] &
+
+
+iWireworldEvolveLibrary[init_?WireworldQ] :=
+	Wireworld[WireworldStep[init]];
+
+iWireworldEvolveLibrary[init_?WireworldQ, {{1}}] :=
+	iWireworldEvolveLibrary[init];
+
+iWireworldEvolveLibrary[init_?WireworldQ, {{tspec_}}] :=
+	Wireworld[WireworldRun[Normal[init], tspec]];
+
+iWireworldEvolveLibrary[init_?WireworldQ, tspec_Integer] :=
+	Wireworld /@ NestList[WireworldRun[#, 1] &, Normal[init], tspec];
 
 iWireworldEvolveLibrary[init_, tspec_] :=
 	$Failed;
-
-
-WireworldEvolveFunction = CellularAutomaton[$WireworldNumberRule, #1, {#2, Automatic}] &
 
 
 (*******************************************************************************
@@ -308,41 +319,6 @@ MakeBoxes[w_Wireworld, fmt_] /; WireworldQ[w] :=
 
 
 Needs["DanielS`Wireworld`WireworldDraw`"]
-
-
-Needs["DanielS`Wireworld`libWireworld`"]
-
-DanielS`Wireworld`Library`WireworldStepImmutable :=
-	Module[{funs},
-		funs = InitializeWireworldLibrary[];
-		If[FailureQ[funs],
-			Return[funs]
-		];
-
-		ClearAll[DanielS`Wireworld`Library`WireworldStepImmutable];
-		DanielS`Wireworld`Library`WireworldStepImmutable = funs["wireworld_step_immutable"]
-	]
-
-DanielS`Wireworld`Library`WireworldRun :=
-	Module[{funs},
-		funs = InitializeWireworldLibrary[];
-		If[FailureQ[funs],
-			Return[funs]
-		];
-		ClearAll[DanielS`Wireworld`Library`WireworldRun];
-		DanielS`Wireworld`Library`WireworldRun = funs["wireworld_run"]
-	]
-
-DanielS`Wireworld`Library`WireworldStepMutable :=
-	Module[{funs},
-		funs = InitializeWireworldLibrary[];
-		If[FailureQ[funs],
-			Return[funs]
-		];
-
-		ClearAll[DanielS`Wireworld`Library`WireworldStepMutable];
-		DanielS`Wireworld`Library`WireworldStepMutable = funs["wireworld_step_mutable"]
-	]
 
 
 (*******************************************************************************
