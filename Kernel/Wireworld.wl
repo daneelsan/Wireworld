@@ -109,7 +109,7 @@ MakeBoxes[w_Wireworld, fmt_] /; WireworldQ[w] :=
 		icon = stateIcon[state];
 		BoxForm`ArrangeSummaryBox[
 			Wireworld,
-			state,
+			w,
 			icon,
 			{
 				BoxForm`SummaryItem @ {"Rows: ", dims[[1]]},
