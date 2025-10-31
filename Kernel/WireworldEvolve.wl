@@ -56,7 +56,7 @@ $WireworldNumberRule := $WireworldNumberRule =
 *******************************************************************************)
 
 SyntaxInformation[WireworldEvolve] = {
-	"ArgumentsPattern" -> {_, _.}
+	"ArgumentsPattern" -> {_, _., OptionsPattern[]}
 };
 
 Options[WireworldEvolve] = {
@@ -120,16 +120,16 @@ WireworldEvolveFunction = CellularAutomaton[$WireworldNumberRule, #1, {#2, Autom
 
 
 iWireworldEvolveLibrary[init_?WireworldQ] :=
-	Wireworld[WireworldStep[init]];
+	DanielS`Wireworld`Private`iCreateWireworld[WireworldStep[Normal[init]]];
 
 iWireworldEvolveLibrary[init_?WireworldQ, {{1}}] :=
 	iWireworldEvolveLibrary[init];
 
 iWireworldEvolveLibrary[init_?WireworldQ, {{tspec_}}] :=
-	Wireworld[WireworldRun[Normal[init], tspec]];
+	DanielS`Wireworld`Private`iCreateWireworld[WireworldRun[Normal[init], tspec]];
 
 iWireworldEvolveLibrary[init_?WireworldQ, tspec_Integer] :=
-	Wireworld /@ NestList[WireworldRun[#, 1] &, Normal[init], tspec];
+	DanielS`Wireworld`Private`iCreateWireworld /@ NestList[WireworldRun[#, 1] &, Normal[init], tspec];
 
 iWireworldEvolveLibrary[init_, tspec_] :=
 	$Failed;

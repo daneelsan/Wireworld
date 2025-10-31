@@ -58,7 +58,12 @@ Wireworld[arg1_] ? System`Private`HoldEntryQ :=
 		];
 		state = NumericArray[arg1, "UnsignedInteger8"];
 		System`Private`ConstructNoEntry[Wireworld, state]
-	]
+	];
+
+
+iCreateWireworld[state_] :=
+	System`Private`ConstructNoEntry[Wireworld, state];
+
 
 Wireworld /: HoldPattern[Normal[Wireworld[state_]]] :=
 	state;
@@ -127,6 +132,7 @@ MakeBoxes[w_Wireworld, fmt_] /; WireworldQ[w] :=
 Needs["DanielS`Wireworld`WireworldEvolve`"]
 Needs["DanielS`Wireworld`WireworldPlot`"]
 Needs["DanielS`Wireworld`WireworldDraw`"]
+Needs["DanielS`Wireworld`WireworldParse`"]
 
 
 End[] (* End Wireworld`Private`*)
