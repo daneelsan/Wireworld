@@ -84,6 +84,10 @@ Wireworld /: NumericArray[w_Wireworld ? WireworldQ, type_] :=
 	NumericArray[Normal[w], type];
 
 
+Wireworld /: Part[w_Wireworld?WireworldQ, spec__] := 
+	Wireworld[Part[Normal[w], spec]];
+
+
 SyntaxInformation[WireworldQ] = {
 	"ArgumentsPattern" -> {_}
 };
