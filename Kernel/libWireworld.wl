@@ -4,13 +4,17 @@ BeginPackage["DanielS`Wireworld`libWireworld`"]
 
 InitializeWireworldLibrary
 
+WireworldStep
+
+WireworldRun
+
 Begin["`Private`"]
 
 
-$libName = If[$OperatingSystem === "Windows", "", "lib"] <> "Wireworld";
+$libName = "Wireworld";
 
 InitializeWireworldLibrary[] :=
-	Module[{libWireworld, wireworldStepImm, wireworldStepMut},
+	Module[{libWireworld, wireworldStepImm, wireworldRunMut},
 		libWireworld = FindLibrary[$libName];
 		If[!FileExistsQ[libWireworld],
 			Return @ Failure["WireworldFailure", <|
@@ -21,38 +25,61 @@ InitializeWireworldLibrary[] :=
 
 		wireworldStepImm = LibraryFunctionLoad[
 			libWireworld,
-			"wireworld_step_immutable",
-			{{Integer, 2, "Constant"}},
-			{Integer, 2}
+			"wireworld_numeric_array_step_immutable",
+			{{LibraryDataType[NumericArray], "Constant"}},
+			LibraryDataType[NumericArray]
 		];
 		If[Head[wireworldStepImm] =!= LibraryFunction,
 			Return @ Failure["WireworldFailure", <|
 				"MessageTemplate" -> "Unable to load the `1` library function.",
-				"MessageParameters" -> {"wireworld_step_immutable"},
+				"MessageParameters" -> {"wireworld_numeric_array_step_immutable"},
 				"Library" -> libWireworld
 			|>]
 		];
 
-		wireworldStepMut = LibraryFunctionLoad[
+		wireworldRunMut = LibraryFunctionLoad[
 			libWireworld,
-			"wireworld_step_mutable",
-			{{Integer, 2, "Shared"}, Integer},
-			"Void"
+			"wireworld_numeric_array_run_mutable",
+			{{LibraryDataType[NumericArray], "Constant"}, Integer},
+			LibraryDataType[NumericArray]
 		];
-		If[Head[wireworldStepMut] =!= LibraryFunction,
+		If[Head[wireworldRunMut] =!= LibraryFunction,
 			Return @ Failure["WireworldFailure", <|
 				"MessageTemplate" -> "Unable to load the `1` library function.",
-				"MessageParameters" -> {"wireworld_step_mutable"},
+				"MessageParameters" -> {"wireworld_numeric_array_run_mutable"},
 				"Library" -> libWireworld
 			|>]
 		];
 
 		ClearAll[InitializeWireworldLibrary];
 		InitializeWireworldLibrary[] = <|
-			"wireworld_step_immutable" -> wireworldStepImm,
-			"wireworld_step_mutable" -> wireworldStepMut
+			"wireworld_step" -> wireworldStepImm,
+			"wireworld_run" -> wireworldRunMut
 		|>
-	]
+	];
+
+
+WireworldStep :=
+	Module[{funs},
+		funs = InitializeWireworldLibrary[];
+		If[FailureQ[funs],
+			Return[funs]
+		];
+
+		ClearAll[WireworldStep];
+		WireworldStep = funs["wireworld_step"]
+	];
+
+
+WireworldRun :=
+	Module[{funs},
+		funs = InitializeWireworldLibrary[];
+		If[FailureQ[funs],
+			Return[funs]
+		];
+		ClearAll[WireworldRun];
+		WireworldRun = funs["wireworld_run"]
+	];
 
 
 End[]

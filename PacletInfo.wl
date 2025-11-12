@@ -8,7 +8,7 @@ PacletObject[
         "SourceControlURL" -> "https://github.com/daneelsan/Wireworld",
         "License" -> "MIT",
         "PublisherID" -> "DanielS",
-        "Version" -> "1.0.7",
+        "Version" -> "1.0.8",
         "WolframVersion" -> "13.0+",
         "ActionURL" -> "$ActionURL$",
         "BuildDate" -> "$BuildDate$",
@@ -19,6 +19,7 @@ PacletObject[
                 "Root" -> "Kernel",
                 "Context" -> {"DanielS`Wireworld`"},
                 "Symbols" -> {
+                    "DanielS`Wireworld`Wireworld",
                     "DanielS`Wireworld`WireworldEvolve",
                     "DanielS`Wireworld`WireworldPlot",
                     "DanielS`Wireworld`WireworldDraw",

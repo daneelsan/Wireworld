@@ -12,7 +12,7 @@ jobs:
     name: Check
     runs-on: ubuntu-latest
     container: 
-      image: wolframresearch/wolframengine:13.0.1
+      image: wolframresearch/wolframengine:13.3
       options: --user root
     env: 
       WOLFRAM_SYSTEM_ID: Linux-x86-64
@@ -32,7 +32,7 @@ jobs:
     - name: UploadWorkflowValues
       id: upload-workflow-values-step
       if: always() && env.PACLET_WORKFLOW_VALUES
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         name: paclet-workflow-values
         path: ${{ env.PACLET_WORKFLOW_VALUES }}
@@ -42,7 +42,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     container: 
-      image: wolframresearch/wolframengine:13.0.1
+      image: wolframresearch/wolframengine:13.3
       options: --user root
     env: 
       WOLFRAM_SYSTEM_ID: Linux-x86-64
@@ -61,7 +61,7 @@ jobs:
     - name: UploadWorkflowValues
       id: upload-workflow-values-step
       if: always() && env.PACLET_WORKFLOW_VALUES
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         name: paclet-workflow-values
         path: ${{ env.PACLET_WORKFLOW_VALUES }}
@@ -71,7 +71,7 @@ jobs:
     needs:  [Check]
     runs-on: ubuntu-latest
     container: 
-      image: wolframresearch/wolframengine:13.0.1
+      image: wolframresearch/wolframengine:13.3
       options: --user root
     env: 
       WOLFRAM_SYSTEM_ID: Linux-x86-64
@@ -90,7 +90,7 @@ jobs:
         resource_system_base: https://www.wolframcloud.com/obj/resourcesystem/api/1.0
     - name: UploadArtifact
       id: upload-build-artifacts-step
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         path: ${{ env.PACLET_BUILD_DIR }}
         if-no-files-found: ignore
@@ -174,13 +174,13 @@ jobs:
         }
         wolfram -runfirst 'Unprotect[$EvaluationEnvironment];$EvaluationEnvironment=\"Script\";Protect[$EvaluationEnvironment]' -script ${{ env.WOLFRAM_LIBRARY_BUILD_SCRIPT }}
     - name: Archive compiled libraries
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         name: ${{ env.WOLFRAM_SYSTEM_ID }}
         path: ${{ env.WOLFRAM_LIBRARY_BUILD_OUTPUT }}/${{ env.WOLFRAM_SYSTEM_ID }}
   Compile-MacOSX-x86-64: 
     name: Compile-MacOSX-x86-64
-    runs-on: macos-12
+    runs-on: macos-13
     env: 
       WOLFRAM_LIBRARY_BUILD_OUTPUT: LibraryResources/
       WOLFRAM_LIBRARY_BUILD_SCRIPT: ./Scripts/Compile.wls
@@ -225,7 +225,7 @@ jobs:
         fi
         wolframscript -runfirst 'CompoundExpression[Unprotect[\$EvaluationEnvironment],Set[\$EvaluationEnvironment,SymbolName[Script]],Protect[\$EvaluationEnvironment]]' -script ${{ env.WOLFRAM_LIBRARY_BUILD_SCRIPT }}
     - name: Archive compiled libraries
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         name: ${{ env.WOLFRAM_SYSTEM_ID }}
         path: ${{ env.WOLFRAM_LIBRARY_BUILD_OUTPUT }}/${{ env.WOLFRAM_SYSTEM_ID }}
@@ -233,7 +233,7 @@ jobs:
     name: Compile-Linux-x86-64
     runs-on: ubuntu-latest
     container: 
-      image: wolframresearch/wolframengine:13.0.1
+      image: wolframresearch/wolframengine:13.3
       options: --user root
     env: 
       WOLFRAM_LIBRARY_BUILD_SCRIPT: ./Scripts/Compile.wls
@@ -256,7 +256,7 @@ jobs:
         fi
         wolframscript -script ${{ env.WOLFRAM_LIBRARY_BUILD_SCRIPT }}
     - name: Archive compiled libraries
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         name: ${{ env.WOLFRAM_SYSTEM_ID }}
         path: ${{ env.WOLFRAM_LIBRARY_BUILD_OUTPUT }}/${{ env.WOLFRAM_SYSTEM_ID }}
@@ -265,7 +265,7 @@ jobs:
     needs:  [Compile-Windows-x86-64, Compile-MacOSX-x86-64, Compile-Linux-x86-64]
     runs-on: ubuntu-latest
     container: 
-      image: wolframresearch/wolframengine:13.0.1
+      image: wolframresearch/wolframengine:13.3
       options: --user root
     env: 
       WOLFRAM_SYSTEM_ID: Linux-x86-64
@@ -275,7 +275,7 @@ jobs:
       uses: actions/checkout@v3
     - name: DownloadCompilationArtifacts
       id: download-compilation-artifacts-step
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with: 
         path: LibraryResources
     - name: BuildMX
@@ -304,7 +304,7 @@ jobs:
         resource_system_base: https://www.wolframcloud.com/obj/resourcesystem/api/1.0
     - name: UploadArtifact
       id: upload-build-artifacts-step
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         path: ${{ env.PACLET_BUILD_DIR }}
         if-no-files-found: ignore
@@ -329,7 +329,7 @@ jobs:
         path: ${{ env.WOLFRAMENGINE_INSTALLATION_DIRECTORY }}
         key: wolframengine-${{ env.WOLFRAM_SYSTEM_ID }}-${{ env.WOLFRAMENGINE_CACHE_KEY }}
     - name: DownloadBuiltPaclet
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with: 
         name: artifact
         path: build
@@ -374,7 +374,7 @@ jobs:
     - name: UploadWorkflowValues
       id: upload-workflow-values-step
       if: always() && env.PACLET_WORKFLOW_VALUES
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         name: paclet-workflow-values
         path: ${{ env.PACLET_WORKFLOW_VALUES }}
@@ -382,7 +382,7 @@ jobs:
   Test-MacOSX-x86-64: 
     name: Test-MacOSX-x86-64
     needs:  [BuildPaclet]
-    runs-on: macos-12
+    runs-on: macos-13
     env: 
       WOLFRAM_SYSTEM_ID: MacOSX-x86-64
       WOLFRAMENGINE_CACHE_KEY: WolframEngine-A
@@ -400,7 +400,7 @@ jobs:
         path: ${{ env.WOLFRAMENGINE_INSTALLATION_DIRECTORY }}
         key: wolframengine-${{ env.WOLFRAM_SYSTEM_ID }}-${{ env.WOLFRAMENGINE_CACHE_KEY }}
     - name: DownloadBuiltPaclet
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with: 
         name: artifact
         path: build
@@ -432,7 +432,7 @@ jobs:
     - name: UploadWorkflowValues
       id: upload-workflow-values-step
       if: always() && env.PACLET_WORKFLOW_VALUES
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         name: paclet-workflow-values
         path: ${{ env.PACLET_WORKFLOW_VALUES }}
@@ -442,7 +442,7 @@ jobs:
     needs:  [BuildPaclet]
     runs-on: ubuntu-latest
     container: 
-      image: wolframresearch/wolframengine:13.0.1
+      image: wolframresearch/wolframengine:13.3
       options: --user root
     env: 
       WOLFRAM_SYSTEM_ID: Linux-x86-64
@@ -459,14 +459,14 @@ jobs:
         fi
         wolframscript Scripts/TestPaclet.wls
     - name: DownloadBuiltPaclet
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with: 
         name: artifact
         path: build
     - name: UploadWorkflowValues
       id: upload-workflow-values-step
       if: always() && env.PACLET_WORKFLOW_VALUES
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         name: paclet-workflow-values
         path: ${{ env.PACLET_WORKFLOW_VALUES }}
@@ -476,7 +476,7 @@ jobs:
     needs:  [Release]
     runs-on: ubuntu-latest
     container: 
-      image: wolframresearch/wolframengine:13.0.1
+      image: wolframresearch/wolframengine:13.3
       options: --user root
     env: 
       WOLFRAM_SYSTEM_ID: Linux-x86-64
@@ -494,7 +494,7 @@ jobs:
         resource_system_base: https://www.wolframcloud.com/obj/resourcesystem/api/1.0
     - name: UploadArtifact
       id: upload-build-artifacts-step
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
         path: ${{ env.PACLET_BUILD_DIR }}
         if-no-files-found: ignore

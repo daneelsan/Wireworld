@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    528304,      11160]
-NotebookOptionsPosition[    512222,      10813]
-NotebookOutlinePosition[    513047,      10840]
-CellTagsIndexPosition[    512965,      10835]
+NotebookDataLength[    534428,      11275]
+NotebookOptionsPosition[    518153,      10923]
+NotebookOutlinePosition[    518996,      10951]
+CellTagsIndexPosition[    518914,      10946]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -215,6 +215,7 @@ Cell[TextData[{
     ButtonBox["$WireworldFunctionRule",
      BaseStyle->"Link",
      ButtonData->"paclet:DanielS/Wireworld/ref/$WireworldFunctionRule"], ",", 
+    
     StyleBox["init", "TI"], ",", 
     RowBox[{"{", 
      RowBox[{
@@ -426,32 +427,39 @@ Cell["See Also", "SeeAlsoSection",
 
 Cell[TextData[{
  Cell[BoxData[
+  ButtonBox["Wireworld",
+   BaseStyle->"Link",
+   ButtonData->"paclet:DanielS/Wireworld/ref/Wireworld"]], "InlineFormula",
+  ExpressionUUID->"6558a7ef-b728-42c8-a411-461f1e43ad5b"],
+ " \[EmptyVerySmallSquare] ",
+ Cell[BoxData[
   ButtonBox["WireworldStateQ",
    BaseStyle->"Link",
    ButtonData->"paclet:DanielS/Wireworld/ref/WireworldStateQ"]], 
-  "InlineFormula",ExpressionUUID->"8d14917d-7f9a-4cd1-9cb3-a0d7c6e0310f"],
+  "InlineFormula",ExpressionUUID->"30b22d7e-3b2e-43cd-bd5a-0350ee993e60"],
  " \[EmptyVerySmallSquare] ",
  Cell[BoxData[
   ButtonBox["WireworldPlot",
    BaseStyle->"Link",
    ButtonData->"paclet:DanielS/Wireworld/ref/WireworldPlot"]], 
-  "InlineFormula",ExpressionUUID->"619371a4-0d0c-42c6-a335-970ed8933bde"],
+  "InlineFormula",ExpressionUUID->"39f3b6b7-22d4-44ba-bd87-162abc188ece"],
  " \[EmptyVerySmallSquare] ",
  Cell[BoxData[
   ButtonBox["$WireworldFunctionRule",
    BaseStyle->"Link",
    ButtonData->"paclet:DanielS/Wireworld/ref/$WireworldFunctionRule"]], 
-  "InlineFormula",ExpressionUUID->"dd14bdc3-71bb-4085-a35f-3091f73dd2fa"],
+  "InlineFormula",ExpressionUUID->"facf331d-ace1-43e2-b2ae-9437a56575e5"],
  " \[EmptyVerySmallSquare] ",
  Cell[BoxData[
   ButtonBox["$WireworldNumberRule",
    BaseStyle->"Link",
    ButtonData->"paclet:DanielS/Wireworld/ref/$WireworldNumberRule"]], 
-  "InlineFormula",ExpressionUUID->"8363fe85-07c7-49ed-aaa6-333ec2963687"]
+  "InlineFormula",ExpressionUUID->"a01455d1-d83a-4f9e-8139-0c0552e0f61b"]
 }], "SeeAlso",
  CellChangeTimes->{{3.850767199922099*^9, 3.8507672647939367`*^9}, {
-  3.851029333274057*^9, 3.85102934718293*^9}},
- CellID->86772014,ExpressionUUID->"ab7e0c06-4bd3-4452-80b1-b9ae3f056882"]
+  3.851029333274057*^9, 3.85102934718293*^9}, {3.971347826151846*^9, 
+  3.971347827525354*^9}},
+ CellID->86772014,ExpressionUUID->"a6c68ce0-9a61-4a04-b793-6f6367f348e5"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -497,10 +505,12 @@ Cell[BoxData[
      RowBox[{
      "0", ",", "0", ",", "0", ",", "0", ",", "3", ",", "3", ",", "0", ",", 
       "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+    
     RowBox[{"{", 
      RowBox[{
      "3", ",", "3", ",", "2", ",", "1", ",", "3", ",", "0", ",", "3", ",", 
       "3", ",", "2", ",", "1", ",", "3"}], "}"}], ",", "\[IndentingNewLine]", 
+    
     RowBox[{"{", 
      RowBox[{
      "0", ",", "0", ",", "0", ",", "0", ",", "3", ",", "3", ",", "0", ",", 
@@ -541,12 +551,22 @@ Cell[BoxData[
      RowBox[{"{", 
       RowBox[{
       "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "3", ",", "0", ",", 
-       "0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], "}"}]], "Output",
+       "0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], "}"}]], "Output",\
+
  CellChangeTimes->{3.850767874046279*^9, 3.850768018521204*^9, 
   3.850770111000577*^9, 3.850771702822076*^9},
  CellLabel->"Out[90]=",
  CellID->291186743,ExpressionUUID->"a65045cb-67c6-43e4-8965-24f4aaaf09be"]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "d1c90135-6b60-449d-9b9c-e711c4312f0a"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->589737325,ExpressionUUID->"4115ae0b-c4c7-438f-a2f8-c64013914392"],
 
 Cell["Evolve an initial state for 2 steps and plot the result:", "ExampleText",
  CellChangeTimes->{{3.8507679857853727`*^9, 3.8507680478067217`*^9}, {
@@ -897,6 +917,7 @@ UAsMlfQwCgD5iCSC
  CellLabel->"Out[89]=",
  CellID->68240130,ExpressionUUID->"f620cf2c-d2d7-49e8-8f98-97607849710d"]
 }, Open  ]]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1030,8 +1051,8 @@ AIruxqI=
 P7evEg6zLc58b3+3VyKgSfCi/RKpb9VJcx/atzQ+v3d46Vuc5gy2eBkVH1hx
 AIruxqI=
                  "], {{0, 0}, {11, 5}}, {0, 1}], AspectRatio -> 1, Axes -> 
-                False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
-                Directive[
+                False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> D\
+irective[
                   Opacity[0.5], 
                   Thickness[Tiny], 
                   RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -1150,7 +1171,7 @@ AIruxqI=
      Selectable->False], ",", "3"}], "]"}]}]], "Input",
  CellChangeTimes->{{3.850768601752286*^9, 3.850768608314659*^9}, {
    3.850768656344824*^9, 3.850768666719054*^9}, 3.850769357874549*^9},
- CellLabel->"In[91]:=",
+ CellLabel->"In[14]:=",
  CellID->121325979,ExpressionUUID->"cb53a640-5ea7-48df-b249-31ff5469c8d3"],
 
 Cell[BoxData[
@@ -1182,7 +1203,7 @@ AFY0HFk=
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -1217,7 +1238,7 @@ TBxZ
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -1252,7 +1273,7 @@ Y2scWQ==
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -1287,7 +1308,7 @@ WQ==
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -1298,9 +1319,9 @@ WQ==
       "DefaultPlotStyle" -> Automatic}]}], "}"}]], "Output",
  CellChangeTimes->{{3.850768598530223*^9, 3.850768608739881*^9}, {
    3.850768656667445*^9, 3.850768666994659*^9}, 3.850769802437152*^9, 
-   3.850771709545335*^9},
- CellLabel->"Out[91]=",
- CellID->380095674,ExpressionUUID->"72ad2853-afae-4390-ba0d-467133f457eb"]
+   3.850771709545335*^9, 3.970864010656747*^9},
+ CellLabel->"Out[14]=",
+ CellID->1768076560,ExpressionUUID->"43cc30a4-9ae6-4796-a02c-6e953870ded6"]
 }, Open  ]]
 }, Open  ]],
 
@@ -1539,7 +1560,7 @@ tsWZ7+3v9koENAletF8i9a06ae5D+5bG5/cOL32L05yB8i8AuC/DVg==
  CellChangeTimes->{{3.85076884315923*^9, 3.8507688744323378`*^9}, {
    3.850769254115103*^9, 3.8507692567029676`*^9}, 3.850769598022402*^9, 
    3.8507699961189117`*^9},
- CellLabel->"In[92]:=",
+ CellLabel->"In[13]:=",
  CellID->223754082,ExpressionUUID->"4ce99d97-72e1-4699-afdf-9c2506492962"],
 
 Cell[BoxData[
@@ -1583,8 +1604,8 @@ tsWZ7+3v9koENAletF8i9a06ae5D+5bG5/cOL32L05yB8i8AuC/DVg==
                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                    Magnification])}], 
                Method -> {
-                "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                 Automatic, 
+                "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                 "DefaultBoundaryStyle" -> Automatic, 
                  "DefaultGraphicsInteraction" -> {
                   "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                    "Effects" -> {
@@ -1651,8 +1672,8 @@ tsWZ7+3v9koENAletF8i9a06ae5D+5bG5/cOL32L05yB8i8AuC/DVg==
                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                    Magnification])}], 
                Method -> {
-                "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                 Automatic, 
+                "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                 "DefaultBoundaryStyle" -> Automatic, 
                  "DefaultGraphicsInteraction" -> {
                   "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                    "Effects" -> {
@@ -1800,8 +1821,8 @@ bIsz39vf7ZUIaBK8aL9E6lt10tyH9i2Nz+8dXvqW5v7CJQ4ACMbDVg==
                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                    Magnification])}], 
                Method -> {
-                "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                 Automatic, 
+                "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                 "DefaultBoundaryStyle" -> Automatic, 
                  "DefaultGraphicsInteraction" -> {
                   "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                    "Effects" -> {
@@ -1868,8 +1889,8 @@ bIsz39vf7ZUIaBK8aL9E6lt10tyH9i2Nz+8dXvqW5v7CJQ4ACMbDVg==
                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                    Magnification])}], 
                Method -> {
-                "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                 Automatic, 
+                "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                 "DefaultBoundaryStyle" -> Automatic, 
                  "DefaultGraphicsInteraction" -> {
                   "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                    "Effects" -> {
@@ -2017,8 +2038,8 @@ xX99T7L4Gcb8PMuWO/aB9XsPNf1+bl8lHGZbnPme5v7CJQ4A6p/DVg==
                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                    Magnification])}], 
                Method -> {
-                "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                 Automatic, 
+                "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                 "DefaultBoundaryStyle" -> Automatic, 
                  "DefaultGraphicsInteraction" -> {
                   "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                    "Effects" -> {
@@ -2085,8 +2106,8 @@ xX99T7L4Gcb8PMuWO/aB9XsPNf1+bl8lHGZbnPme5v7CJQ4A6p/DVg==
                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                    Magnification])}], 
                Method -> {
-                "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                 Automatic, 
+                "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                 "DefaultBoundaryStyle" -> Automatic, 
                  "DefaultGraphicsInteraction" -> {
                   "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                    "Effects" -> {
@@ -2198,9 +2219,9 @@ xX99T7L4Gcb8PMuWO/aB9XsPNf1+bl8lHGZbnPme5v7CJQ4A6p/DVg==
     Selectable->False]}], "}"}]], "Output",
  CellChangeTimes->{{3.850768852625966*^9, 3.850768875466332*^9}, 
    3.850769257027524*^9, 3.850769598396551*^9, 3.850769996553006*^9, 
-   3.85077171169846*^9},
- CellLabel->"Out[92]=",
- CellID->8560850,ExpressionUUID->"de62c691-cf96-4641-8d68-07e978ee5d98"]
+   3.85077171169846*^9, 3.970864009189011*^9},
+ CellLabel->"Out[13]=",
+ CellID->1285802181,ExpressionUUID->"77d82d64-8da5-49f0-bec1-4d735823b8e4"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2441,7 +2462,7 @@ tsWZ7+3v9koENAletF8i9a06ae5D+5bG5/cOL32L05yB8i8AuC/DVg==
    RowBox[{"{", "2", "}"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.8507691662190247`*^9, 3.850769166369466*^9}, 
    3.8507692681930513`*^9, 3.850769606674892*^9, 3.85076998090738*^9},
- CellLabel->"In[94]:=",
+ CellLabel->"In[15]:=",
  CellID->326303010,ExpressionUUID->"0fcce98b-4356-461b-95d4-e93625c53167"],
 
 Cell[BoxData[
@@ -2483,8 +2504,8 @@ xX99T7L4Gcb8PMuWO/aB9XsPNf1+bl8lHGZbnPme5v7CJQ4A6p/DVg==
                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                   Magnification])}], 
               Method -> {
-               "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                Automatic, 
+               "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                "DefaultBoundaryStyle" -> Automatic, 
                 "DefaultGraphicsInteraction" -> {
                  "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                   "Effects" -> {
@@ -2550,8 +2571,8 @@ xX99T7L4Gcb8PMuWO/aB9XsPNf1+bl8lHGZbnPme5v7CJQ4A6p/DVg==
                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                   Magnification])}], 
               Method -> {
-               "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                Automatic, 
+               "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                "DefaultBoundaryStyle" -> Automatic, 
                 "DefaultGraphicsInteraction" -> {
                  "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                   "Effects" -> {
@@ -2661,9 +2682,10 @@ xX99T7L4Gcb8PMuWO/aB9XsPNf1+bl8lHGZbnPme5v7CJQ4A6p/DVg==
    SelectWithContents->True,
    Selectable->False], "}"}]], "Output",
  CellChangeTimes->{3.8507691674820547`*^9, 3.8507692685893707`*^9, 
-  3.850769606996491*^9, 3.85076998124485*^9, 3.8507717149744596`*^9},
- CellLabel->"Out[94]=",
- CellID->189298204,ExpressionUUID->"9236beaa-d511-42c4-bc70-48691a79499f"]
+  3.850769606996491*^9, 3.85076998124485*^9, 3.8507717149744596`*^9, 
+  3.9708640125627337`*^9},
+ CellLabel->"Out[15]=",
+ CellID->1218926925,ExpressionUUID->"04269986-0d2b-40c0-862b-c919587b15da"]
 }, Open  ]]
 }, Open  ]],
 
@@ -2906,7 +2928,7 @@ tsWZ7+3v9koENAletF8i9a06ae5D+5bG5/cOL32L05yB8i8AuC/DVg==
     RowBox[{"{", "2", "}"}], "}"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.850769190617147*^9, 3.850769191097145*^9}, 
    3.850769270892271*^9, 3.85076960983727*^9, 3.850769977616534*^9},
- CellLabel->"In[95]:=",
+ CellLabel->"In[16]:=",
  CellID->543045894,ExpressionUUID->"d3489241-d80e-4612-b803-15de7de4d21f"],
 
 Cell[BoxData[
@@ -2915,6 +2937,7 @@ Cell[BoxData[
    TagBox["SparseArray",
     "SummaryHead"], "[", 
    DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
     TemplateBox[{
       PaneSelectorBox[{False -> GridBox[{{
             PaneBox[
@@ -2947,8 +2970,8 @@ xX99T7L4Gcb8PMuWO/aB9XsPNf1+bl8lHGZbnPme5v7CJQ4A6p/DVg==
                 3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                  Magnification])}], 
              Method -> {
-              "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-               Automatic, 
+              "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+               "DefaultBoundaryStyle" -> Automatic, 
                "DefaultGraphicsInteraction" -> {
                 "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                  "Effects" -> {
@@ -3013,8 +3036,8 @@ xX99T7L4Gcb8PMuWO/aB9XsPNf1+bl8lHGZbnPme5v7CJQ4A6p/DVg==
                 3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                  Magnification])}], 
              Method -> {
-              "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-               Automatic, 
+              "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+               "DefaultBoundaryStyle" -> Automatic, 
                "DefaultGraphicsInteraction" -> {
                 "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                  "Effects" -> {
@@ -3123,9 +3146,10 @@ xX99T7L4Gcb8PMuWO/aB9XsPNf1+bl8lHGZbnPme5v7CJQ4A6p/DVg==
   SelectWithContents->True,
   Selectable->False]], "Output",
  CellChangeTimes->{3.8507691914984083`*^9, 3.850769271278318*^9, 
-  3.850769610607767*^9, 3.850769978084999*^9, 3.850771716678196*^9},
- CellLabel->"Out[95]=",
- CellID->59364975,ExpressionUUID->"414242e6-3781-4ba5-9cb8-baf9ae35a0cc"]
+  3.850769610607767*^9, 3.850769978084999*^9, 3.850771716678196*^9, 
+  3.970864014911049*^9},
+ CellLabel->"Out[16]=",
+ CellID->411388527,ExpressionUUID->"ae8271e6-6869-41a9-ade6-7ad19848d842"]
 }, Open  ]]
 }, Open  ]],
 
@@ -3346,7 +3370,8 @@ tsWZ7+3v9koENAletF8i9a06ae5D+5bG5/cOL32L05yB8i8AuC/DVg==
                     "Column"], "SummaryItem"]}}, 
                 GridBoxAlignment -> {
                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
-                False, GridBoxItemSize -> {
+                False, 
+                GridBoxItemSize -> {
                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
                 GridBoxSpacings -> {
                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
@@ -3372,7 +3397,7 @@ tsWZ7+3v9koENAletF8i9a06ae5D+5bG5/cOL32L05yB8i8AuC/DVg==
  CellChangeTimes->{{3.850769223556849*^9, 3.850769236687542*^9}, 
    3.850769282196158*^9, 3.8507695123267727`*^9, 3.850769637097144*^9, 
    3.850769966953185*^9},
- CellLabel->"In[96]:=",
+ CellLabel->"In[17]:=",
  CellID->185281081,ExpressionUUID->"66d58031-becc-492b-abaa-77b51d04572f"],
 
 Cell[BoxData[
@@ -3401,7 +3426,7 @@ Cell[BoxData[
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -3433,7 +3458,7 @@ Cell[BoxData[
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -3465,7 +3490,7 @@ Cell[BoxData[
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -3497,7 +3522,7 @@ Cell[BoxData[
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -3530,7 +3555,7 @@ Cell[BoxData[
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -3562,7 +3587,7 @@ Cell[BoxData[
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -3594,7 +3619,7 @@ Cell[BoxData[
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -3626,7 +3651,7 @@ Cell[BoxData[
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -3658,7 +3683,7 @@ Cell[BoxData[
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -3691,7 +3716,7 @@ Cell[BoxData[
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -3723,7 +3748,7 @@ Cell[BoxData[
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -3735,9 +3760,9 @@ Cell[BoxData[
  CellChangeTimes->{{3.8507692263615227`*^9, 3.850769237203003*^9}, 
    3.8507692826380997`*^9, 3.850769512719994*^9, 3.850769638828806*^9, {
    3.850769946443665*^9, 3.85076996727584*^9}, {3.850770876465403*^9, 
-   3.850770898261539*^9}, 3.850771719201128*^9},
- CellLabel->"Out[96]=",
- CellID->437764205,ExpressionUUID->"6a8d148a-ac0e-4a27-935f-7bfcb658c101"]
+   3.850770898261539*^9}, 3.850771719201128*^9, 3.970864016473446*^9},
+ CellLabel->"Out[17]=",
+ CellID->71129086,ExpressionUUID->"ca2b5407-f1e0-43f2-8155-ca5acbb31c84"]
 }, Open  ]]
 }, Open  ]],
 
@@ -3983,7 +4008,7 @@ D6PiEHEA/DrHag==
    3.850769126992931*^9}, 3.850769264762664*^9, 3.850769600751487*^9, 
    3.850769991499724*^9, {3.850771912168746*^9, 3.85077191271143*^9}, 
    3.85077194709226*^9},
- CellLabel->"In[101]:=",
+ CellLabel->"In[18]:=",
  CellID->4505975,ExpressionUUID->"4586e5e7-25e0-42ec-8df0-bd6f8eff38c7"],
 
 Cell[BoxData[
@@ -4028,8 +4053,8 @@ D6PiEHEA/DrHag==
                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                    Magnification])}], 
                Method -> {
-                "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                 Automatic, 
+                "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                 "DefaultBoundaryStyle" -> Automatic, 
                  "DefaultGraphicsInteraction" -> {
                   "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                    "Effects" -> {
@@ -4097,8 +4122,8 @@ D6PiEHEA/DrHag==
                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                    Magnification])}], 
                Method -> {
-                "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                 Automatic, 
+                "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                 "DefaultBoundaryStyle" -> Automatic, 
                  "DefaultGraphicsInteraction" -> {
                   "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                    "Effects" -> {
@@ -4182,8 +4207,7 @@ D6PiEHEA/DrHag==
                    "Column"], "SummaryItem"]}}, 
                GridBoxAlignment -> {
                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
-               False, 
-               GridBoxItemSize -> {
+               False, GridBoxItemSize -> {
                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
                GridBoxSpacings -> {
                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
@@ -4245,8 +4269,8 @@ jLT0MCoOEQcAn1rFkg==
                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                    Magnification])}], 
                Method -> {
-                "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                 Automatic, 
+                "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                 "DefaultBoundaryStyle" -> Automatic, 
                  "DefaultGraphicsInteraction" -> {
                   "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                    "Effects" -> {
@@ -4314,8 +4338,8 @@ jLT0MCoOEQcAn1rFkg==
                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                    Magnification])}], 
                Method -> {
-                "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                 Automatic, 
+                "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                 "DefaultBoundaryStyle" -> Automatic, 
                  "DefaultGraphicsInteraction" -> {
                   "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                    "Effects" -> {
@@ -4461,8 +4485,8 @@ teyllntGWnoYFYeIAwDpC8Gg
                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                    Magnification])}], 
                Method -> {
-                "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                 Automatic, 
+                "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                 "DefaultBoundaryStyle" -> Automatic, 
                  "DefaultGraphicsInteraction" -> {
                   "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                    "Effects" -> {
@@ -4530,8 +4554,8 @@ teyllntGWnoYFYeIAwDpC8Gg
                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                    Magnification])}], 
                Method -> {
-                "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
-                 Automatic, 
+                "GridLinesInFront" -> True, "AxisPadding" -> Scaled[0.02], 
+                 "DefaultBoundaryStyle" -> Automatic, 
                  "DefaultGraphicsInteraction" -> {
                   "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                    "Effects" -> {
@@ -4642,9 +4666,9 @@ teyllntGWnoYFYeIAwDpC8Gg
   3.850768892873198*^9, {3.850769122743579*^9, 3.8507691273392963`*^9}, 
    3.85076926515965*^9, 3.8507696011515102`*^9, 3.850769991931686*^9, 
    3.850771713429936*^9, {3.850771909197093*^9, 3.850771913253644*^9}, 
-   3.85077194736436*^9},
- CellLabel->"Out[101]=",
- CellID->533966259,ExpressionUUID->"4d7b6c95-f384-4a43-b975-4f3ffcc8cf8e"]
+   3.85077194736436*^9, 3.9708640190502977`*^9},
+ CellLabel->"Out[18]=",
+ CellID->1565877971,ExpressionUUID->"53eec778-210c-48fc-bd83-4c4eec4db5f4"]
 }, Open  ]]
 }, Open  ]],
 
@@ -4889,7 +4913,7 @@ D6PiEHEA/DrHag==
      RowBox[{"0", ",", "30", ",", "3"}], "}"}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.850771965161193*^9, 3.8507719883474903`*^9}, {
   3.8507720237355223`*^9, 3.850772037156479*^9}},
- CellLabel->"In[108]:=",
+ CellLabel->"In[19]:=",
  CellID->306477154,ExpressionUUID->"fbef873d-1517-4cc2-a80d-fc3940209c47"],
 
 Cell[BoxData[
@@ -4921,7 +4945,7 @@ UAsMlfQwCgD5iCSC
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -4956,7 +4980,7 @@ OC5Aa3tJdQ+1wFBLDyMXAAB8LySC
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -4991,7 +5015,7 @@ b1rbO1DhP9jcMwpwAQBsRycA
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -5026,7 +5050,7 @@ h1Iw2NwzCnABAHE3JII=
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -5061,7 +5085,7 @@ h1Iw2NwzCnABAHE3JII=
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -5096,7 +5120,7 @@ gQr/weaeUYALAABTTySC
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -5131,7 +5155,7 @@ gQr/weaeUYALAABTTySC
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -5166,7 +5190,7 @@ qAUGm3tGAS4AADVnJII=
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -5201,7 +5225,7 @@ qAUGm3tGAS4AADVnJII=
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -5236,7 +5260,7 @@ gQr/weaeUYALAAAXfySC
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -5271,7 +5295,7 @@ fKDcAwP0Dv/B5p5RgAsAAJoXJII=
     GridLinesStyle->Directive[
       GrayLevel[0.5, 0.4]],
     Method->{
-     "DefaultBoundaryStyle" -> Automatic, 
+     "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
       "DefaultGraphicsInteraction" -> {
        "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
         "Effects" -> {
@@ -5281,9 +5305,9 @@ fKDcAwP0Dv/B5p5RgAsAAJoXJII=
             "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
       "DefaultPlotStyle" -> Automatic}]}], "}"}]], "Output",
  CellChangeTimes->{{3.850771976813713*^9, 3.8507719888360977`*^9}, 
-   3.850772044610656*^9},
- CellLabel->"Out[108]=",
- CellID->18545973,ExpressionUUID->"92e17eca-3016-40a3-a7ab-0542ad329893"]
+   3.850772044610656*^9, 3.9708640202018223`*^9},
+ CellLabel->"Out[19]=",
+ CellID->1037327589,ExpressionUUID->"8acf8d66-663d-4e3e-a174-7c7bdb5ad182"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -5377,14 +5401,13 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"{", 
      RowBox[{"{", 
-      RowBox[{"3", ",", "3", ",", "1", ",", "2", ",", "3"}], "}"}], "}"}], 
-    ",", "2"}], "]"}], "===", 
+      RowBox[{"3", ",", "3", ",", "1", ",", "2", ",", "3"}], "}"}], "}"}], ",",
+     "2"}], "]"}], "===", 
   RowBox[{"CellularAutomaton", "[", 
    RowBox[{"$WireworldFunctionRule", ",", 
     RowBox[{"{", 
      RowBox[{"{", 
-      RowBox[{"3", ",", "3", ",", "1", ",", "2", ",", "3"}], "}"}], "}"}], 
-    ",", 
+      RowBox[{"3", ",", "3", ",", "1", ",", "2", ",", "3"}], "}"}], "}"}], ",", 
     RowBox[{"{", 
      RowBox[{"2", ",", "All"}], "}"}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.8507721283093977`*^9, 3.8507721801871977`*^9}},
@@ -5907,8 +5930,8 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"{", 
      RowBox[{"{", 
-      RowBox[{"3", ",", "3", ",", "1", ",", "2", ",", "3"}], "}"}], "}"}], 
-    ",", "2"}], "]"}]}]], "Input",
+      RowBox[{"3", ",", "3", ",", "1", ",", "2", ",", "3"}], "}"}], "}"}], ",",
+     "2"}], "]"}]}]], "Input",
  CellChangeTimes->{{3.8507696656747713`*^9, 3.850769691385084*^9}, {
   3.8507698430241756`*^9, 3.850769844041901*^9}, {3.8507718286052103`*^9, 
   3.850771828715767*^9}},
@@ -6054,6 +6077,7 @@ Cell[BoxData[
    TagBox["Failure",
     "SummaryHead"], "[", 
    DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
     TemplateBox[{
       PaneSelectorBox[{False -> GridBox[{{
             FrameBox[
@@ -6221,6 +6245,7 @@ Cell[BoxData[
    TagBox["Failure",
     "SummaryHead"], "[", 
    DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
     TemplateBox[{
       PaneSelectorBox[{False -> GridBox[{{
             FrameBox[
@@ -6599,21 +6624,22 @@ WSs=
       SelectWithContents->True,
       Selectable->False], ",", "11"}], "]"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.850774002720478*^9, 3.850774019308937*^9}},
- CellLabel->"In[166]:=",
+ CellLabel->"In[20]:=",
  CellID->218170293,ExpressionUUID->"8be11126-3dfb-452b-af26-69291633553f"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i21$$ = 4, Typeset`show$$ = True, 
+   DynamicModuleBox[{Manipulate`Dump`i$31778$$ = 10, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {
-    "\"min\"" :> {$CellContext`i21$$ = 1}, 
-     "\"max\"" :> {$CellContext`i21$$ = 12}}, Typeset`bookmarkMode$$ = "Menu",
-     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"min\"" :> {Manipulate`Dump`i$31778$$ = 1}, 
+     "\"max\"" :> {Manipulate`Dump`i$31778$$ = 12}}, Typeset`bookmarkMode$$ = 
+    "Menu", Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`i21$$], 1, ""}, 1, 12, 1}}, Typeset`size$$ = 
-    Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True}, 
+       Hold[Manipulate`Dump`i$31778$$], 1, ""}, 1, 12, 1, ControlType -> 
+      Animator}}, Typeset`size$$ = Automatic, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
     PaneBox[
      PanelBox[GridBox[{
         {
@@ -6622,10 +6648,10 @@ Cell[BoxData[
            TagBox[
             StyleBox[GridBox[{
                {"\<\"\"\>", 
-                AnimatorBox[Dynamic[$CellContext`i21$$], {1, 12, 1},
+                AnimatorBox[Dynamic[Manipulate`Dump`i$31778$$], {1, 12, 1},
                  AnimationRate->Automatic,
-                 AnimationRunTime->73.43301010131836,
-                 AnimationTimeIndex->1.66666666666665,
+                 AnimationRunTime->50.42577838897705,
+                 AnimationTimeIndex->4.166666666666668,
                  
                  AppearanceElements->{
                   "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
@@ -6688,7 +6714,8 @@ AADCozuV
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -6731,7 +6758,8 @@ XAAAwqM7lQ==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -6775,7 +6803,8 @@ AMKjO5U=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -6803,6 +6832,7 @@ Mp+Qvejl/ygYbAAAwqM7lQ==
                   {RGBColor[
                    0.33333333333333337`, 0.33333333333333337`, 
                     0.33333333333333337`], Thickness[Tiny], 
+                   
                    StyleBox[
                     LineBox[{{{0, 0}, {0, 9}}, {{1, 0}, {1, 9}}, {{2, 0}, {2, 
                     9}}, {{3, 0}, {3, 9}}, {{4, 0}, {4, 9}}, {{5, 0}, {5, 
@@ -6818,7 +6848,8 @@ Mp+Qvejl/ygYbAAAwqM7lQ==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -6862,7 +6893,8 @@ enk+CgDCozuV
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -6906,7 +6938,8 @@ wqM7lQ==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -6950,7 +6983,8 @@ pLs7lQ==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -6994,7 +7028,8 @@ ACmhO5U=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7038,7 +7073,8 @@ eDuV
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7082,7 +7118,8 @@ PtgArd051M0nFQx1/46GJ23MHyz16VApP2GA2HqTWuXzUC/PRwEA1h07lQ==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7100,7 +7137,6 @@ AACa/juV
                   {RGBColor[
                    0.33333333333333337`, 0.33333333333333337`, 
                     0.33333333333333337`], Thickness[Tiny], 
-                   
                    StyleBox[
                     LineBox[{{{0, 9}, {14, 9}}, {{0, 8}, {14, 8}}, {{0, 7}, {
                     14, 7}}, {{0, 6}, {14, 6}}, {{0, 5}, {14, 5}}, {{0, 4}, {
@@ -7126,7 +7162,8 @@ AACa/juV
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7143,6 +7180,7 @@ AACa/juV
                   {RGBColor[
                    0.33333333333333337`, 0.33333333333333337`, 
                     0.33333333333333337`], Thickness[Tiny], 
+                   
                    StyleBox[
                     LineBox[{{{0, 9}, {14, 9}}, {{0, 8}, {14, 8}}, {{0, 7}, {
                     14, 7}}, {{0, 6}, {14, 6}}, {{0, 5}, {14, 5}}, {{0, 4}, {
@@ -7168,7 +7206,8 @@ AACa/juV
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7177,8 +7216,8 @@ AACa/juV
                     "Droplines" -> {
                     "freeformCursorMode" -> True, 
                     "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
-                  "DefaultPlotStyle" -> Automatic}]}, 
-               Dynamic[$CellContext`i21$$],
+                  "DefaultPlotStyle" -> Automatic}]}, Dynamic[
+               Manipulate`Dump`i$31778$$],
                Alignment->Automatic,
                BaseStyle->"ListAnimateCore",
                ImageSize->All,
@@ -7198,9 +7237,11 @@ AACa/juV
            Editable->False,
            Selectable->False],
           Alignment->{Left, Center},
-          Background->GrayLevel[1],
+          Background->ThemeColor["Background"],
           Frame->1,
-          FrameStyle->GrayLevel[0, 0.2],
+          FrameStyle->Directive[
+            Opacity[0.2], 
+            ThemeColor["Foreground"]],
           ItemSize->Automatic,
           StripOnInput->False]}
        },
@@ -7208,6 +7249,7 @@ AACa/juV
        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Top}}},
        GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       
        GridBoxSpacings->{"Columns" -> {
            Offset[0.7], {
             Offset[0.5599999999999999]}, 
@@ -7228,9 +7270,10 @@ AACa/juV
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.850774003052807*^9, 3.8507740196336927`*^9}},
- CellLabel->"Out[166]=",
- CellID->260999542,ExpressionUUID->"3bac79dd-3d34-4163-9119-a3b66666930b"]
+ CellChangeTimes->{{3.850774003052807*^9, 3.8507740196336927`*^9}, 
+   3.970864025012879*^9},
+ CellLabel->"Out[20]=",
+ CellID->54311275,ExpressionUUID->"71b418d5-f5c1-4a63-875b-990b36b61aaf"]
 }, Open  ]]
 }, Open  ]],
 
@@ -7477,21 +7520,22 @@ fLC5f1R8VJwScQDUzItf
       Selectable->False], ",", "8"}], "]"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.850773338911951*^9, 3.8507733458219852`*^9}, 
    3.850773387907185*^9, {3.850773560862097*^9, 3.850773573965201*^9}},
- CellLabel->"In[161]:=",
+ CellLabel->"In[21]:=",
  CellID->89524726,ExpressionUUID->"545606a7-497b-475d-a193-5d913937d59c"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i17$$ = 1, Typeset`show$$ = True, 
+   DynamicModuleBox[{Manipulate`Dump`i$32514$$ = 1, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {
-    "\"min\"" :> {$CellContext`i17$$ = 1}, 
-     "\"max\"" :> {$CellContext`i17$$ = 9}}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"min\"" :> {Manipulate`Dump`i$32514$$ = 1}, 
+     "\"max\"" :> {Manipulate`Dump`i$32514$$ = 9}}, Typeset`bookmarkMode$$ = 
+    "Menu", Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`i17$$], 1, ""}, 1, 9, 1}}, Typeset`size$$ = 
-    Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True}, 
+       Hold[Manipulate`Dump`i$32514$$], 1, ""}, 1, 9, 1, ControlType -> 
+      Animator}}, Typeset`size$$ = Automatic, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
     PaneBox[
      PanelBox[GridBox[{
         {
@@ -7500,10 +7544,10 @@ Cell[BoxData[
            TagBox[
             StyleBox[GridBox[{
                {"\<\"\"\>", 
-                AnimatorBox[Dynamic[$CellContext`i17$$], {1, 9, 1},
+                AnimatorBox[Dynamic[Manipulate`Dump`i$32514$$], {1, 9, 1},
                  AnimationRate->Automatic,
-                 AnimationRunTime->73.3876256942749,
-                 AnimationTimeIndex->0.5555555555556495,
+                 AnimationRunTime->49.970699310302734`,
+                 AnimationTimeIndex->0.5555555555555556,
                  
                  AppearanceElements->{
                   "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
@@ -7568,7 +7612,8 @@ AQAlynfo
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7614,7 +7659,8 @@ AIWse6U=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7660,7 +7706,8 @@ YKTn91Ew0gAA7D92qQ==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7678,7 +7725,6 @@ BSMTAADIDnVq
                   {RGBColor[
                    0.33333333333333337`, 0.33333333333333337`, 
                     0.33333333333333337`], Thickness[Tiny], 
-                   
                    StyleBox[
                     LineBox[{{{0, 9}, {21, 9}}, {{0, 8}, {21, 8}}, {{0, 7}, {
                     21, 7}}, {{0, 6}, {21, 6}}, {{0, 5}, {21, 5}}, {{0, 4}, {
@@ -7706,7 +7752,8 @@ BSMTAADIDnVq
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7752,7 +7799,8 @@ RiYAAGNedWo=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7798,7 +7846,8 @@ mQAA6691ag==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7816,6 +7865,7 @@ cYHB5v6BDrfhBkbz+ygYBaNgtDyEAFLLw8EmDgPo9Tu1yvmBcs9AtX+GKxjN
                   {RGBColor[
                    0.33333333333333337`, 0.33333333333333337`, 
                     0.33333333333333337`], Thickness[Tiny], 
+                   
                    StyleBox[
                     LineBox[{{{0, 9}, {21, 9}}, {{0, 8}, {21, 8}}, {{0, 7}, {
                     21, 7}}, {{0, 6}, {21, 6}}, {{0, 5}, {21, 5}}, {{0, 4}, {
@@ -7843,7 +7893,8 @@ cYHB5v6BDrfhBkbz+ygYBaNgtDyEAFLLw8EmDgPo9Tu1yvmBcs9AtX+GKxjN
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7889,7 +7940,8 @@ MgEAV/V6Zg==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7935,7 +7987,8 @@ SAUjPb+PgpEGANxwdWo=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -7944,8 +7997,8 @@ SAUjPb+PgpEGANxwdWo=
                     "Droplines" -> {
                     "freeformCursorMode" -> True, 
                     "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
-                  "DefaultPlotStyle" -> Automatic}]}, 
-               Dynamic[$CellContext`i17$$],
+                  "DefaultPlotStyle" -> Automatic}]}, Dynamic[
+               Manipulate`Dump`i$32514$$],
                Alignment->Automatic,
                BaseStyle->"ListAnimateCore",
                ImageSize->All,
@@ -7965,9 +8018,11 @@ SAUjPb+PgpEGANxwdWo=
            Editable->False,
            Selectable->False],
           Alignment->{Left, Center},
-          Background->GrayLevel[1],
+          Background->ThemeColor["Background"],
           Frame->1,
-          FrameStyle->GrayLevel[0, 0.2],
+          FrameStyle->Directive[
+            Opacity[0.2], 
+            ThemeColor["Foreground"]],
           ItemSize->Automatic,
           StripOnInput->False]}
        },
@@ -7975,6 +8030,7 @@ SAUjPb+PgpEGANxwdWo=
        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Top}}},
        GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       
        GridBoxSpacings->{"Columns" -> {
            Offset[0.7], {
             Offset[0.5599999999999999]}, 
@@ -7997,9 +8053,9 @@ SAUjPb+PgpEGANxwdWo=
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{
   3.850773346767744*^9, 3.850773388320652*^9, {3.850773561381384*^9, 
-   3.850773574230938*^9}},
- CellLabel->"Out[161]=",
- CellID->154471982,ExpressionUUID->"a5f31236-d8e9-4a7c-bc74-1da4943c6dae"]
+   3.850773574230938*^9}, 3.970864026862103*^9},
+ CellLabel->"Out[21]=",
+ CellID->956055539,ExpressionUUID->"b537cca1-1f0f-4fe1-80d7-6a4c83d9397c"]
 }, Open  ]]
 }, Open  ]],
 
@@ -8251,21 +8307,22 @@ Ba70jyu/DNf26lBx56i/6FOPDPX2/FAP/9H4GhUfFR8VHxUfFUcWBwCWL7Au
       SelectWithContents->True,
       Selectable->False], ",", "20"}], "]"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.850773590425316*^9, 3.850773592077547*^9}},
- CellLabel->"In[162]:=",
+ CellLabel->"In[22]:=",
  CellID->324314685,ExpressionUUID->"655a55f2-c9ac-45d5-bc9b-672096ce40ef"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i18$$ = 11, Typeset`show$$ = True, 
+   DynamicModuleBox[{Manipulate`Dump`i$33706$$ = 12, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {
-    "\"min\"" :> {$CellContext`i18$$ = 1}, 
-     "\"max\"" :> {$CellContext`i18$$ = 21}}, Typeset`bookmarkMode$$ = "Menu",
-     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"min\"" :> {Manipulate`Dump`i$33706$$ = 1}, 
+     "\"max\"" :> {Manipulate`Dump`i$33706$$ = 21}}, Typeset`bookmarkMode$$ = 
+    "Menu", Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`i18$$], 1, ""}, 1, 21, 1}}, Typeset`size$$ = 
-    Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True}, 
+       Hold[Manipulate`Dump`i$33706$$], 1, ""}, 1, 21, 1, ControlType -> 
+      Animator}}, Typeset`size$$ = Automatic, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
     PaneBox[
      PanelBox[GridBox[{
         {
@@ -8274,10 +8331,10 @@ Cell[BoxData[
            TagBox[
             StyleBox[GridBox[{
                {"\<\"\"\>", 
-                AnimatorBox[Dynamic[$CellContext`i18$$], {1, 21, 1},
+                AnimatorBox[Dynamic[Manipulate`Dump`i$33706$$], {1, 21, 1},
                  AnimationRate->Automatic,
-                 AnimationRunTime->73.36098289489746,
-                 AnimationTimeIndex->2.6190476190477128`,
+                 AnimationRunTime->2.6362547874450684`,
+                 AnimationTimeIndex->2.6362547874450684`,
                  
                  AppearanceElements->{
                   "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
@@ -8345,7 +8402,8 @@ wTk3xjbFdo0BwIbgU3/4NudRh9X4k8863HEIwv7r+EvXow15hRLkDyT+fh9L
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8395,7 +8453,8 @@ cmidA3PPC+jU2v/naf6lPEv5b2Vetfq911L/u5jn/6XtHKdfAGDVDrUnjvs=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8442,8 +8501,10 @@ ovYc+LZfQKfe5vzS9440//D+Sqz979b7MvN8Hdr6NfkCAKtOwwqQOg==
                 FrameTicks->{{None, None}, {None, None}},
                 GridLinesStyle->Directive[
                   GrayLevel[0.5, 0.4]],
+                
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8493,7 +8554,8 @@ krg=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8543,7 +8605,8 @@ AUCLHU5qkDo=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8593,7 +8656,8 @@ Og==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8643,7 +8707,8 @@ PMBIi6/R/hd1wVBxJ6lgpPlrtD1PX0CrepZe8TsKRsEoGAWjYLADAPLekDo=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8693,7 +8758,8 @@ kDo=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8723,7 +8789,6 @@ kXk=
                   {RGBColor[
                    0.33333333333333337`, 0.33333333333333337`, 
                     0.33333333333333337`], Thickness[Tiny], 
-                   
                    StyleBox[
                     LineBox[{{{0, 0}, {0, 13}}, {{1, 0}, {1, 13}}, {{2, 0}, {
                     2, 13}}, {{3, 0}, {3, 13}}, {{4, 0}, {4, 13}}, {{5, 0}, {
@@ -8743,7 +8808,8 @@ kXk=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8762,6 +8828,7 @@ kXk=
                   {RGBColor[
                    0.33333333333333337`, 0.33333333333333337`, 
                     0.33333333333333337`], Thickness[Tiny], 
+                   
                    StyleBox[
                     LineBox[{{{0, 13}, {24, 13}}, {{0, 12}, {24, 12}}, {{0, 
                     11}, {24, 11}}, {{0, 10}, {24, 10}}, {{0, 9}, {24, 9}}, {{
@@ -8792,7 +8859,8 @@ kXk=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8842,7 +8910,8 @@ uxvNL477
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8892,7 +8961,8 @@ lY77
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8940,8 +9010,10 @@ AGf1jvs=
                 FrameTicks->{{None, None}, {None, None}},
                 GridLinesStyle->Directive[
                   GrayLevel[0.5, 0.4]],
+                
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -8991,7 +9063,8 @@ LXbwRo77
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9041,7 +9114,8 @@ LXbwRo77
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9091,7 +9165,8 @@ BCOt/hps7U9S+4ODDQzX9DNS/TXS2/O0BqP9r1EwCkbBKBgF9AEAxlOReQ==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9121,6 +9196,7 @@ Pyfn3BzWEtb7DQB9ube4+2xP8aS1OHTkdeE7yQP1XJfWfUr9Tdqt5svKOdEm
                   {RGBColor[
                    0.33333333333333337`, 0.33333333333333337`, 
                     0.33333333333333337`], Thickness[Tiny], 
+                   
                    StyleBox[
                     LineBox[{{{0, 0}, {0, 13}}, {{1, 0}, {1, 13}}, {{2, 0}, {
                     2, 13}}, {{3, 0}, {3, 13}}, {{4, 0}, {4, 13}}, {{5, 0}, {
@@ -9140,7 +9216,8 @@ Pyfn3BzWEtb7DQB9ube4+2xP8aS1OHTkdeE7yQP1XJfWfUr9Tdqt5svKOdEm
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9190,7 +9267,8 @@ q52JTsMArnw3VPPRUHEnqWCk+Wu0PU8fMND93NH4GgWjYBSMgpECAFimjvs=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9239,7 +9317,8 @@ uPLRcGuvDhV3kgpGmr9G2/P0AYO1/zsaX6NgFIyCUTDcAADg9477
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9289,7 +9368,8 @@ eKL0/Zh6L0Cm3ur19Vzcoxc6F728V2P5qVUt+X+L93xZ0v7nUC8AaNUJ0w+O
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9338,7 +9418,8 @@ qD0Hvu0LaFNv+Sr970h1zv8ryd9HO+t9mXm+jtb6OPkCAKtOmUiReQ==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9347,8 +9428,8 @@ qD0Hvu0LaFNv+Sr970h1zv8ryd9HO+t9mXm+jtb6OPkCAKtOmUiReQ==
                     "Droplines" -> {
                     "freeformCursorMode" -> True, 
                     "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
-                  "DefaultPlotStyle" -> Automatic}]}, 
-               Dynamic[$CellContext`i18$$],
+                  "DefaultPlotStyle" -> Automatic}]}, Dynamic[
+               Manipulate`Dump`i$33706$$],
                Alignment->Automatic,
                BaseStyle->"ListAnimateCore",
                ImageSize->All,
@@ -9368,9 +9449,11 @@ qD0Hvu0LaFNv+Sr970h1zv8ryd9HO+t9mXm+jtb6OPkCAKtOmUiReQ==
            Editable->False,
            Selectable->False],
           Alignment->{Left, Center},
-          Background->GrayLevel[1],
+          Background->ThemeColor["Background"],
           Frame->1,
-          FrameStyle->GrayLevel[0, 0.2],
+          FrameStyle->Directive[
+            Opacity[0.2], 
+            ThemeColor["Foreground"]],
           ItemSize->Automatic,
           StripOnInput->False]}
        },
@@ -9378,6 +9461,7 @@ qD0Hvu0LaFNv+Sr970h1zv8ryd9HO+t9mXm+jtb6OPkCAKtOmUiReQ==
        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Top}}},
        GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       
        GridBoxSpacings->{"Columns" -> {
            Offset[0.7], {
             Offset[0.5599999999999999]}, 
@@ -9398,9 +9482,9 @@ qD0Hvu0LaFNv+Sr970h1zv8ryd9HO+t9mXm+jtb6OPkCAKtOmUiReQ==
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.850773592564622*^9},
- CellLabel->"Out[162]=",
- CellID->446382,ExpressionUUID->"09e08e55-11e7-4a25-91a0-482fc3c012a0"]
+ CellChangeTimes->{3.850773592564622*^9, 3.9708640292949533`*^9},
+ CellLabel->"Out[22]=",
+ CellID->1250782856,ExpressionUUID->"5a03988f-9a98-4017-bcb0-45eb9a230bdf"]
 }, Open  ]]
 }, Open  ]],
 
@@ -9652,21 +9736,22 @@ tbI=
       SelectWithContents->True,
       Selectable->False], ",", "20"}], "]"}]}], "]"}]], "Input",
  CellChangeTimes->{3.850774293567637*^9},
- CellLabel->"In[167]:=",
+ CellLabel->"In[23]:=",
  CellID->407688826,ExpressionUUID->"d8803f03-3bee-47bf-b443-2b84e5678632"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i22$$ = 15, Typeset`show$$ = True, 
+   DynamicModuleBox[{Manipulate`Dump`i$34898$$ = 4, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {
-    "\"min\"" :> {$CellContext`i22$$ = 1}, 
-     "\"max\"" :> {$CellContext`i22$$ = 21}}, Typeset`bookmarkMode$$ = "Menu",
-     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"min\"" :> {Manipulate`Dump`i$34898$$ = 1}, 
+     "\"max\"" :> {Manipulate`Dump`i$34898$$ = 21}}, Typeset`bookmarkMode$$ = 
+    "Menu", Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`i22$$], 1, ""}, 1, 21, 1}}, Typeset`size$$ = 
-    Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True}, 
+       Hold[Manipulate`Dump`i$34898$$], 1, ""}, 1, 21, 1, ControlType -> 
+      Animator}}, Typeset`size$$ = Automatic, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
     PaneBox[
      PanelBox[GridBox[{
         {
@@ -9675,10 +9760,10 @@ Cell[BoxData[
            TagBox[
             StyleBox[GridBox[{
                {"\<\"\"\>", 
-                AnimatorBox[Dynamic[$CellContext`i22$$], {1, 21, 1},
+                AnimatorBox[Dynamic[Manipulate`Dump`i$34898$$], {1, 21, 1},
                  AnimationRate->Automatic,
-                 AnimationRunTime->73.36498260498047,
-                 AnimationTimeIndex->3.3649826049804688`,
+                 AnimationRunTime->0.8242912292480469,
+                 AnimationTimeIndex->0.8242912292480469,
                  
                  AppearanceElements->{
                   "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
@@ -9746,7 +9831,8 @@ TM65OY4ljmcNADYEn+bLj/kcfVjNn3rWIecQhHPr/KX70Ya6ggR9DF/UOvfW
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9796,7 +9882,8 @@ N76qe+r5LEWUxfwJnp5X6mep//+SZ63feyv5v4v7fFm1/c+hXgCg1Q46bZgz
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9846,7 +9933,8 @@ UFapvNeqw7RfQNfXvp3b363Ife9I9x/eX1Fr5916nb/hPq9D+38O+QKAXpy/
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9896,7 +9984,8 @@ IwUAAMkkm/A=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9946,7 +10035,8 @@ nlcr80Rdse/B2wgZ/LqaK0+u+kw9/KfS/b01sfsd9l/PWplnql77LN/zddX+
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -9996,7 +10086,8 @@ aN0JaDSZcg==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10046,7 +10137,8 @@ PJly
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10096,7 +10188,8 @@ cg==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10126,7 +10219,6 @@ lwEAz3axw55u
                   {RGBColor[
                    0.33333333333333337`, 0.33333333333333337`, 
                     0.33333333333333337`], Thickness[Tiny], 
-                   
                    StyleBox[
                     LineBox[{{{0, 0}, {0, 13}}, {{1, 0}, {1, 13}}, {{2, 0}, {
                     2, 13}}, {{3, 0}, {3, 13}}, {{4, 0}, {4, 13}}, {{5, 0}, {
@@ -10146,7 +10238,8 @@ lwEAz3axw55u
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10196,7 +10289,8 @@ nJcBAH4XM1OasQ==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10246,7 +10340,8 @@ nJcBAH4XM1OasQ==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10294,8 +10389,10 @@ lvQ=
                 FrameTicks->{{None, None}, {None, None}},
                 GridLinesStyle->Directive[
                   GrayLevel[0.5, 0.4]],
+                
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10345,7 +10442,8 @@ AO4OlvQ=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10395,7 +10493,8 @@ Vpb0
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10445,7 +10544,8 @@ AfkZmrE=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10475,6 +10575,7 @@ z5qx
                   {RGBColor[
                    0.33333333333333337`, 0.33333333333333337`, 
                     0.33333333333333337`], Thickness[Tiny], 
+                   
                    StyleBox[
                     LineBox[{{{0, 0}, {0, 13}}, {{1, 0}, {1, 13}}, {{2, 0}, {
                     2, 13}}, {{3, 0}, {3, 13}}, {{4, 0}, {4, 13}}, {{5, 0}, {
@@ -10494,7 +10595,8 @@ z5qx
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10544,7 +10646,8 @@ nS8=
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10594,7 +10697,8 @@ dDWYMw==
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10643,7 +10747,8 @@ TM65OY4ljmcNADYEn+bLj/kcfVjNn3rWIecQhHPr/KX70Ya6ggR9DF/UOvfW
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10693,7 +10798,8 @@ N76qe+r5LEWUxfwJnp5X6mep//+SZ63feyv5v4v7fFm1/c+hXgCg1Q46bZgz
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10743,7 +10849,8 @@ UFapvNeqw7RfQNfXvp3b363Ife9I9x/eX1Fr5916nb/hPq9D+38O+QKAXpy/
                   GrayLevel[0.5, 0.4]],
                 
                 Method->{
-                 "DefaultBoundaryStyle" -> Automatic, 
+                 "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> 
+                  Automatic, 
                   "DefaultGraphicsInteraction" -> {
                    "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
                     "Effects" -> {
@@ -10752,8 +10859,8 @@ UFapvNeqw7RfQNfXvp3b363Ife9I9x/eX1Fr5916nb/hPq9D+38O+QKAXpy/
                     "Droplines" -> {
                     "freeformCursorMode" -> True, 
                     "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
-                  "DefaultPlotStyle" -> Automatic}]}, 
-               Dynamic[$CellContext`i22$$],
+                  "DefaultPlotStyle" -> Automatic}]}, Dynamic[
+               Manipulate`Dump`i$34898$$],
                Alignment->Automatic,
                BaseStyle->"ListAnimateCore",
                ImageSize->All,
@@ -10773,9 +10880,11 @@ UFapvNeqw7RfQNfXvp3b363Ife9I9x/eX1Fr5916nb/hPq9D+38O+QKAXpy/
            Editable->False,
            Selectable->False],
           Alignment->{Left, Center},
-          Background->GrayLevel[1],
+          Background->ThemeColor["Background"],
           Frame->1,
-          FrameStyle->GrayLevel[0, 0.2],
+          FrameStyle->Directive[
+            Opacity[0.2], 
+            ThemeColor["Foreground"]],
           ItemSize->Automatic,
           StripOnInput->False]}
        },
@@ -10783,6 +10892,7 @@ UFapvNeqw7RfQNfXvp3b363Ife9I9x/eX1Fr5916nb/hPq9D+38O+QKAXpy/
        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Top}}},
        GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       
        GridBoxSpacings->{"Columns" -> {
            Offset[0.7], {
             Offset[0.5599999999999999]}, 
@@ -10803,9 +10913,9 @@ UFapvNeqw7RfQNfXvp3b363Ife9I9x/eX1Fr5916nb/hPq9D+38O+QKAXpy/
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.8507742939691277`*^9},
- CellLabel->"Out[167]=",
- CellID->20231498,ExpressionUUID->"955b75e6-0e05-4283-9ff1-5fd80b52b69a"]
+ CellChangeTimes->{3.8507742939691277`*^9, 3.970864031066216*^9},
+ CellLabel->"Out[23]=",
+ CellID->1941118734,ExpressionUUID->"63a92b7c-5c1f-4ba3-b558-cd9e3d28e638"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -10814,9 +10924,10 @@ UFapvNeqw7RfQNfXvp3b363Ife9I9x/eX1Fr5916nb/hPq9D+38O+QKAXpy/
 WindowSize->{1440, 847},
 WindowMargins->{{127.5, Automatic}, {Automatic, 59}},
 TaggingRules-><|
- "Author" -> "daniels", "CreationDate" -> "01-09-2022 17:15:56"|>,
+ "Author" -> "daniels", "CreationDate" -> "01-09-2022 17:15:56", "Paclet" -> 
+  "None"|>,
 CellContext->"Global`",
-FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (January 26, 2022)",
+FrontEndVersion->"15.0 for Mac OS X ARM (64-bit) (October 23, 2025)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
   CharacterEncoding -> "UTF-8"],
 ExpressionUUID->"cb771c58-5a75-4b22-8470-542b9cc981cd"
@@ -10827,337 +10938,341 @@ ExpressionUUID->"cb771c58-5a75-4b22-8470-542b9cc981cd"
 (*CellTagsOutline
 CellTagsIndex->{
  "ExtendedExamples"->{
-  Cell[36591, 903, 154, 2, 55, "ExtendedExamplesSection",ExpressionUUID->"2efa4a5b-a2e8-4d1c-8905-942f7f5c54c6",
+  Cell[37163, 924, 154, 2, 56, "ExtendedExamplesSection",ExpressionUUID->"2efa4a5b-a2e8-4d1c-8905-942f7f5c54c6",
    CellTags->"ExtendedExamples",
    CellID->302093659]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 512772, 10828}
+ {"ExtendedExamples", 518721, 10939}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 666, 15, 24, "History",ExpressionUUID->"7d45f2f1-e815-4d8d-bf67-2e5d2e264ddb",
+Cell[558, 20, 666, 15, 25, "History",ExpressionUUID->"7d45f2f1-e815-4d8d-bf67-2e5d2e264ddb",
  CellID->159377655],
 Cell[1227, 37, 139, 1, 20, "AuthorDate",ExpressionUUID->"c919fcfd-83b8-4948-b44f-456692f03c89",
  CellID->682367763],
 Cell[CellGroupData[{
-Cell[1391, 42, 122, 1, 29, "CategorizationSection",ExpressionUUID->"30b1e4de-543a-4822-b6f1-277c67a5119e",
+Cell[1391, 42, 122, 1, 20, "CategorizationSection",ExpressionUUID->"30b1e4de-543a-4822-b6f1-277c67a5119e",
  CellID->281587033],
-Cell[1516, 45, 134, 2, 31, "Categorization",ExpressionUUID->"5f90d32a-0ebb-42e0-b10f-c7aebb42576b",
+Cell[1516, 45, 134, 2, 34, "Categorization",ExpressionUUID->"5f90d32a-0ebb-42e0-b10f-c7aebb42576b",
  CellID->223290413],
-Cell[1653, 49, 145, 2, 31, "Categorization",ExpressionUUID->"b73f0185-78a0-4997-8558-fbddefb69a8f",
+Cell[1653, 49, 145, 2, 34, "Categorization",ExpressionUUID->"b73f0185-78a0-4997-8558-fbddefb69a8f",
  CellID->106174948],
-Cell[1801, 53, 142, 2, 31, "Categorization",ExpressionUUID->"97eabb23-c9eb-4315-8679-058612fc308f",
+Cell[1801, 53, 142, 2, 34, "Categorization",ExpressionUUID->"97eabb23-c9eb-4315-8679-058612fc308f",
  CellID->302737818],
-Cell[1946, 57, 157, 2, 31, "Categorization",ExpressionUUID->"f8f180c3-9f3b-4c62-a76d-d1b1609e797f",
+Cell[1946, 57, 157, 2, 34, "Categorization",ExpressionUUID->"f8f180c3-9f3b-4c62-a76d-d1b1609e797f",
  CellID->802452497]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2140, 64, 110, 1, 29, "KeywordsSection",ExpressionUUID->"c40df76c-82c1-4e10-9347-c72eb4416c6a",
+Cell[2140, 64, 110, 1, 30, "KeywordsSection",ExpressionUUID->"c40df76c-82c1-4e10-9347-c72eb4416c6a",
  CellID->117421071],
-Cell[2253, 67, 96, 1, 19, "Keywords",ExpressionUUID->"641c6f22-47cc-4a0f-9628-a48b55c42a88",
+Cell[2253, 67, 96, 1, 20, "Keywords",ExpressionUUID->"641c6f22-47cc-4a0f-9628-a48b55c42a88",
  CellID->222093]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2386, 73, 119, 1, 29, "TemplatesSection",ExpressionUUID->"d487ef32-8268-4fa7-b3fa-b0fd8c3576bc",
+Cell[2386, 73, 119, 1, 30, "TemplatesSection",ExpressionUUID->"d487ef32-8268-4fa7-b3fa-b0fd8c3576bc",
  CellID->825607643],
-Cell[2508, 76, 148, 2, 27, "Template",ExpressionUUID->"e8bd624e-0ebe-4940-9128-7634771bd4af",
+Cell[2508, 76, 148, 2, 29, "Template",ExpressionUUID->"e8bd624e-0ebe-4940-9128-7634771bd4af",
  CellID->127877137],
-Cell[2659, 80, 137, 2, 27, "Template",ExpressionUUID->"bee09b83-801d-4523-9de7-bce655ce4023",
+Cell[2659, 80, 137, 2, 29, "Template",ExpressionUUID->"bee09b83-801d-4523-9de7-bce655ce4023",
  CellID->176979400],
-Cell[2799, 84, 135, 2, 27, "Template",ExpressionUUID->"e20912e2-0596-40d2-823d-e39943741a92",
+Cell[2799, 84, 135, 2, 29, "Template",ExpressionUUID->"e20912e2-0596-40d2-823d-e39943741a92",
  CellID->320184877],
-Cell[2937, 88, 137, 2, 27, "Template",ExpressionUUID->"7ab8ad1f-22b2-4896-9007-4127ebaa264d",
+Cell[2937, 88, 137, 2, 29, "Template",ExpressionUUID->"7ab8ad1f-22b2-4896-9007-4127ebaa264d",
  CellID->324954029]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3111, 95, 112, 1, 63, "ObjectName",ExpressionUUID->"5ea4c71b-75cc-44da-8d84-9819d21fbe84",
+Cell[3111, 95, 112, 1, 72, "ObjectName",ExpressionUUID->"5ea4c71b-75cc-44da-8d84-9819d21fbe84",
  CellID->471428439],
-Cell[3226, 98, 2257, 57, 152, "Usage",ExpressionUUID->"54621624-5b26-42a5-88fa-04696285f5d9",
+Cell[3226, 98, 2257, 57, 159, "Usage",ExpressionUUID->"54621624-5b26-42a5-88fa-04696285f5d9",
  CellID->113513342],
-Cell[5486, 157, 423, 7, 25, "Notes",ExpressionUUID->"3947c7a2-d816-4c10-8748-73a1d4c805fe",
+Cell[5486, 157, 423, 7, 26, "Notes",ExpressionUUID->"3947c7a2-d816-4c10-8748-73a1d4c805fe",
  CellID->116670600],
-Cell[5912, 166, 1616, 30, 95, "2ColumnTableMod",ExpressionUUID->"c8e3d893-ac25-45e7-b64a-670ec34922c2",
+Cell[5912, 166, 1616, 30, 92, "2ColumnTableMod",ExpressionUUID->"c8e3d893-ac25-45e7-b64a-670ec34922c2",
  CellID->519485435],
-Cell[7531, 198, 1054, 30, 47, "Notes",ExpressionUUID->"c73c4045-fa3d-4632-88dd-bb40af9d255f",
+Cell[7531, 198, 1059, 31, 43, "Notes",ExpressionUUID->"c73c4045-fa3d-4632-88dd-bb40af9d255f",
  CellID->2155887],
-Cell[8588, 230, 794, 22, 28, "Notes",ExpressionUUID->"b9c327e8-e7e1-43ea-b8d3-4ac110863dbe",
+Cell[8593, 231, 794, 22, 26, "Notes",ExpressionUUID->"b9c327e8-e7e1-43ea-b8d3-4ac110863dbe",
  CellID->154751048],
-Cell[9385, 254, 719, 19, 28, "Notes",ExpressionUUID->"2f5298ce-5446-430a-b482-29872d3e1220",
+Cell[9390, 255, 719, 19, 26, "Notes",ExpressionUUID->"2f5298ce-5446-430a-b482-29872d3e1220",
  CellID->884754712],
-Cell[10107, 275, 929, 25, 47, "Notes",ExpressionUUID->"05d36262-6f04-4b00-b940-83e591160a58",
+Cell[10112, 276, 929, 25, 43, "Notes",ExpressionUUID->"05d36262-6f04-4b00-b940-83e591160a58",
  CellID->864955741],
-Cell[11039, 302, 3342, 87, 97, "2ColumnTableMod",ExpressionUUID->"66e072f0-2fed-4e48-88ce-94c8ad3da29f",
+Cell[11044, 303, 3342, 87, 95, "2ColumnTableMod",ExpressionUUID->"66e072f0-2fed-4e48-88ce-94c8ad3da29f",
  CellID->29285995],
-Cell[14384, 391, 185, 2, 25, "Notes",ExpressionUUID->"a7a8b95d-95af-4533-a9db-79bfa7327264",
+Cell[14389, 392, 185, 2, 26, "Notes",ExpressionUUID->"a7a8b95d-95af-4533-a9db-79bfa7327264",
  CellID->257007364],
-Cell[14572, 395, 205, 2, 25, "Notes",ExpressionUUID->"153779a3-22f0-460e-88ca-eabb8aae1215",
+Cell[14577, 396, 205, 2, 26, "Notes",ExpressionUUID->"153779a3-22f0-460e-88ca-eabb8aae1215",
  CellID->217358231]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14814, 402, 113, 1, 43, "TechNotesSection",ExpressionUUID->"69780021-512b-4527-86ae-5a6258a67647",
+Cell[14819, 403, 113, 1, 38, "TechNotesSection",ExpressionUUID->"69780021-512b-4527-86ae-5a6258a67647",
  CellID->537059371],
-Cell[14930, 405, 99, 1, 16, "TechNotes",ExpressionUUID->"174cb43f-9996-4baf-b847-c4cac8d370bf",
+Cell[14935, 406, 99, 1, 17, "TechNotes",ExpressionUUID->"174cb43f-9996-4baf-b847-c4cac8d370bf",
  CellID->51516452]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15066, 411, 137, 1, 30, "RelatedDemonstrationsSection",ExpressionUUID->"9c4b2dc0-bc93-4cb3-b1f1-8d250819c9ea",
+Cell[15071, 412, 137, 1, 31, "RelatedDemonstrationsSection",ExpressionUUID->"9c4b2dc0-bc93-4cb3-b1f1-8d250819c9ea",
  CellID->323217183],
-Cell[15206, 414, 112, 1, 16, "RelatedDemonstrations",ExpressionUUID->"e6fb86f8-8bee-4ffa-a573-1515ba99b94f",
+Cell[15211, 415, 112, 1, 17, "RelatedDemonstrations",ExpressionUUID->"e6fb86f8-8bee-4ffa-a573-1515ba99b94f",
  CellID->464352678]
 }, Open  ]],
-Cell[15333, 418, 119, 1, 30, "RelatedLinksSection",ExpressionUUID->"e2e5e9cb-6655-45f2-841d-fb63d3e29e1e",
+Cell[15338, 419, 119, 1, 37, "RelatedLinksSection",ExpressionUUID->"e2e5e9cb-6655-45f2-841d-fb63d3e29e1e",
  CellID->438332082],
 Cell[CellGroupData[{
-Cell[15477, 423, 109, 1, 30, "SeeAlsoSection",ExpressionUUID->"04220da6-6977-4433-9df3-647bdd14fb98",
+Cell[15482, 424, 109, 1, 37, "SeeAlsoSection",ExpressionUUID->"04220da6-6977-4433-9df3-647bdd14fb98",
  CellID->304082289],
-Cell[15589, 426, 1165, 27, 22, "SeeAlso",ExpressionUUID->"ab7e0c06-4bd3-4452-80b1-b9ae3f056882",
+Cell[15594, 427, 1441, 34, 34, "SeeAlso",ExpressionUUID->"a6c68ce0-9a61-4a04-b793-6f6367f348e5",
  CellID->86772014]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16791, 458, 181, 2, 30, "MoreAboutSection",ExpressionUUID->"d3041e34-2682-46cd-8479-426e3798b580",
+Cell[17072, 466, 181, 2, 37, "MoreAboutSection",ExpressionUUID->"d3041e34-2682-46cd-8479-426e3798b580",
  CellID->2253341],
-Cell[16975, 462, 268, 4, 16, "MoreAbout",ExpressionUUID->"0a2f0f3d-1301-4274-97b6-cb647a5c2240",
+Cell[17256, 470, 268, 4, 17, "MoreAbout",ExpressionUUID->"0a2f0f3d-1301-4274-97b6-cb647a5c2240",
  CellID->559080892]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17280, 471, 411, 11, 68, "PrimaryExamplesSection",ExpressionUUID->"6c481aec-d3b9-4a04-9a19-c90d8e8e06ea",
+Cell[17561, 479, 411, 11, 70, "PrimaryExamplesSection",ExpressionUUID->"6c481aec-d3b9-4a04-9a19-c90d8e8e06ea",
  CellID->206926606],
-Cell[17694, 484, 254, 3, 22, "ExampleText",ExpressionUUID->"5cee9098-3043-45b7-85d2-efaed89cba19",
+Cell[17975, 492, 254, 3, 23, "ExampleText",ExpressionUUID->"5cee9098-3043-45b7-85d2-efaed89cba19",
  CellID->18437281],
 Cell[CellGroupData[{
-Cell[17973, 491, 943, 20, 78, "Input",ExpressionUUID->"93fe6191-92ca-4933-85a9-77f923b697bf",
+Cell[18254, 499, 953, 22, 82, "Input",ExpressionUUID->"93fe6191-92ca-4933-85a9-77f923b697bf",
  CellID->214940097],
-Cell[18919, 513, 1349, 34, 60, "Output",ExpressionUUID->"a65045cb-67c6-43e4-8965-24f4aaaf09be",
+Cell[19210, 523, 1351, 35, 62, "Output",ExpressionUUID->"a65045cb-67c6-43e4-8965-24f4aaaf09be",
  CellID->291186743]
 }, Open  ]],
-Cell[20283, 550, 324, 4, 22, "ExampleText",ExpressionUUID->"b35728ff-b359-407b-8a00-b5c369ac429f",
+Cell[CellGroupData[{
+Cell[20598, 563, 242, 5, 16, "ExampleDelimiter",ExpressionUUID->"4115ae0b-c4c7-438f-a2f8-c64013914392",
+ CellID->589737325],
+Cell[20843, 570, 324, 4, 23, "ExampleText",ExpressionUUID->"b35728ff-b359-407b-8a00-b5c369ac429f",
  CellID->193229918],
 Cell[CellGroupData[{
-Cell[20632, 558, 11015, 225, 56, "Input",ExpressionUUID->"98ecc827-ef17-44d8-b55e-7be583d751f8",
+Cell[21192, 578, 11015, 225, 50, "Input",ExpressionUUID->"98ecc827-ef17-44d8-b55e-7be583d751f8",
  CellID->11485810],
-Cell[31650, 785, 4892, 112, 68, "Output",ExpressionUUID->"f620cf2c-d2d7-49e8-8f98-97607849710d",
+Cell[32210, 805, 4892, 112, 67, "Output",ExpressionUUID->"f620cf2c-d2d7-49e8-8f98-97607849710d",
  CellID->68240130]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36591, 903, 154, 2, 55, "ExtendedExamplesSection",ExpressionUUID->"2efa4a5b-a2e8-4d1c-8905-942f7f5c54c6",
+Cell[37163, 924, 154, 2, 56, "ExtendedExamplesSection",ExpressionUUID->"2efa4a5b-a2e8-4d1c-8905-942f7f5c54c6",
  CellTags->"ExtendedExamples",
  CellID->302093659],
 Cell[CellGroupData[{
-Cell[36770, 909, 241, 5, 33, "ExampleSection",ExpressionUUID->"1adc5120-13d5-420b-898d-0164eeb149b3",
+Cell[37342, 930, 241, 5, 32, "ExampleSection",ExpressionUUID->"1adc5120-13d5-420b-898d-0164eeb149b3",
  CellID->149993620],
 Cell[CellGroupData[{
-Cell[37036, 918, 160, 2, 22, "ExampleSubsection",ExpressionUUID->"f3954fcf-14db-4b69-9df3-8483408c5498",
+Cell[37608, 939, 160, 2, 23, "ExampleSubsection",ExpressionUUID->"f3954fcf-14db-4b69-9df3-8483408c5498",
  CellID->181865940],
-Cell[37199, 922, 308, 4, 22, "ExampleText",ExpressionUUID->"eebd3e17-cc86-4ded-98c6-d429717930e3",
+Cell[37771, 943, 308, 4, 23, "ExampleText",ExpressionUUID->"eebd3e17-cc86-4ded-98c6-d429717930e3",
  CellID->636865750],
 Cell[CellGroupData[{
-Cell[37532, 930, 10911, 223, 56, "Input",ExpressionUUID->"cb53a640-5ea7-48df-b249-31ff5469c8d3",
+Cell[38104, 951, 10896, 223, 50, "Input",ExpressionUUID->"cb53a640-5ea7-48df-b249-31ff5469c8d3",
  CellID->121325979],
-Cell[48446, 1155, 6280, 147, 68, "Output",ExpressionUUID->"72ad2853-afae-4390-ba0d-467133f457eb",
- CellID->380095674]
+Cell[49003, 1176, 6415, 147, 139, "Output",ExpressionUUID->"43cc30a4-9ae6-4796-a02c-6e953870ded6",
+ CellID->1768076560]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[54775, 1308, 156, 2, 22, "ExampleSubsection",ExpressionUUID->"4e5f2a47-ab28-4c6a-b493-a0554c36fd97",
+Cell[55467, 1329, 156, 2, 23, "ExampleSubsection",ExpressionUUID->"4e5f2a47-ab28-4c6a-b493-a0554c36fd97",
  CellID->230966776],
-Cell[54934, 1312, 163, 2, 22, "ExampleText",ExpressionUUID->"a24e66b3-6834-4b68-bda4-d8d98176a32f",
+Cell[55626, 1333, 163, 2, 23, "ExampleText",ExpressionUUID->"a24e66b3-6834-4b68-bda4-d8d98176a32f",
  CellID->133394977],
 Cell[CellGroupData[{
-Cell[55122, 1318, 10855, 224, 56, "Input",ExpressionUUID->"4ce99d97-72e1-4699-afdf-9c2506492962",
+Cell[55814, 1339, 10855, 224, 50, "Input",ExpressionUUID->"4ce99d97-72e1-4699-afdf-9c2506492962",
  CellID->223754082],
-Cell[65980, 1544, 31829, 658, 108, "Output",ExpressionUUID->"de62c691-cf96-4641-8d68-07e978ee5d98",
- CellID->8560850]
+Cell[66672, 1565, 32022, 658, 148, "Output",ExpressionUUID->"77d82d64-8da5-49f0-bec1-4d735823b8e4",
+ CellID->1285802181]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[97846, 2207, 241, 5, 16, "ExampleDelimiter",ExpressionUUID->"8b875c90-8a17-42b1-8e93-48a14aa8f75c",
+Cell[98731, 2228, 241, 5, 16, "ExampleDelimiter",ExpressionUUID->"8b875c90-8a17-42b1-8e93-48a14aa8f75c",
  CellID->14356737],
-Cell[98090, 2214, 178, 2, 22, "ExampleText",ExpressionUUID->"6dfbea2c-80f8-4a6f-a3ca-e60de4d7aba6",
+Cell[98975, 2235, 178, 2, 23, "ExampleText",ExpressionUUID->"6dfbea2c-80f8-4a6f-a3ca-e60de4d7aba6",
  CellID->65833670],
 Cell[CellGroupData[{
-Cell[98293, 2220, 10849, 224, 56, "Input",ExpressionUUID->"0fcce98b-4356-461b-95d4-e93625c53167",
+Cell[99178, 2241, 10849, 224, 50, "Input",ExpressionUUID->"0fcce98b-4356-461b-95d4-e93625c53167",
  CellID->326303010],
-Cell[109145, 2446, 10584, 219, 55, "Output",ExpressionUUID->"9236beaa-d511-42c4-bc70-48691a79499f",
- CellID->189298204]
+Cell[110030, 2467, 10668, 220, 49, "Output",ExpressionUUID->"04269986-0d2b-40c0-862b-c919587b15da",
+ CellID->1218926925]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[119778, 2671, 242, 5, 16, "ExampleDelimiter",ExpressionUUID->"278514dd-c958-4026-b241-5f6db9e23c2f",
+Cell[120747, 2693, 242, 5, 16, "ExampleDelimiter",ExpressionUUID->"278514dd-c958-4026-b241-5f6db9e23c2f",
  CellID->662994548],
-Cell[120023, 2678, 171, 2, 22, "ExampleText",ExpressionUUID->"96650e29-64bf-4812-aceb-6eabb9ee4a49",
+Cell[120992, 2700, 171, 2, 23, "ExampleText",ExpressionUUID->"96650e29-64bf-4812-aceb-6eabb9ee4a49",
  CellID->258141747],
 Cell[CellGroupData[{
-Cell[120219, 2684, 10870, 225, 56, "Input",ExpressionUUID->"d3489241-d80e-4612-b803-15de7de4d21f",
+Cell[121188, 2706, 10870, 225, 50, "Input",ExpressionUUID->"d3489241-d80e-4612-b803-15de7de4d21f",
  CellID->543045894],
-Cell[131092, 2911, 10371, 216, 55, "Output",ExpressionUUID->"414242e6-3781-4ba5-9cb8-baf9ae35a0cc",
- CellID->59364975]
+Cell[132061, 2933, 10458, 218, 49, "Output",ExpressionUUID->"ae8271e6-6869-41a9-ade6-7ad19848d842",
+ CellID->411388527]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[141512, 3133, 242, 5, 16, "ExampleDelimiter",ExpressionUUID->"1aee01b5-67b1-41ab-8ac4-8bc18bdfb575",
+Cell[142568, 3157, 242, 5, 16, "ExampleDelimiter",ExpressionUUID->"1aee01b5-67b1-41ab-8ac4-8bc18bdfb575",
  CellID->561036609],
-Cell[141757, 3140, 181, 2, 22, "ExampleText",ExpressionUUID->"6cb82f1b-3dc3-4f82-957b-4ccac31ec6a2",
+Cell[142813, 3164, 181, 2, 23, "ExampleText",ExpressionUUID->"6cb82f1b-3dc3-4f82-957b-4ccac31ec6a2",
  CellID->1421909],
 Cell[CellGroupData[{
-Cell[141963, 3146, 11127, 229, 56, "Input",ExpressionUUID->"66d58031-becc-492b-abaa-77b51d04572f",
+Cell[143019, 3170, 11144, 230, 78, "Input",ExpressionUUID->"66d58031-becc-492b-abaa-77b51d04572f",
  CellID->185281081],
-Cell[153093, 3377, 14762, 362, 270, "Output",ExpressionUUID->"6a8d148a-ac0e-4a27-935f-7bfcb658c101",
- CellID->437764205]
+Cell[154166, 3402, 15091, 362, 362, "Output",ExpressionUUID->"ca2b5407-f1e0-43f2-8155-ca5acbb31c84",
+ CellID->71129086]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[167904, 3745, 242, 5, 16, "ExampleDelimiter",ExpressionUUID->"a7277038-c1eb-4c74-a094-48aafc73ca9a",
+Cell[169306, 3770, 242, 5, 16, "ExampleDelimiter",ExpressionUUID->"a7277038-c1eb-4c74-a094-48aafc73ca9a",
  CellID->142342200],
-Cell[168149, 3752, 198, 2, 22, "ExampleText",ExpressionUUID->"083718c9-8b75-4e14-b69c-78b0cd43c062",
+Cell[169551, 3777, 198, 2, 23, "ExampleText",ExpressionUUID->"083718c9-8b75-4e14-b69c-78b0cd43c062",
  CellID->262063002],
 Cell[CellGroupData[{
-Cell[168372, 3758, 10966, 228, 56, "Input",ExpressionUUID->"4586e5e7-25e0-42ec-8df0-bd6f8eff38c7",
+Cell[169774, 3783, 10965, 228, 50, "Input",ExpressionUUID->"4586e5e7-25e0-42ec-8df0-bd6f8eff38c7",
  CellID->4505975],
-Cell[179341, 3988, 31594, 658, 108, "Output",ExpressionUUID->"4d7b6c95-f384-4a43-b975-4f3ffcc8cf8e",
- CellID->533966259]
+Cell[180742, 4013, 31770, 657, 148, "Output",ExpressionUUID->"53eec778-210c-48fc-bd83-4c4eec4db5f4",
+ CellID->1565877971]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[210984, 4652, 241, 5, 16, "ExampleDelimiter",ExpressionUUID->"51e65854-c07f-4d96-bc6c-a5a9b05ae477",
+Cell[212561, 4676, 241, 5, 16, "ExampleDelimiter",ExpressionUUID->"51e65854-c07f-4d96-bc6c-a5a9b05ae477",
  CellID->46804217],
-Cell[211228, 4659, 224, 3, 22, "ExampleText",ExpressionUUID->"a10aac97-82f1-4718-873f-68939dc158cf",
+Cell[212805, 4683, 224, 3, 23, "ExampleText",ExpressionUUID->"a10aac97-82f1-4718-873f-68939dc158cf",
  CellID->641467655],
 Cell[CellGroupData[{
-Cell[211477, 4666, 10982, 226, 84, "Input",ExpressionUUID->"fbef873d-1517-4cc2-a80d-fc3940209c47",
+Cell[213054, 4690, 10981, 226, 78, "Input",ExpressionUUID->"fbef873d-1517-4cc2-a80d-fc3940209c47",
  CellID->306477154],
-Cell[222462, 4894, 16833, 391, 211, "Output",ExpressionUUID->"92e17eca-3016-40a3-a7ab-0542ad329893",
- CellID->18545973]
+Cell[224038, 4918, 17166, 391, 283, "Output",ExpressionUUID->"8acf8d66-663d-4e3e-a174-7c7bdb5ad182",
+ CellID->1037327589]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
-Cell[239346, 5291, 264, 5, 33, "ExampleSection",ExpressionUUID->"e3addf12-21fd-43bc-a03c-4ce351be01a9",
+Cell[241255, 5315, 264, 5, 32, "ExampleSection",ExpressionUUID->"e3addf12-21fd-43bc-a03c-4ce351be01a9",
  CellID->310892667],
 Cell[CellGroupData[{
-Cell[239635, 5300, 243, 5, 21, "ExampleSection",ExpressionUUID->"688a6940-faa8-4df4-a274-39abc3cc8a69",
+Cell[241544, 5324, 243, 5, 20, "ExampleSection",ExpressionUUID->"688a6940-faa8-4df4-a274-39abc3cc8a69",
  CellID->630784836],
-Cell[239881, 5307, 246, 5, 24, "ExampleSubsection",ExpressionUUID->"9a53c461-1c21-49ae-b756-a62a0c328ac6",
+Cell[241790, 5331, 246, 5, 23, "ExampleSubsection",ExpressionUUID->"9a53c461-1c21-49ae-b756-a62a0c328ac6",
  CellID->431567471],
-Cell[240130, 5314, 245, 5, 20, "ExampleSubsection",ExpressionUUID->"bab0c606-0887-46d3-bb41-8562fce03d6c",
+Cell[242039, 5338, 245, 5, 19, "ExampleSubsection",ExpressionUUID->"bab0c606-0887-46d3-bb41-8562fce03d6c",
  CellID->93881490]
 }, Open  ]],
-Cell[240390, 5322, 247, 5, 33, "ExampleSection",ExpressionUUID->"10f0e619-088d-4754-82d5-f30b1fcf821a",
+Cell[242299, 5346, 247, 5, 32, "ExampleSection",ExpressionUUID->"10f0e619-088d-4754-82d5-f30b1fcf821a",
  CellID->31507441],
 Cell[CellGroupData[{
-Cell[240662, 5331, 323, 6, 21, "ExampleSection",ExpressionUUID->"7aea3c75-1d24-41ea-86dc-e783cc8fb164",
+Cell[242571, 5355, 323, 6, 20, "ExampleSection",ExpressionUUID->"7aea3c75-1d24-41ea-86dc-e783cc8fb164",
  CellID->505586209],
-Cell[240988, 5339, 1034, 30, 70, "ExampleText",ExpressionUUID->"8d82fbfa-ffed-4a87-b689-b39ea92c6fcc",
+Cell[242897, 5363, 1034, 30, 70, "ExampleText",ExpressionUUID->"8d82fbfa-ffed-4a87-b689-b39ea92c6fcc",
  CellID->287885043],
 Cell[CellGroupData[{
-Cell[242047, 5373, 664, 18, 70, "Input",ExpressionUUID->"9f7d7e25-29ad-42a5-950a-bd35cd3147b6",
+Cell[243956, 5397, 659, 17, 70, "Input",ExpressionUUID->"9f7d7e25-29ad-42a5-950a-bd35cd3147b6",
  CellID->58044071],
-Cell[242714, 5393, 196, 3, 70, "Output",ExpressionUUID->"f1967953-b73b-4c4f-9606-bd474839dbc0",
+Cell[244618, 5416, 196, 3, 70, "Output",ExpressionUUID->"f1967953-b73b-4c4f-9606-bd474839dbc0",
  CellID->662275577]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[242947, 5401, 242, 5, 70, "ExampleDelimiter",ExpressionUUID->"fc5aeaf2-3e14-4d51-9d24-1c2e1fa562f8",
+Cell[244851, 5424, 242, 5, 70, "ExampleDelimiter",ExpressionUUID->"fc5aeaf2-3e14-4d51-9d24-1c2e1fa562f8",
  CellID->609403432],
-Cell[243192, 5408, 452, 11, 70, "ExampleText",ExpressionUUID->"8a2096e5-9abb-42b6-b9d2-fb6048a70844",
+Cell[245096, 5431, 452, 11, 70, "ExampleText",ExpressionUUID->"8a2096e5-9abb-42b6-b9d2-fb6048a70844",
  CellID->325117648],
 Cell[CellGroupData[{
-Cell[243669, 5423, 11416, 230, 70, "Input",ExpressionUUID->"ab508651-39c0-4546-8d00-5c6a593083ad",
+Cell[245573, 5446, 11416, 230, 70, "Input",ExpressionUUID->"ab508651-39c0-4546-8d00-5c6a593083ad",
  CellID->579796642],
-Cell[255088, 5655, 10157, 224, 70, "Output",ExpressionUUID->"171620b4-91ab-4f25-afe0-6e3c4c285dc4",
+Cell[256992, 5678, 10157, 224, 70, "Output",ExpressionUUID->"171620b4-91ab-4f25-afe0-6e3c4c285dc4",
  CellID->355913621]
 }, Open  ]]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[265306, 5886, 251, 5, 21, "ExampleSection",ExpressionUUID->"a73ad1e3-ddfc-458c-940c-a38c9f44771a",
+Cell[267210, 5909, 251, 5, 20, "ExampleSection",ExpressionUUID->"a73ad1e3-ddfc-458c-940c-a38c9f44771a",
  CellID->152975838],
-Cell[265560, 5893, 319, 6, 70, "ExampleText",ExpressionUUID->"9f2541da-f717-4908-8184-7c67e4a0848c",
+Cell[267464, 5916, 319, 6, 70, "ExampleText",ExpressionUUID->"9f2541da-f717-4908-8184-7c67e4a0848c",
  CellID->67851712],
 Cell[CellGroupData[{
-Cell[265904, 5903, 510, 12, 70, "Input",ExpressionUUID->"d8de9264-9144-48a4-aaae-6874b1e0e520",
+Cell[267808, 5926, 510, 12, 70, "Input",ExpressionUUID->"d8de9264-9144-48a4-aaae-6874b1e0e520",
  CellID->527746758],
-Cell[266417, 5917, 4182, 98, 70, "Output",ExpressionUUID->"f435c323-4fdf-4cfc-a41e-201bc69629b2",
+Cell[268321, 5940, 4182, 98, 70, "Output",ExpressionUUID->"f435c323-4fdf-4cfc-a41e-201bc69629b2",
  CellID->32582211]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[270636, 6020, 241, 5, 70, "ExampleDelimiter",ExpressionUUID->"94838e18-6eff-48c3-9bfc-40f295dc805e",
+Cell[272540, 6043, 241, 5, 70, "ExampleDelimiter",ExpressionUUID->"94838e18-6eff-48c3-9bfc-40f295dc805e",
  CellID->19855140],
-Cell[270880, 6027, 362, 9, 70, "ExampleText",ExpressionUUID->"6225d975-95b4-44f5-bfcc-8b1ae2d17b7b",
+Cell[272784, 6050, 362, 9, 70, "ExampleText",ExpressionUUID->"6225d975-95b4-44f5-bfcc-8b1ae2d17b7b",
  CellID->78714835],
 Cell[CellGroupData[{
-Cell[271267, 6040, 341, 8, 70, "Input",ExpressionUUID->"a4ee091b-5271-4bb2-b5a8-0ffb251b9eb0",
+Cell[273171, 6063, 341, 8, 70, "Input",ExpressionUUID->"a4ee091b-5271-4bb2-b5a8-0ffb251b9eb0",
  CellID->135518305],
-Cell[271611, 6050, 6537, 128, 70, "Output",ExpressionUUID->"c668ac92-3ca2-4c76-ad55-5c5cf44f723a",
+Cell[273515, 6073, 6542, 129, 70, "Output",ExpressionUUID->"c668ac92-3ca2-4c76-ad55-5c5cf44f723a",
  CellID->592844465]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[278197, 6184, 242, 5, 70, "ExampleDelimiter",ExpressionUUID->"2fc90159-ec35-473d-9ff9-85245e2bf8a9",
+Cell[280106, 6208, 242, 5, 70, "ExampleDelimiter",ExpressionUUID->"2fc90159-ec35-473d-9ff9-85245e2bf8a9",
  CellID->297677979],
-Cell[278442, 6191, 365, 9, 70, "ExampleText",ExpressionUUID->"ca931c0a-840b-4474-ac40-07eecec88a0f",
+Cell[280351, 6215, 365, 9, 70, "ExampleText",ExpressionUUID->"ca931c0a-840b-4474-ac40-07eecec88a0f",
  CellID->8490493],
 Cell[CellGroupData[{
-Cell[278832, 6204, 440, 11, 70, "Input",ExpressionUUID->"5d885691-e96d-412a-85ea-a9831c6fe7c3",
+Cell[280741, 6228, 440, 11, 70, "Input",ExpressionUUID->"5d885691-e96d-412a-85ea-a9831c6fe7c3",
  CellID->26362993],
-Cell[279275, 6217, 6250, 122, 70, "Output",ExpressionUUID->"3cec3478-be3e-43c1-8ae5-21596a739c5d",
+Cell[281184, 6241, 6255, 123, 70, "Output",ExpressionUUID->"3cec3478-be3e-43c1-8ae5-21596a739c5d",
  CellID->126055114]
 }, Open  ]]
 }, Open  ]]
 }, Closed]],
-Cell[285564, 6344, 256, 5, 21, "ExampleSection",ExpressionUUID->"f46a56ac-d113-4b8d-933d-4c19d3e93cd9",
+Cell[287478, 6369, 256, 5, 20, "ExampleSection",ExpressionUUID->"f46a56ac-d113-4b8d-933d-4c19d3e93cd9",
  CellID->865551683],
 Cell[CellGroupData[{
-Cell[285845, 6353, 249, 5, 21, "ExampleSection",ExpressionUUID->"6bdfe17d-7217-46bf-876d-a965e1dc6f78",
+Cell[287759, 6378, 249, 5, 20, "ExampleSection",ExpressionUUID->"6bdfe17d-7217-46bf-876d-a965e1dc6f78",
  CellID->127645625],
 Cell[CellGroupData[{
-Cell[286119, 6362, 233, 3, 22, "ExampleSubsection",ExpressionUUID->"0e4ebac4-8201-4e25-9824-daf11f223eb9",
+Cell[288033, 6387, 233, 3, 23, "ExampleSubsection",ExpressionUUID->"0e4ebac4-8201-4e25-9824-daf11f223eb9",
  CellID->62100668],
-Cell[286355, 6367, 249, 3, 22, "ExampleText",ExpressionUUID->"9d4facd5-22c4-4230-bf99-b850c10ca60a",
+Cell[288269, 6392, 249, 3, 23, "ExampleText",ExpressionUUID->"9d4facd5-22c4-4230-bf99-b850c10ca60a",
  CellID->347615528],
 Cell[CellGroupData[{
-Cell[286629, 6374, 11228, 228, 84, "Input",ExpressionUUID->"8be11126-3dfb-452b-af26-69291633553f",
+Cell[288543, 6399, 11227, 228, 106, "Input",ExpressionUUID->"8be11126-3dfb-452b-af26-69291633553f",
  CellID->218170293],
-Cell[297860, 6604, 30622, 628, 241, "Output",ExpressionUUID->"3bac79dd-3d34-4163-9119-a3b66666930b",
- CellID->260999542]
+Cell[299773, 6629, 31449, 646, 245, "Output",ExpressionUUID->"71b418d5-f5c1-4a63-875b-990b36b61aaf",
+ CellID->54311275]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[328531, 7238, 178, 2, 22, "ExampleSubsection",ExpressionUUID->"5799d3cb-b2aa-4591-b32e-b63450ee6d93",
+Cell[331271, 7281, 178, 2, 23, "ExampleSubsection",ExpressionUUID->"5799d3cb-b2aa-4591-b32e-b63450ee6d93",
  CellID->99434949],
-Cell[328712, 7242, 219, 2, 22, "ExampleText",ExpressionUUID->"083a86a0-5692-4751-87b2-270517717586",
+Cell[331452, 7285, 219, 2, 23, "ExampleText",ExpressionUUID->"083a86a0-5692-4751-87b2-270517717586",
  CellID->423977913],
 Cell[CellGroupData[{
-Cell[328956, 7248, 11610, 232, 84, "Input",ExpressionUUID->"545606a7-497b-475d-a193-5d913937d59c",
+Cell[331696, 7291, 11609, 232, 78, "Input",ExpressionUUID->"545606a7-497b-475d-a193-5d913937d59c",
  CellID->89524726],
-Cell[340569, 7482, 25691, 519, 191, "Output",ExpressionUUID->"a5f31236-d8e9-4a7c-bc74-1da4943c6dae",
- CellID->154471982]
+Cell[343308, 7525, 26355, 532, 196, "Output",ExpressionUUID->"b537cca1-1f0f-4fe1-80d7-6a4c83d9397c",
+ CellID->956055539]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[366309, 8007, 229, 3, 22, "ExampleSubsection",ExpressionUUID->"80943b1f-f82c-48c7-8768-8e939686a8fd",
+Cell[369712, 8063, 229, 3, 23, "ExampleSubsection",ExpressionUUID->"80943b1f-f82c-48c7-8768-8e939686a8fd",
  CellID->54885240],
-Cell[366541, 8012, 269, 3, 22, "ExampleText",ExpressionUUID->"7530047b-2cea-4b34-9443-022df0a30afe",
+Cell[369944, 8068, 269, 3, 23, "ExampleText",ExpressionUUID->"7530047b-2cea-4b34-9443-022df0a30afe",
  CellID->9127377],
 Cell[CellGroupData[{
-Cell[366835, 8019, 11704, 235, 84, "Input",ExpressionUUID->"655a55f2-c9ac-45d5-bc9b-672096ce40ef",
+Cell[370238, 8075, 11703, 235, 106, "Input",ExpressionUUID->"655a55f2-c9ac-45d5-bc9b-672096ce40ef",
  CellID->324314685],
-Cell[378542, 8256, 60575, 1146, 217, "Output",ExpressionUUID->"09e08e55-11e7-4a25-91a0-482fc3c012a0",
- CellID->446382]
+Cell[381944, 8312, 61862, 1174, 222, "Output",ExpressionUUID->"5a03988f-9a98-4017-bcb0-45eb9a230bdf",
+ CellID->1250782856]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[439166, 9408, 229, 3, 22, "ExampleSubsection",ExpressionUUID->"5e3e5e57-0473-48d1-bf97-95d0cb43218d",
+Cell[443855, 9492, 229, 3, 23, "ExampleSubsection",ExpressionUUID->"5e3e5e57-0473-48d1-bf97-95d0cb43218d",
  CellID->407492055],
-Cell[439398, 9413, 295, 3, 22, "ExampleText",ExpressionUUID->"d118b295-012b-4135-a75c-bcb692cd0586",
+Cell[444087, 9497, 295, 3, 23, "ExampleText",ExpressionUUID->"d118b295-012b-4135-a75c-bcb692cd0586",
  CellID->478970367],
 Cell[CellGroupData[{
-Cell[439718, 9420, 11759, 235, 84, "Input",ExpressionUUID->"d8803f03-3bee-47bf-b443-2b84e5678632",
+Cell[444407, 9504, 11758, 235, 106, "Input",ExpressionUUID->"d8803f03-3bee-47bf-b443-2b84e5678632",
  CellID->407688826],
-Cell[451480, 9657, 60690, 1150, 217, "Output",ExpressionUUID->"955b75e6-0e05-4283-9ff1-5fd80b52b69a",
- CellID->20231498]
+Cell[456168, 9741, 61933, 1176, 222, "Output",ExpressionUUID->"63a92b7c-5c1f-4ba3-b558-cd9e3d28e638",
+ CellID->1941118734]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
